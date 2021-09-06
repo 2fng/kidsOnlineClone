@@ -15,6 +15,7 @@
 		DFCAB16326E5E9AC00EB718E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB16226E5E9AC00EB718E /* HomeViewController.swift */; };
 		DFCAB16526E5EB4800EB718E /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB16426E5EB4800EB718E /* Student.swift */; };
 		DFCAB16826E5F8E400EB718E /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB16726E5F8E400EB718E /* HomeTableViewCell.swift */; };
+		DFCAB16A26E60FFF00EB718E /* TimeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB16926E60FFE00EB718E /* TimeInfoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DFCAB16226E5E9AC00EB718E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DFCAB16426E5EB4800EB718E /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		DFCAB16726E5F8E400EB718E /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		DFCAB16926E60FFE00EB718E /* TimeInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInfoTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				DFCAB16726E5F8E400EB718E /* HomeTableViewCell.swift */,
+				DFCAB16926E60FFE00EB718E /* TimeInfoTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				DFCAB16826E5F8E400EB718E /* HomeTableViewCell.swift in Sources */,
 				DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */,
 				DFCAB16326E5E9AC00EB718E /* HomeViewController.swift in Sources */,
+				DFCAB16A26E60FFF00EB718E /* TimeInfoTableViewCell.swift in Sources */,
 				DFCAB16526E5EB4800EB718E /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

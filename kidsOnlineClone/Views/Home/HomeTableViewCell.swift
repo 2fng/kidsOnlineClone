@@ -8,6 +8,10 @@
 import UIKit
 
 class HomeTableViewCell: UITableViewCell {
+    
+    var schedule = ["7:00 AM", "8:30 AM", "9:00 AM", "9:45 AM", "10:15 AM", "11:00 AM", "11:45 AM"]
+    
+    @IBOutlet var timeInfoTable: UITableView!
     //DateLabel View
     @IBOutlet var dateLabelView: UIView!
     @IBOutlet var scheduleDateLabel: UILabel!
@@ -22,6 +26,9 @@ class HomeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        timeInfoTable.dataSource = self
+        timeInfoTable.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,4 +37,26 @@ class HomeTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+}
+
+extension HomeTableViewCell: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You tapped me!")
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        schedule.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "timeInfoCell", for: indexPath) as! TimeInfoTableViewCell
+        
+        cell.timeColumn?.text = schedule[indexPath.row]
+        cell.infoColumn?.text = ""
+        
+        return cell
+    }
+    
+    
 }
