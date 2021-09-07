@@ -29,6 +29,7 @@ class HomeTableViewCell: UITableViewCell {
         
         timeInfoTable.dataSource = self
         timeInfoTable.delegate = self
+        timeInfoTable.isScrollEnabled = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -53,10 +54,11 @@ extension HomeTableViewCell: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "timeInfoCell", for: indexPath) as! TimeInfoTableViewCell
         
         cell.timeColumn?.text = schedule[indexPath.row]
+        cell.timeColumn.lineBreakMode = .byWordWrapping
+        cell.timeColumn.numberOfLines = 0
         cell.infoColumn?.text = ""
         
         return cell
     }
-    
     
 }

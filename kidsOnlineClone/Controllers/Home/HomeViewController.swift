@@ -10,7 +10,6 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet var homeTableView: UITableView!
-    @IBOutlet var timeInfoTableView: UITableView!
     
     var scheduleDates = ["Chu nhat, 05/09/2021", "Thu bay, 04/09/2021", "Thu sau, 03/09/2021", "Thu nam, 02/09/2021", "Thu tu, 01/09/2021", "Thu ba, 31/08/2021", "Thu hai, 30/08/2021"]
     
@@ -25,6 +24,7 @@ class HomeViewController: UIViewController {
         
         homeTableView.dataSource = self
         homeTableView.delegate = self
+        homeTableView.isScrollEnabled = true
     }
 
 }

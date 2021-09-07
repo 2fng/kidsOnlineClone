@@ -79,12 +79,12 @@
                                     <constraint firstItem="iI6-0p-0tp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xRc-Il-3f6" secondAttribute="trailing" constant="8" symbolic="YES" id="b6L-6O-3Iq"/>
                                     <constraint firstItem="xRc-Il-3f6" firstAttribute="leading" secondItem="2wm-EC-6dj" secondAttribute="trailing" constant="10" id="f6G-Oa-23i"/>
                                     <constraint firstItem="iI6-0p-0tp" firstAttribute="top" secondItem="Pln-Xq-IWm" secondAttribute="top" constant="15" id="lym-2X-bZL"/>
+                                    <constraint firstAttribute="height" constant="50" id="n3m-Z7-DrN"/>
                                     <constraint firstAttribute="trailing" secondItem="iI6-0p-0tp" secondAttribute="trailing" constant="25" id="ts0-aQ-raE"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z9q-yg-cw1">
                                 <rect key="frame" x="0.0" y="138" width="414" height="675"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="datacell" rowHeight="534" id="fHH-Vm-f3y" customClass="HomeTableViewCell" customModule="kidsOnlineClone" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="534"/>
@@ -158,11 +158,11 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SrK-XT-QTX">
                                                             <rect key="frame" x="-3" y="116" width="402" height="40"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book.closed.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hFD-NO-pNF">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="81" height="40"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.max.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hFD-NO-pNF">
+                                                                    <rect key="frame" x="0.0" y="-0.5" width="91.5" height="40.5"/>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buoi sang" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yyk-kr-wmy">
-                                                                    <rect key="frame" x="89" y="0.0" width="313" height="40"/>
+                                                                    <rect key="frame" x="99.5" y="0.0" width="302.5" height="40"/>
                                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -200,7 +200,6 @@
                                                         </stackView>
                                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j9w-XW-VjR">
                                                             <rect key="frame" x="15" y="201.5" width="369" height="244.5"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <prototypes>
                                                                 <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timeInfoCell" rowHeight="338" id="GmQ-KO-V6w" customClass="TimeInfoTableViewCell" customModule="kidsOnlineClone" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="24.5" width="369" height="338"/>
@@ -304,7 +303,6 @@
                         <constraints>
                             <constraint firstItem="Pln-Xq-IWm" firstAttribute="leading" secondItem="bnu-GM-zN4" secondAttribute="leading" id="BYg-oY-DGw"/>
                             <constraint firstItem="Pln-Xq-IWm" firstAttribute="top" secondItem="bnu-GM-zN4" secondAttribute="top" id="Nvn-jN-T5k"/>
-                            <constraint firstItem="bnu-GM-zN4" firstAttribute="bottom" secondItem="Pln-Xq-IWm" secondAttribute="bottom" constant="675" id="SuK-Ni-cjR"/>
                             <constraint firstItem="Z9q-yg-cw1" firstAttribute="leading" secondItem="bnu-GM-zN4" secondAttribute="leading" id="Wec-ar-RqN"/>
                             <constraint firstItem="Z9q-yg-cw1" firstAttribute="top" secondItem="Pln-Xq-IWm" secondAttribute="bottom" id="b2O-Ps-a35"/>
                             <constraint firstItem="Z9q-yg-cw1" firstAttribute="trailing" secondItem="bnu-GM-zN4" secondAttribute="trailing" id="e7J-tS-gzr"/>
@@ -374,7 +372,7 @@
         <!--Thông báo-->
         <scene sceneID="bNg-gP-dk7">
             <objects>
-                <tableViewController id="eLp-xW-zeP" sceneMemberID="viewController">
+                <tableViewController id="eLp-xW-zeP" customClass="ThongBaoTableViewController" customModule="kidsOnlineClone" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="c5b-Zs-kzj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -489,6 +487,7 @@
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <image name="quote.bubble.fill" catalog="system" width="128" height="110"/>
+        <image name="sun.max.fill" catalog="system" width="128" height="124"/>
         <image name="tray.and.arrow.down.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -16,6 +16,9 @@
 		DFCAB16526E5EB4800EB718E /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB16426E5EB4800EB718E /* Student.swift */; };
 		DFCAB16826E5F8E400EB718E /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB16726E5F8E400EB718E /* HomeTableViewCell.swift */; };
 		DFCAB16A26E60FFF00EB718E /* TimeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB16926E60FFE00EB718E /* TimeInfoTableViewCell.swift */; };
+		DFCAB16E26E6F88500EB718E /* ThongBaoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB16D26E6F88400EB718E /* ThongBaoTableViewController.swift */; };
+		DFCAB17626E6FC6300EB718E /* ThongBaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB17426E6FC6300EB718E /* ThongBaoTableViewCell.swift */; };
+		DFCAB17726E6FC6300EB718E /* ThongBaoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB17526E6FC6300EB718E /* ThongBaoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		DFCAB16426E5EB4800EB718E /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		DFCAB16726E5F8E400EB718E /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		DFCAB16926E60FFE00EB718E /* TimeInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInfoTableViewCell.swift; sourceTree = "<group>"; };
+		DFCAB16D26E6F88400EB718E /* ThongBaoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThongBaoTableViewController.swift; sourceTree = "<group>"; };
+		DFCAB17426E6FC6300EB718E /* ThongBaoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThongBaoTableViewCell.swift; sourceTree = "<group>"; };
+		DFCAB17526E6FC6300EB718E /* ThongBaoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThongBaoTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 		DFCAB15526E5D33100EB718E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DFCAB16F26E6FB7700EB718E /* ThongBao */,
 				DFCAB16626E5F8CD00EB718E /* Home */,
 			);
 			path = Views;
@@ -94,6 +101,7 @@
 		DFCAB15626E5D33F00EB718E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DFCAB16B26E6F83900EB718E /* ThongBao */,
 				DFCAB15726E5D42C00EB718E /* Home */,
 			);
 			path = Controllers;
@@ -114,6 +122,23 @@
 				DFCAB16926E60FFE00EB718E /* TimeInfoTableViewCell.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		DFCAB16B26E6F83900EB718E /* ThongBao */ = {
+			isa = PBXGroup;
+			children = (
+				DFCAB16D26E6F88400EB718E /* ThongBaoTableViewController.swift */,
+			);
+			path = ThongBao;
+			sourceTree = "<group>";
+		};
+		DFCAB16F26E6FB7700EB718E /* ThongBao */ = {
+			isa = PBXGroup;
+			children = (
+				DFCAB17426E6FC6300EB718E /* ThongBaoTableViewCell.swift */,
+				DFCAB17526E6FC6300EB718E /* ThongBaoTableViewCell.xib */,
+			);
+			path = ThongBao;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +201,7 @@
 				DFCAB14D26E5CAF400EB718E /* LaunchScreen.storyboard in Resources */,
 				DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */,
 				DFCAB14826E5CAF100EB718E /* Main.storyboard in Resources */,
+				DFCAB17726E6FC6300EB718E /* ThongBaoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,7 +213,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */,
+				DFCAB16E26E6F88500EB718E /* ThongBaoTableViewController.swift in Sources */,
 				DFCAB16826E5F8E400EB718E /* HomeTableViewCell.swift in Sources */,
+				DFCAB17626E6FC6300EB718E /* ThongBaoTableViewCell.swift in Sources */,
 				DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */,
 				DFCAB16326E5E9AC00EB718E /* HomeViewController.swift in Sources */,
 				DFCAB16A26E60FFF00EB718E /* TimeInfoTableViewCell.swift in Sources */,
