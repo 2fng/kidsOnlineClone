@@ -24,6 +24,8 @@ class ScheduleTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        contentView.backgroundColor = .white
         // Initialization code
     }
 

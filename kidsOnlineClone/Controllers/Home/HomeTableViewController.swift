@@ -27,6 +27,8 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .lightGray
+        
         //set up tableview datasource and delegate
         tableView.dataSource = self
         tableView.delegate = self
@@ -137,6 +139,10 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(appData[indexPath.section]["date"])")
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20
     }
     
 }
