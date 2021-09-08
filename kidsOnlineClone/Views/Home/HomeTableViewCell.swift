@@ -29,7 +29,7 @@ class HomeTableViewCell: UITableViewCell {
         
         timeInfoTable.dataSource = self
         timeInfoTable.delegate = self
-        timeInfoTable.isScrollEnabled = false
+        timeInfoTable.isScrollEnabled = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -40,11 +40,7 @@ class HomeTableViewCell: UITableViewCell {
 
 }
 
-extension HomeTableViewCell: UITableViewDataSource, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped me!")
-    }
+extension HomeTableViewCell: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         schedule.count
@@ -57,8 +53,21 @@ extension HomeTableViewCell: UITableViewDataSource, UITableViewDelegate {
         cell.timeColumn.lineBreakMode = .byWordWrapping
         cell.timeColumn.numberOfLines = 0
         cell.infoColumn?.text = ""
-        
+        cell.timeColumn.layer.borderWidth = 1
+        cell.timeColumn.layer.borderColor  = UIColor.black.cgColor
         return cell
+    }
+    
+}
+
+extension HomeTableViewCell: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You tapped me!")
     }
     
 }

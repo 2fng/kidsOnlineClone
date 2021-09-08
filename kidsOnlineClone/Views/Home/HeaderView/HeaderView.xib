@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="kidsOnlineClone" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="j6A-us-Ivp"/>
+                <outlet property="label" destination="P37-HA-s1d" id="I7h-Ue-c0M"/>
+                <outlet property="leftButton" destination="7bg-48-mwQ" id="bFe-SO-4lb"/>
+                <outlet property="rightButton" destination="lz1-Pa-hDy" id="KUN-zq-ofg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bg-48-mwQ">
+                    <rect key="frame" x="15" y="10" width="20" height="30"/>
+                    <state key="normal" image="person.circle" catalog="system"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đang xem thông tin bé Cát Tiên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P37-HA-s1d">
+                    <rect key="frame" x="45" y="10" width="240.5" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lz1-Pa-hDy">
+                    <rect key="frame" x="380" y="10" width="19" height="30"/>
+                    <state key="normal" image="square.and.arrow.down" catalog="system"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="lz1-Pa-hDy" secondAttribute="trailing" constant="15" id="6Tx-El-fuj"/>
+                <constraint firstItem="lz1-Pa-hDy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="DuL-x0-nAG"/>
+                <constraint firstItem="7bg-48-mwQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="K0y-CD-g7U"/>
+                <constraint firstItem="7bg-48-mwQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Opm-Af-rH0"/>
+                <constraint firstItem="P37-HA-s1d" firstAttribute="leading" secondItem="7bg-48-mwQ" secondAttribute="trailing" constant="10" id="RJ0-oX-Ofr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="lz1-Pa-hDy" secondAttribute="bottom" constant="10" id="aci-nH-7ae"/>
+                <constraint firstItem="P37-HA-s1d" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="s3B-Vb-Frb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7bg-48-mwQ" secondAttribute="bottom" constant="10" id="ul2-Sa-22z"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="P37-HA-s1d" secondAttribute="bottom" constant="10" id="yLM-Kf-fhH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-193.52678571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

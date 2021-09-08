@@ -340,35 +340,6 @@
             </objects>
             <point key="canvasLocation" x="1831.8840579710147" y="87.723214285714278"/>
         </scene>
-        <!--Tính năng-->
-        <scene sceneID="d9R-ML-Eik">
-            <objects>
-                <tableViewController id="AdK-3B-xG9" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SxA-eC-OqV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="VAR-2B-z0F">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VAR-2B-z0F" id="UiT-wG-HIf">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="AdK-3B-xG9" id="YFj-gY-21A"/>
-                            <outlet property="delegate" destination="AdK-3B-xG9" id="mZs-Dl-0PR"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Tính năng" id="a7W-qP-O6G"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XtQ-jR-6AB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="996" y="877"/>
-        </scene>
         <!--Thông báo-->
         <scene sceneID="bNg-gP-dk7">
             <objects>
@@ -392,7 +363,15 @@
                             <outlet property="delegate" destination="eLp-xW-zeP" id="fC1-cm-rch"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Thông báo" id="RKh-lq-m7W"/>
+                    <navigationItem key="navigationItem" title="Thông báo" id="RKh-lq-m7W">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="TLr-cz-fse">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jU6-L9-bJe">
+                                <rect key="frame" x="266" y="0.0" width="128" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="square.and.pencil" catalog="system"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GyY-Ff-WPL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -471,24 +450,90 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="AdK-3B-xG9" kind="relationship" relationship="rootViewController" id="1ks-qM-I2s"/>
+                        <segue destination="evm-DU-EEv" kind="relationship" relationship="rootViewController" id="81h-5Q-5MF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGW-nF-6fa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="103" y="877"/>
         </scene>
+        <!--Tinh Nang View Controller-->
+        <scene sceneID="kUG-be-4LQ">
+            <objects>
+                <viewController id="evm-DU-EEv" customClass="TinhNangViewController" customModule="kidsOnlineClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hPX-Ia-1Hp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D95-y1-hcl">
+                                <rect key="frame" x="20" y="88" width="374" height="350"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="wh0-hy-O03"/>
+                                </constraints>
+                            </tableView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="4di-Ki-ayU">
+                                <rect key="frame" x="156" y="438" width="102.5" height="27.5"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="linkColor"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="K6a-uC-hug"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4di-Ki-ayU" firstAttribute="top" secondItem="D95-y1-hcl" secondAttribute="bottom" id="EN9-M0-Sf7"/>
+                            <constraint firstItem="4di-Ki-ayU" firstAttribute="centerX" secondItem="D95-y1-hcl" secondAttribute="centerX" id="Hzl-ot-3gz"/>
+                            <constraint firstItem="K6a-uC-hug" firstAttribute="trailing" secondItem="D95-y1-hcl" secondAttribute="trailing" constant="20" id="PIu-Vk-tjz"/>
+                            <constraint firstItem="D95-y1-hcl" firstAttribute="leading" secondItem="K6a-uC-hug" secondAttribute="leading" constant="20" id="VoK-f2-cLP"/>
+                            <constraint firstItem="D95-y1-hcl" firstAttribute="top" secondItem="K6a-uC-hug" secondAttribute="top" id="h5a-4M-OUJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8VE-gU-joW">
+                        <leftBarButtonItems>
+                            <barButtonItem style="plain" id="xbe-av-NX7">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="I1L-aX-kHe">
+                                    <rect key="frame" x="20" y="0.0" width="21" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="calendar" catalog="system"/>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="pxG-WO-Lu8">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="g4F-Pv-CZq">
+                                    <rect key="frame" x="49" y="2.5" width="235" height="39"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <state key="normal" title="Tương tác với nhà trường">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tinhNangPageControl" destination="4di-Ki-ayU" id="FPx-5h-Q97"/>
+                        <outlet property="tinhNangTableView" destination="D95-y1-hcl" id="Fcl-Mp-48X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RMh-eU-Qqm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="877"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="book.closed.fill" catalog="system" width="115" height="128"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="gearshape.2.fill" catalog="system" width="128" height="100"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="phone.fill" catalog="system" width="128" height="114"/>
         <image name="quote.bubble.fill" catalog="system" width="128" height="110"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="sun.max.fill" catalog="system" width="128" height="124"/>
         <image name="tray.and.arrow.down.fill" catalog="system" width="128" height="114"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
