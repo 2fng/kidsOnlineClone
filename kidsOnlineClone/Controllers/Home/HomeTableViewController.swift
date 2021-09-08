@@ -43,6 +43,10 @@ class HomeTableViewController: UITableViewController {
         //Create talbe
         setupTalbeViewHeader()
         
+        //Register Cells
+        tableView.register(ScheduleTableViewCell.nib(), forCellReuseIdentifier: ScheduleTableViewCell.identifier)
+        
+        
     }
     
     func setupTalbeViewHeader() {
@@ -65,18 +69,47 @@ class HomeTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 2
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        if appData[indexPath.row]["type"] == "1" {
+            switch indexPath.row {
+            case 0:
+                let cell = tableView.dequeueReusableCell(withIdentifier: ScheduleTableViewCell.identifier) as! ScheduleTableViewCell
+
+                cell.date.text = appData[indexPath.row]["date"]
+                cell.title.text = appData[indexPath.row]["title"]
+                cell.date2.text = appData[indexPath.row]["date"]
+                cell.title2.text = appData[indexPath.row]["subTitle"]
+
+                return cell
+            case 1:
+                return UITableViewCell()
+            default:
+                return UITableViewCell()
+            }
+            
+        }
+        
+        return UITableViewCell()
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200.0
     }
     
     // MARK: - Table view delegate
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("I was tapped")
+        print("\(appData[indexPath.row]["date"])")
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

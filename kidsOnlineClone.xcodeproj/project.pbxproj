@@ -33,8 +33,6 @@
 		DFCAB19926E864D500EB718E /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB19726E864D500EB718E /* ScheduleTableViewCell.xib */; };
 		DFCAB19D26E86CD900EB718E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB19C26E86CD800EB718E /* HeaderView.swift */; };
 		DFCAB19F26E86CE900EB718E /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB19E26E86CE900EB718E /* HeaderView.xib */; };
-		DFCAB1A326E8937B00EB718E /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB1A126E8937B00EB718E /* ScheduleTableViewCell.swift */; };
-		DFCAB1A426E8937B00EB718E /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB1A226E8937B00EB718E /* ScheduleTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,8 +64,6 @@
 		DFCAB19726E864D500EB718E /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		DFCAB19C26E86CD800EB718E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		DFCAB19E26E86CE900EB718E /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
-		DFCAB1A126E8937B00EB718E /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
-		DFCAB1A226E8937B00EB718E /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +155,6 @@
 				DFCAB19B26E86CC600EB718E /* HeaderView */,
 				DFCAB16726E5F8E400EB718E /* HomeTableViewCell.swift */,
 				DFCAB16926E60FFE00EB718E /* TimeInfoTableViewCell.swift */,
-				DFCAB19626E864D500EB718E /* ScheduleTableViewCell.swift */,
-				DFCAB19726E864D500EB718E /* ScheduleTableViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -231,8 +225,8 @@
 		DFCAB1A026E8935700EB718E /* ScheduleCell */ = {
 			isa = PBXGroup;
 			children = (
-				DFCAB1A126E8937B00EB718E /* ScheduleTableViewCell.swift */,
-				DFCAB1A226E8937B00EB718E /* ScheduleTableViewCell.xib */,
+				DFCAB19626E864D500EB718E /* ScheduleTableViewCell.swift */,
+				DFCAB19726E864D500EB718E /* ScheduleTableViewCell.xib */,
 			);
 			path = ScheduleCell;
 			sourceTree = "<group>";
@@ -304,7 +298,6 @@
 				DFCAB17F26E7185800EB718E /* TinhNangTableViewCell.xib in Resources */,
 				DFCAB14826E5CAF100EB718E /* Main.storyboard in Resources */,
 				DFCAB19526E8621C00EB718E /* HomeTableViewController.xib in Resources */,
-				DFCAB1A426E8937B00EB718E /* ScheduleTableViewCell.xib in Resources */,
 				DFCAB17726E6FC6300EB718E /* ThongBaoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,7 +315,6 @@
 				DFCAB16826E5F8E400EB718E /* HomeTableViewCell.swift in Sources */,
 				DFCAB17626E6FC6300EB718E /* ThongBaoTableViewCell.swift in Sources */,
 				DFCAB18726E8458200EB718E /* TaiKhoanViewController.swift in Sources */,
-				DFCAB1A326E8937B00EB718E /* ScheduleTableViewCell.swift in Sources */,
 				DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */,
 				DFCAB18226E7192700EB718E /* ButtonsCollectionViewCell.swift in Sources */,
 				DFCAB19826E864D500EB718E /* ScheduleTableViewCell.swift in Sources */,

@@ -9,8 +9,16 @@ import UIKit
 
 class ScheduleTableViewCell: UITableViewCell {
     
-    static let identifier = "scheduleCell"
+    static var identifier = "scheduleCell"
     
+    @IBOutlet var title: UILabel!
+    @IBOutlet var date: UILabel!
+    @IBOutlet var title2: UILabel!
+    @IBOutlet var date2: UILabel!
+    
+    static func nib() -> UINib {
+        return UINib(nibName: "ScheduleTableViewCell", bundle: nil)
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,5 +30,5 @@ class ScheduleTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

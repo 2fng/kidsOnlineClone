@@ -14,6 +14,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="k3I-9H-XkH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FE1-tV-BDA">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -45,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="968" y="88"/>
         </scene>
-        <!--Home View Controller-->
+        <!--View Controller-->
         <scene sceneID="nCM-us-CpG">
             <objects>
-                <viewController id="K9k-pR-bcV" customClass="HomeViewController" customModule="kidsOnlineClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="K9k-pR-bcV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uWj-ck-sYh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
