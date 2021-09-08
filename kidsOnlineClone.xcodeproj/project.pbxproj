@@ -11,7 +11,6 @@
 		DF33AC8C26E8B2A80000E137 /* TimeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF33AC8A26E8B2A80000E137 /* TimeInfoTableViewCell.xib */; };
 		DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14026E5CAF100EB718E /* AppDelegate.swift */; };
 		DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */; };
-		DFCAB14826E5CAF100EB718E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB14626E5CAF100EB718E /* Main.storyboard */; };
 		DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB14926E5CAF400EB718E /* Assets.xcassets */; };
 		DFCAB14D26E5CAF400EB718E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB14B26E5CAF400EB718E /* LaunchScreen.storyboard */; };
 		DFCAB16526E5EB4800EB718E /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB16426E5EB4800EB718E /* Student.swift */; };
@@ -42,7 +41,6 @@
 		DFCAB13D26E5CAF100EB718E /* kidsOnlineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsOnlineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCAB14026E5CAF100EB718E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DFCAB14726E5CAF100EB718E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DFCAB14926E5CAF400EB718E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFCAB14C26E5CAF400EB718E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFCAB14E26E5CAF400EB718E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 				DFCAB15426E5D32800EB718E /* Models */,
 				DFCAB14026E5CAF100EB718E /* AppDelegate.swift */,
 				DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */,
-				DFCAB14626E5CAF100EB718E /* Main.storyboard */,
 				DFCAB14926E5CAF400EB718E /* Assets.xcassets */,
 				DFCAB14B26E5CAF400EB718E /* LaunchScreen.storyboard */,
 				DFCAB14E26E5CAF400EB718E /* Info.plist */,
@@ -300,7 +297,6 @@
 				DFCAB19926E864D500EB718E /* ScheduleTableViewCell.xib in Resources */,
 				DFCAB18D26E847D400EB718E /* TabBarViewController.xib in Resources */,
 				DFCAB17F26E7185800EB718E /* TinhNangTableViewCell.xib in Resources */,
-				DFCAB14826E5CAF100EB718E /* Main.storyboard in Resources */,
 				DFCAB19526E8621C00EB718E /* HomeTableViewController.xib in Resources */,
 				DFCAB17726E6FC6300EB718E /* ThongBaoTableViewCell.xib in Resources */,
 			);
@@ -334,14 +330,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DFCAB14626E5CAF100EB718E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DFCAB14726E5CAF100EB718E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DFCAB14B26E5CAF400EB718E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
