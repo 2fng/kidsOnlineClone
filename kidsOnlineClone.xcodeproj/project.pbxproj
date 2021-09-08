@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF33AC8B26E8B2A80000E137 /* TimeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF33AC8926E8B2A80000E137 /* TimeInfoTableViewCell.swift */; };
+		DF33AC8C26E8B2A80000E137 /* TimeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF33AC8A26E8B2A80000E137 /* TimeInfoTableViewCell.xib */; };
 		DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14026E5CAF100EB718E /* AppDelegate.swift */; };
 		DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */; };
 		DFCAB14826E5CAF100EB718E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB14626E5CAF100EB718E /* Main.storyboard */; };
@@ -14,7 +16,6 @@
 		DFCAB14D26E5CAF400EB718E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB14B26E5CAF400EB718E /* LaunchScreen.storyboard */; };
 		DFCAB16526E5EB4800EB718E /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB16426E5EB4800EB718E /* Student.swift */; };
 		DFCAB16826E5F8E400EB718E /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB16726E5F8E400EB718E /* HomeTableViewCell.swift */; };
-		DFCAB16A26E60FFF00EB718E /* TimeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB16926E60FFE00EB718E /* TimeInfoTableViewCell.swift */; };
 		DFCAB16E26E6F88500EB718E /* ThongBaoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB16D26E6F88400EB718E /* ThongBaoTableViewController.swift */; };
 		DFCAB17626E6FC6300EB718E /* ThongBaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB17426E6FC6300EB718E /* ThongBaoTableViewCell.swift */; };
 		DFCAB17726E6FC6300EB718E /* ThongBaoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB17526E6FC6300EB718E /* ThongBaoTableViewCell.xib */; };
@@ -36,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF33AC8926E8B2A80000E137 /* TimeInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInfoTableViewCell.swift; sourceTree = "<group>"; };
+		DF33AC8A26E8B2A80000E137 /* TimeInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeInfoTableViewCell.xib; sourceTree = "<group>"; };
 		DFCAB13D26E5CAF100EB718E /* kidsOnlineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsOnlineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCAB14026E5CAF100EB718E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +48,6 @@
 		DFCAB14E26E5CAF400EB718E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFCAB16426E5EB4800EB718E /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		DFCAB16726E5F8E400EB718E /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		DFCAB16926E60FFE00EB718E /* TimeInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInfoTableViewCell.swift; sourceTree = "<group>"; };
 		DFCAB16D26E6F88400EB718E /* ThongBaoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThongBaoTableViewController.swift; sourceTree = "<group>"; };
 		DFCAB17426E6FC6300EB718E /* ThongBaoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThongBaoTableViewCell.swift; sourceTree = "<group>"; };
 		DFCAB17526E6FC6300EB718E /* ThongBaoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThongBaoTableViewCell.xib; sourceTree = "<group>"; };
@@ -154,7 +156,6 @@
 				DFCAB1A026E8935700EB718E /* ScheduleCell */,
 				DFCAB19B26E86CC600EB718E /* HeaderView */,
 				DFCAB16726E5F8E400EB718E /* HomeTableViewCell.swift */,
-				DFCAB16926E60FFE00EB718E /* TimeInfoTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -227,6 +228,8 @@
 			children = (
 				DFCAB19626E864D500EB718E /* ScheduleTableViewCell.swift */,
 				DFCAB19726E864D500EB718E /* ScheduleTableViewCell.xib */,
+				DF33AC8926E8B2A80000E137 /* TimeInfoTableViewCell.swift */,
+				DF33AC8A26E8B2A80000E137 /* TimeInfoTableViewCell.xib */,
 			);
 			path = ScheduleCell;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				DFCAB14D26E5CAF400EB718E /* LaunchScreen.storyboard in Resources */,
 				DFCAB18826E8458200EB718E /* TaiKhoanViewController.xib in Resources */,
 				DFCAB19F26E86CE900EB718E /* HeaderView.xib in Resources */,
+				DF33AC8C26E8B2A80000E137 /* TimeInfoTableViewCell.xib in Resources */,
 				DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */,
 				DFCAB19926E864D500EB718E /* ScheduleTableViewCell.xib in Resources */,
 				DFCAB18D26E847D400EB718E /* TabBarViewController.xib in Resources */,
@@ -319,8 +323,8 @@
 				DFCAB18226E7192700EB718E /* ButtonsCollectionViewCell.swift in Sources */,
 				DFCAB19826E864D500EB718E /* ScheduleTableViewCell.swift in Sources */,
 				DFCAB19426E8621C00EB718E /* HomeTableViewController.swift in Sources */,
+				DF33AC8B26E8B2A80000E137 /* TimeInfoTableViewCell.swift in Sources */,
 				DFCAB19D26E86CD900EB718E /* HeaderView.swift in Sources */,
-				DFCAB16A26E60FFF00EB718E /* TimeInfoTableViewCell.swift in Sources */,
 				DFCAB18C26E847D400EB718E /* TabBarViewController.swift in Sources */,
 				DFCAB17A26E7165600EB718E /* TinhNangViewController.swift in Sources */,
 				DFCAB16526E5EB4800EB718E /* Student.swift in Sources */,

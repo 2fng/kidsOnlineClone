@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleCell" rowHeight="209" id="KGk-i7-Jjw" customClass="ScheduleTableViewCell" customModule="kidsOnlineClone" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="495" height="209"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleCell" rowHeight="273" id="KGk-i7-Jjw" customClass="ScheduleTableViewCell" customModule="kidsOnlineClone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="495" height="273"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="495" height="209"/>
+                <rect key="frame" x="0.0" y="0.0" width="495" height="273"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uRk-uH-3qb">
@@ -80,26 +80,51 @@
                             </label>
                         </subviews>
                     </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pK2-Tf-mXD">
+                        <rect key="frame" x="35" y="209" width="425" height="20.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Thời gian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1n-Zk-BsV">
+                                <rect key="frame" x="0.0" y="0.0" width="75" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="41i-pc-tqt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nội dung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gho-oj-gKa">
+                                <rect key="frame" x="75" y="0.0" width="350" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="uRk-uH-3qb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="7Ac-Ub-8yp"/>
                     <constraint firstItem="Nql-KE-fdu" firstAttribute="top" secondItem="uRk-uH-3qb" secondAttribute="bottom" constant="10" id="8D7-ks-yLp"/>
+                    <constraint firstAttribute="trailing" secondItem="pK2-Tf-mXD" secondAttribute="trailing" constant="35" id="D0t-o0-QRj"/>
+                    <constraint firstItem="pK2-Tf-mXD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="Dqy-ad-3D1"/>
                     <constraint firstItem="MKk-Uq-jvn" firstAttribute="leading" secondItem="uRk-uH-3qb" secondAttribute="leading" id="HDm-2b-YMb"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Nql-KE-fdu" secondAttribute="trailing" constant="15" id="K8T-IZ-rBd"/>
                     <constraint firstItem="Nql-KE-fdu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="15" id="VCy-dr-dsc"/>
                     <constraint firstItem="MKk-Uq-jvn" firstAttribute="top" secondItem="Nql-KE-fdu" secondAttribute="bottom" constant="20" id="qDn-3c-Tz7"/>
                     <constraint firstAttribute="trailing" secondItem="uRk-uH-3qb" secondAttribute="trailing" constant="15" id="qvC-KZ-dPS"/>
                     <constraint firstItem="uRk-uH-3qb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="s2M-kE-YIz"/>
+                    <constraint firstItem="pK2-Tf-mXD" firstAttribute="top" secondItem="MKk-Uq-jvn" secondAttribute="bottom" constant="20" id="ywb-Dx-eqa"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="date" destination="pky-XK-qZa" id="7kT-cA-LdP"/>
                 <outlet property="date2" destination="t8b-lK-CUv" id="tyo-it-bDJ"/>
+                <outlet property="infoColumn" destination="gho-oj-gKa" id="k9y-AA-zVj"/>
+                <outlet property="timeColumn" destination="j1n-Zk-BsV" id="ibi-oB-1fv"/>
                 <outlet property="title" destination="YGq-hz-zZb" id="WeW-ok-lKz"/>
                 <outlet property="title2" destination="D3e-yj-2kh" id="l8p-G6-l4R"/>
             </connections>
-            <point key="canvasLocation" x="236.95652173913047" y="66.629464285714278"/>
+            <point key="canvasLocation" x="236.95652173913047" y="87.388392857142847"/>
         </tableViewCell>
     </objects>
     <resources>

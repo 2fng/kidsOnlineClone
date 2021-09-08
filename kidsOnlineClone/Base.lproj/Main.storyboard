@@ -242,10 +242,6 @@
                                                                             <constraint firstItem="7AH-M5-BdN" firstAttribute="leading" secondItem="YSo-ov-pIh" secondAttribute="leadingMargin" id="nsl-jg-SqN"/>
                                                                         </constraints>
                                                                     </tableViewCellContentView>
-                                                                    <connections>
-                                                                        <outlet property="infoColumn" destination="KTC-yH-8Id" id="CLG-f3-e9g"/>
-                                                                        <outlet property="timeColumn" destination="Ucj-uu-tv9" id="cJa-aT-nqI"/>
-                                                                    </connections>
                                                                 </tableViewCell>
                                                             </prototypes>
                                                         </tableView>

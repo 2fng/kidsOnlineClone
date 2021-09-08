@@ -15,6 +15,8 @@ class ScheduleTableViewCell: UITableViewCell {
     @IBOutlet var date: UILabel!
     @IBOutlet var title2: UILabel!
     @IBOutlet var date2: UILabel!
+    @IBOutlet var timeColumn: UILabel!
+    @IBOutlet var infoColumn: UILabel!
     
     static func nib() -> UINib {
         return UINib(nibName: "ScheduleTableViewCell", bundle: nil)

@@ -45,6 +45,7 @@ class HomeTableViewController: UITableViewController {
         
         //Register Cells
         tableView.register(ScheduleTableViewCell.nib(), forCellReuseIdentifier: ScheduleTableViewCell.identifier)
+        tableView.register(TimeInfoTableViewCell.nib(), forCellReuseIdentifier: TimeInfoTableViewCell.identifier)
         
         
     }
@@ -69,32 +70,52 @@ class HomeTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 3
+        return appData.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return schedule.count+1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        if appData[indexPath.row]["type"] == "1" {
+        if appData[indexPath.section]["type"] == "1" {
             switch indexPath.row {
             case 0:
                 let cell = tableView.dequeueReusableCell(withIdentifier: ScheduleTableViewCell.identifier) as! ScheduleTableViewCell
 
-                cell.date.text = appData[indexPath.row]["date"]
-                cell.title.text = appData[indexPath.row]["title"]
-                cell.date2.text = appData[indexPath.row]["date"]
-                cell.title2.text = appData[indexPath.row]["subTitle"]
+                cell.date.text = appData[indexPath.section]["date"]
+                cell.title.text = appData[indexPath.section]["title"]
+                cell.date2.text = appData[indexPath.section]["date"]
+                cell.title2.text = appData[indexPath.section]["subTitle"]
+                
+                //cell.timeColumn.layer.cornerRadius = 4
+                cell.timeColumn.layer.borderWidth = 1
+                cell.timeColumn.layer.borderColor = UIColor(named: "blue")?.cgColor
+                
+                //cell.infoColumn.layer.cornerRadius = 4
+                cell.infoColumn.layer.borderWidth = 1
+                cell.infoColumn.layer.borderColor = UIColor(named: "blue")?.cgColor
 
                 return cell
-            case 1:
-                return UITableViewCell()
             default:
-                return UITableViewCell()
+                
+                let cell = tableView.dequeueReusableCell(withIdentifier: TimeInfoTableViewCell.identifier) as! TimeInfoTableViewCell
+                
+                cell.timeColumn.text = schedule[indexPath.row-1]
+                cell.infoColumn.text = activity[indexPath.row-1]
+                
+                //cell.timeColumn.layer.cornerRadius = 4
+                cell.timeColumn.layer.borderWidth = 1
+                cell.timeColumn.layer.borderColor = UIColor(named: "blue")?.cgColor
+                
+                //cell.infoColumn.layer.cornerRadius = 4
+                cell.infoColumn.layer.borderWidth = 1
+                cell.infoColumn.layer.borderColor = UIColor(named: "blue")?.cgColor
+                
+                return cell
             }
             
         }
@@ -103,13 +124,18 @@ class HomeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200.0
+        switch indexPath.row {
+        case 0:
+            return 230.0
+        default:
+            return 20
+        }
     }
     
     // MARK: - Table view delegate
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("\(appData[indexPath.row]["date"])")
+        print("\(appData[indexPath.section]["date"])")
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
