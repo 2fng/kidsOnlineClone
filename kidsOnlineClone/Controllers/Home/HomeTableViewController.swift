@@ -10,7 +10,10 @@ import UIKit
 class HomeTableViewController: UITableViewController {
     
     //Data sample
-    var appData = [["date": "08/09/2021", "title": "Hoat dong hoc cua be Cat Tien", "subTitle": "Ke hoach thang 9", "subTitleDetail": "Tuan 1 thang 9 nam 2021", "type": "1"]]
+    var appData = [["date": "08/09/2021", "title": "Hoat dong hoc cua be Cat Tien", "subTitle": "Ke hoach thang 9", "subTitleDetail": "Tuan 1 thang 9 nam 2021", "type": "1"],
+                   ["date": "09/09/2021", "title": "Hoat dong hoc cua be Cat Tien", "subTitle": "Ke hoach thang 9", "subTitleDetail": "Tuan 1 thang 9 nam 2021", "type": "1"],
+                   ["date": "10/09/2021", "title": "Hoat dong hoc cua be Cat Tien", "subTitle": "Ke hoach thang 9", "subTitleDetail": "Tuan 1 thang 9 nam 2021", "type": "1"]
+    ]
     
     var schedule = ["7:00 AM", "8:30 AM", "9:00 AM", "9:45 AM", "10:15 AM", "11:00 AM", "12:00 AM"]
     var activity = ["Don tre, tap the duc", "An sang", "HD ngoai troi", "Hoc nhac", "Hoc toan", "An trua", "Ngu trua"]
@@ -37,27 +40,8 @@ class HomeTableViewController: UITableViewController {
         //register cell
         tableView.register(UINib(nibName: "ScheduleTableViewCell", bundle: nil), forCellReuseIdentifier: "scheduleCell")
         
+        //Create talbe
         setupTalbeViewHeader()
-//        //Create table header
-//        let header = HeaderView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width-15, height: 50))
-//        header.backgroundColor = .orange
-//        tableView.tableHeaderView = header
-//
-//        //Create header buttons
-//        let headerLeftButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-//        let headerLabel = UILabel(frame: header.bounds)
-//        let headerRightButton = UIButton()
-//
-//        headerLeftButton.imageView?.image = UIImage(systemName: "phone")
-//
-//        headerLabel.text = "Dang xem thong tin be Cat Tien"
-//        headerLabel.textAlignment = .center
-//        headerRightButton.imageView?.image = UIImage(systemName: "quote.bubble")
-//
-//        //Add to header
-//        header.addSubview(headerLeftButton)
-//        header.addSubview(headerLabel)
-//        header.addSubview(headerRightButton)
         
     }
     
