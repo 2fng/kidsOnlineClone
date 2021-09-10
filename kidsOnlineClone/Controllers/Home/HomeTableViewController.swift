@@ -10,9 +10,8 @@ import UIKit
 class HomeTableViewController: UITableViewController {
     
     //Data sample
-    var appData = [["date": "08/09/2021", "title": "Hoat dong hoc cua be Cat Tien", "subTitle": "Ke hoach thang 9", "subTitleDetail": "Tuan 1 thang 9 nam 2021", "type": "1"],
-                   ["date": "09/09/2021", "title": "Hoat dong hoc cua be Cat Tien", "subTitle": "Ke hoach thang 9", "subTitleDetail": "Tuan 1 thang 9 nam 2021", "type": "1"],
-                   ["date": "10/09/2021", "title": "Hoat dong hoc cua be Cat Tien", "subTitle": "Ke hoach thang 9", "subTitleDetail": "Tuan 1 thang 9 nam 2021", "type": "1"]
+    var appData = [["date": "08/09/2021", "title": "Hoat dong hoc cua be Cat Tien", "subTitle": "Ke hoach thang 9", "subTitleDetail": "Tuan 1 thang 9 nam 2021", "image": "", "isLiked": "", "likes": "0", "type": "1"],
+                   ["date": "09/09/2021", "title": "Cam nang phong benh mua he cho tre", "subTitle": "", "subTitleDetail": "", "image": "image2", "isLiked": "false", "likes": "0", "type": "2"]
     ]
     
     var schedule = ["7:00 AM", "8:30 AM", "9:00 AM", "9:45 AM", "10:15 AM", "11:00 AM", "12:00 AM"]
@@ -48,6 +47,7 @@ class HomeTableViewController: UITableViewController {
         //Register Cells
         tableView.register(ScheduleTableViewCell.nib(), forCellReuseIdentifier: ScheduleTableViewCell.identifier)
         tableView.register(TimeInfoTableViewCell.nib(), forCellReuseIdentifier: TimeInfoTableViewCell.identifier)
+        tableView.register(BaiVietTableViewCell.nib(), forCellReuseIdentifier: BaiVietTableViewCell.identifier)
         
         
     }
@@ -77,7 +77,11 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return schedule.count+1
+        if section == 0 {
+            return schedule.count+1
+        }
+        
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -123,6 +127,23 @@ class HomeTableViewController: UITableViewController {
             
         }
         
+        if appData[indexPath.section]["type"] == "2" {
+            
+            let heartImage = appData[indexPath.section]["isLiked"] == "true" ? "heart.fill" : "heart"
+            let buttonColor = appData[indexPath.section]["isLiked"] == "true" ? UIColor.red : UIColor.black
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: BaiVietTableViewCell.identifier) as! BaiVietTableViewCell
+            
+            cell.title.text = appData[indexPath.section]["title"]
+            cell.date.text = appData[indexPath.section]["date"]
+            cell.thumbNailImage.image = UIImage(named: appData[indexPath.section]["image"] ?? "image1")
+            cell.likeButton.setImage(UIImage(systemName: heartImage), for: .normal)
+            cell.likeButton.tintColor = buttonColor
+            cell.likeCounter.text = appData[indexPath.section]["likes"]
+            
+            return cell
+        }
+        
         return UITableViewCell()
     }
     
@@ -150,10 +171,13 @@ class HomeTableViewController: UITableViewController {
         return 50.0
     }
     
+    
+    // MARK: -Table view header
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width-50, height: 50))
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         
         headerView.backgroundColor = .orange
+        headerView.layer.cornerRadius = 4
         
         return headerView
     }

@@ -10,6 +10,9 @@
 		DF33AC8B26E8B2A80000E137 /* TimeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF33AC8926E8B2A80000E137 /* TimeInfoTableViewCell.swift */; };
 		DF33AC8C26E8B2A80000E137 /* TimeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF33AC8A26E8B2A80000E137 /* TimeInfoTableViewCell.xib */; };
 		DF33AC8E26EAFC0A0000E137 /* TaiKhoanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF33AC8D26EAFC0A0000E137 /* TaiKhoanTableViewController.swift */; };
+		DF33AC9026EAFCA10000E137 /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF33AC8F26EAFCA10000E137 /* HomeTableViewController.xib */; };
+		DF5F930426EAFF49000C9FDC /* BaiVietTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F930226EAFF49000C9FDC /* BaiVietTableViewCell.swift */; };
+		DF5F930526EAFF49000C9FDC /* BaiVietTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F930326EAFF49000C9FDC /* BaiVietTableViewCell.xib */; };
 		DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14026E5CAF100EB718E /* AppDelegate.swift */; };
 		DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */; };
 		DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB14926E5CAF400EB718E /* Assets.xcassets */; };
@@ -27,7 +30,6 @@
 		DFCAB18C26E847D400EB718E /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB18A26E847D400EB718E /* TabBarViewController.swift */; };
 		DFCAB18D26E847D400EB718E /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB18B26E847D400EB718E /* TabBarViewController.xib */; };
 		DFCAB19426E8621C00EB718E /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB19226E8621C00EB718E /* HomeTableViewController.swift */; };
-		DFCAB19526E8621C00EB718E /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB19326E8621C00EB718E /* HomeTableViewController.xib */; };
 		DFCAB19826E864D500EB718E /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB19626E864D500EB718E /* ScheduleTableViewCell.swift */; };
 		DFCAB19926E864D500EB718E /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB19726E864D500EB718E /* ScheduleTableViewCell.xib */; };
 		DFCAB19D26E86CD900EB718E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB19C26E86CD800EB718E /* HeaderView.swift */; };
@@ -38,6 +40,9 @@
 		DF33AC8926E8B2A80000E137 /* TimeInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInfoTableViewCell.swift; sourceTree = "<group>"; };
 		DF33AC8A26E8B2A80000E137 /* TimeInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeInfoTableViewCell.xib; sourceTree = "<group>"; };
 		DF33AC8D26EAFC0A0000E137 /* TaiKhoanTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiKhoanTableViewController.swift; sourceTree = "<group>"; };
+		DF33AC8F26EAFCA10000E137 /* HomeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewController.xib; sourceTree = "<group>"; };
+		DF5F930226EAFF49000C9FDC /* BaiVietTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiVietTableViewCell.swift; sourceTree = "<group>"; };
+		DF5F930326EAFF49000C9FDC /* BaiVietTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiVietTableViewCell.xib; sourceTree = "<group>"; };
 		DFCAB13D26E5CAF100EB718E /* kidsOnlineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsOnlineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCAB14026E5CAF100EB718E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +62,6 @@
 		DFCAB18A26E847D400EB718E /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		DFCAB18B26E847D400EB718E /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		DFCAB19226E8621C00EB718E /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
-		DFCAB19326E8621C00EB718E /* HomeTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewController.xib; sourceTree = "<group>"; };
 		DFCAB19626E864D500EB718E /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		DFCAB19726E864D500EB718E /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		DFCAB19C26E86CD800EB718E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -75,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF5F930126EAFF25000C9FDC /* BaiVietCell */ = {
+			isa = PBXGroup;
+			children = (
+				DF5F930226EAFF49000C9FDC /* BaiVietTableViewCell.swift */,
+				DF5F930326EAFF49000C9FDC /* BaiVietTableViewCell.xib */,
+			);
+			path = BaiVietCell;
+			sourceTree = "<group>";
+		};
 		DFCAB13426E5CAF100EB718E = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				DFCAB19226E8621C00EB718E /* HomeTableViewController.swift */,
-				DFCAB19326E8621C00EB718E /* HomeTableViewController.xib */,
+				DF33AC8F26EAFCA10000E137 /* HomeTableViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -148,6 +161,7 @@
 		DFCAB16626E5F8CD00EB718E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DF5F930126EAFF25000C9FDC /* BaiVietCell */,
 				DFCAB1A026E8935700EB718E /* ScheduleCell */,
 				DFCAB19B26E86CC600EB718E /* HeaderView */,
 				DFCAB16726E5F8E400EB718E /* HomeTableViewCell.swift */,
@@ -285,15 +299,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF33AC9026EAFCA10000E137 /* HomeTableViewController.xib in Resources */,
 				DFCAB18326E7192700EB718E /* ButtonsCollectionViewCell.xib in Resources */,
 				DFCAB14D26E5CAF400EB718E /* LaunchScreen.storyboard in Resources */,
 				DFCAB19F26E86CE900EB718E /* HeaderView.xib in Resources */,
 				DF33AC8C26E8B2A80000E137 /* TimeInfoTableViewCell.xib in Resources */,
+				DF5F930526EAFF49000C9FDC /* BaiVietTableViewCell.xib in Resources */,
 				DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */,
 				DFCAB19926E864D500EB718E /* ScheduleTableViewCell.xib in Resources */,
 				DFCAB18D26E847D400EB718E /* TabBarViewController.xib in Resources */,
 				DFCAB17F26E7185800EB718E /* TinhNangTableViewCell.xib in Resources */,
-				DFCAB19526E8621C00EB718E /* HomeTableViewController.xib in Resources */,
 				DFCAB17726E6FC6300EB718E /* ThongBaoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +332,7 @@
 				DF33AC8B26E8B2A80000E137 /* TimeInfoTableViewCell.swift in Sources */,
 				DFCAB19D26E86CD900EB718E /* HeaderView.swift in Sources */,
 				DF33AC8E26EAFC0A0000E137 /* TaiKhoanTableViewController.swift in Sources */,
+				DF5F930426EAFF49000C9FDC /* BaiVietTableViewCell.swift in Sources */,
 				DFCAB18C26E847D400EB718E /* TabBarViewController.swift in Sources */,
 				DFCAB17A26E7165600EB718E /* TinhNangViewController.swift in Sources */,
 				DFCAB16526E5EB4800EB718E /* Student.swift in Sources */,
