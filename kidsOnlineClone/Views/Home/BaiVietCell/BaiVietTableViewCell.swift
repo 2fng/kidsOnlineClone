@@ -16,7 +16,7 @@ class BaiVietTableViewCell: UITableViewCell {
     @IBOutlet var thumbNailImage: UIImageView!
     @IBOutlet var likeButton: UIButton!
     @IBOutlet var likeCounter: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,10 +26,10 @@ class BaiVietTableViewCell: UITableViewCell {
         return UINib(nibName: "BaiVietTableViewCell", bundle: nil)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        // Configure the view for the selected state
+//    }
     
 }

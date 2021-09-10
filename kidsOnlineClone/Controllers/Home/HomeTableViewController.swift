@@ -9,9 +9,12 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
     
-    //Data sample
+    // MARK: - Data sample
     var appData = [["date": "08/09/2021", "title": "Hoat dong hoc cua be Cat Tien", "subTitle": "Ke hoach thang 9", "subTitleDetail": "Tuan 1 thang 9 nam 2021", "image": "", "isLiked": "", "likes": "0", "type": "1"],
-                   ["date": "09/09/2021", "title": "Cam nang phong benh mua he cho tre", "subTitle": "", "subTitleDetail": "", "image": "image2", "isLiked": "false", "likes": "0", "type": "2"]
+                   ["date": "09/09/2021", "title": "Cam nang phong benh mua he cho tre", "subTitle": "", "subTitleDetail": "", "image": "image2", "isLiked": "false", "likes": "3", "type": "2"],
+                   ["date": "10/09/2021", "title": "Cam nang phong benh mua he cho tre", "subTitle": "", "subTitleDetail": "", "image": "image3", "isLiked": "true", "likes": "4", "type": "2"],
+                   ["date": "11/09/2021", "title": "Cam nang phong benh mua he cho tre", "subTitle": "", "subTitleDetail": "", "image": "image1", "isLiked": "false", "likes": "5", "type": "2"],
+                   ["date": "09/08/2021", "title": "Hoat dong hoc cua be Cat Tien", "subTitle": "Ke hoach thang 8", "subTitleDetail": "Tuan 4 thang 8 nam 2021", "image": "image2", "isLiked": "false", "likes": "3", "type": "1"]
     ]
     
     var schedule = ["7:00 AM", "8:30 AM", "9:00 AM", "9:45 AM", "10:15 AM", "11:00 AM", "12:00 AM"]
@@ -22,7 +25,7 @@ class HomeTableViewController: UITableViewController {
     let callNavButton = UIBarButtonItem(image: UIImage(systemName: "phone"), style: .plain, target: self, action: nil)
     
     
-        
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,6 +55,7 @@ class HomeTableViewController: UITableViewController {
         
     }
     
+    // MARK: - Set up view header
     func setupTalbeViewHeader() {
         let header = HeaderView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 50))
         
@@ -61,9 +65,9 @@ class HomeTableViewController: UITableViewController {
         header.frame.size = size
         
         //Recalculate header size after populated the content
-        size = header.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
-        size.width = UIScreen.main.bounds.width
-        header.frame.size = size
+//        size = header.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
+//        size.width = UIScreen.main.bounds.width
+//        header.frame.size = size
         
         tableView.tableHeaderView = header
     }
@@ -77,20 +81,23 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if section == 0 {
+        if appData[section]["type"] == "1"{
             return schedule.count+1
         }
         
-        return 1
+        else if appData[section]["type"] == "2" {
+            return 1
+        }
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
+        // MARK: - Type 1
         if appData[indexPath.section]["type"] == "1" {
             switch indexPath.row {
             case 0:
-                let cell = tableView.dequeueReusableCell(withIdentifier: ScheduleTableViewCell.identifier) as! ScheduleTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: ScheduleTableViewCell.identifier, for: indexPath) as! ScheduleTableViewCell
                 
                 cell.date.text = appData[indexPath.section]["date"]
                 cell.title.text = appData[indexPath.section]["title"]
@@ -108,7 +115,7 @@ class HomeTableViewController: UITableViewController {
                 return cell
             default:
                 
-                let cell = tableView.dequeueReusableCell(withIdentifier: TimeInfoTableViewCell.identifier) as! TimeInfoTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: TimeInfoTableViewCell.identifier, for: indexPath) as! TimeInfoTableViewCell
                 
                 cell.timeColumn.text = schedule[indexPath.row-1]
                 cell.infoColumn.text = activity[indexPath.row-1]
@@ -125,14 +132,17 @@ class HomeTableViewController: UITableViewController {
                 return cell
             }
             
+            
+            
         }
         
+        // MARK: - Type 2
         if appData[indexPath.section]["type"] == "2" {
             
             let heartImage = appData[indexPath.section]["isLiked"] == "true" ? "heart.fill" : "heart"
             let buttonColor = appData[indexPath.section]["isLiked"] == "true" ? UIColor.red : UIColor.black
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: BaiVietTableViewCell.identifier) as! BaiVietTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: BaiVietTableViewCell.identifier, for: indexPath) as! BaiVietTableViewCell
             
             cell.title.text = appData[indexPath.section]["title"]
             cell.date.text = appData[indexPath.section]["date"]
@@ -141,18 +151,49 @@ class HomeTableViewController: UITableViewController {
             cell.likeButton.tintColor = buttonColor
             cell.likeCounter.text = appData[indexPath.section]["likes"]
             
+            cell.likeButton.tag = indexPath.section
+            
+            cell.likeButton.addTarget(self, action: #selector(likeButtonTapped(sender:)), for: .touchUpInside)
+
             return cell
         }
         
         return UITableViewCell()
     }
     
+    @objc func likeButtonTapped(sender: UIButton) {
+        sender.isSelected = true
+        if appData[sender.tag]["isLiked"] == "false" {
+            appData[sender.tag]["isLiked"] = "true"
+            
+            var tempCount = Int(appData[sender.tag]["likes"] ?? "0")!
+            tempCount += 1
+            appData[sender.tag]["likes"] = String(tempCount)
+            
+            sender.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            sender.tintColor = UIColor.red
+        } else {
+            appData[sender.tag]["isLiked"] = "false"
+            
+            var tempCount = Int(appData[sender.tag]["likes"] ?? "0")!
+            tempCount -= 1
+            appData[sender.tag]["likes"] = String(tempCount)
+            
+            sender.setImage(UIImage(systemName: "heart"), for: .normal)
+            sender.tintColor = UIColor.black
+        }
+        
+        tableView.reloadData()
+        
+    }
+    
+    // MARK: - Row height
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
             return 250.0
         default:
-            return 100
+            return 100.0
         }
     }
     
@@ -172,15 +213,17 @@ class HomeTableViewController: UITableViewController {
     }
     
     
-    // MARK: -Table view header
+    // MARK: - Table view header
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        
+        let headerView = UIView()
+
         headerView.backgroundColor = .orange
         headerView.layer.cornerRadius = 4
         
         return headerView
     }
     
-
 }
+
+
+

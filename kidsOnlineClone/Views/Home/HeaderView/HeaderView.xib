@@ -33,6 +33,7 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lz1-Pa-hDy">
                     <rect key="frame" x="380" y="10" width="19" height="30"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" image="square.and.arrow.down" catalog="system"/>
                 </button>
             </subviews>
