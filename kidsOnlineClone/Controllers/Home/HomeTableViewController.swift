@@ -10,6 +10,11 @@ import UIKit
 class HomeTableViewController: UITableViewController {
     
     // MARK: - Data sample
+    
+    //data includes: date, title, subTitle, subTitleDetail, image, isLiked, likes, type
+    //isLiked is the like button status
+    //likes counts how many likes the post have
+    //type is the cell type ( 1: schedule, 2: post )
     var appData = [["date": "08/09/2021", "title": "Hoat dong hoc cua be Cat Tien", "subTitle": "Ke hoach thang 9", "subTitleDetail": "Tuan 1 thang 9 nam 2021", "image": "", "isLiked": "", "likes": "0", "type": "1"],
                    ["date": "09/09/2021", "title": "Cam nang phong benh mua he cho tre", "subTitle": "", "subTitleDetail": "", "image": "image2", "isLiked": "false", "likes": "3", "type": "2"],
                    ["date": "10/09/2021", "title": "Cam nang phong benh mua he cho tre", "subTitle": "", "subTitleDetail": "", "image": "image3", "isLiked": "true", "likes": "4", "type": "2"],
@@ -17,7 +22,9 @@ class HomeTableViewController: UITableViewController {
                    ["date": "09/08/2021", "title": "Hoat dong hoc cua be Cat Tien", "subTitle": "Ke hoach thang 8", "subTitleDetail": "Tuan 4 thang 8 nam 2021", "image": "image2", "isLiked": "false", "likes": "3", "type": "1"]
     ]
     
+    //Daily schedule
     var schedule = ["7:00 AM", "8:30 AM", "9:00 AM", "9:45 AM", "10:15 AM", "11:00 AM", "12:00 AM"]
+    //Daily activity
     var activity = ["Don tre, tap the duc", "An sang", "HD ngoai troi", "Hoc nhac", "Hoc toan", "An trua", "Ngu trua"]
     
     //Create navBar Button
@@ -29,7 +36,7 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .systemGray6
         
         //set up tableview datasource and delegate
         tableView.dataSource = self
@@ -99,6 +106,7 @@ class HomeTableViewController: UITableViewController {
             case 0:
                 let cell = tableView.dequeueReusableCell(withIdentifier: ScheduleTableViewCell.identifier, for: indexPath) as! ScheduleTableViewCell
                 
+                //Set up cell
                 cell.date.text = appData[indexPath.section]["date"]
                 cell.title.text = appData[indexPath.section]["title"]
                 cell.date2.text = appData[indexPath.section]["date"]
@@ -131,19 +139,18 @@ class HomeTableViewController: UITableViewController {
                 
                 return cell
             }
-            
-            
-            
         }
         
         // MARK: - Type 2
         if appData[indexPath.section]["type"] == "2" {
             
+            //Image and Tint color for the like button
             let heartImage = appData[indexPath.section]["isLiked"] == "true" ? "heart.fill" : "heart"
             let buttonColor = appData[indexPath.section]["isLiked"] == "true" ? UIColor.red : UIColor.black
             
             let cell = tableView.dequeueReusableCell(withIdentifier: BaiVietTableViewCell.identifier, for: indexPath) as! BaiVietTableViewCell
             
+            //Set up cell
             cell.title.text = appData[indexPath.section]["title"]
             cell.date.text = appData[indexPath.section]["date"]
             cell.thumbNailImage.image = UIImage(named: appData[indexPath.section]["image"] ?? "image1")
@@ -151,8 +158,10 @@ class HomeTableViewController: UITableViewController {
             cell.likeButton.tintColor = buttonColor
             cell.likeCounter.text = appData[indexPath.section]["likes"]
             
+            //Button tag for likeButtonTapped function
             cell.likeButton.tag = indexPath.section
             
+            //Call the function when the button is tapped
             cell.likeButton.addTarget(self, action: #selector(likeButtonTapped(sender:)), for: .touchUpInside)
 
             return cell
@@ -161,24 +170,30 @@ class HomeTableViewController: UITableViewController {
         return UITableViewCell()
     }
     
+    // MARK: - Like button is tapped function
     @objc func likeButtonTapped(sender: UIButton) {
         sender.isSelected = true
+        
         if appData[sender.tag]["isLiked"] == "false" {
             appData[sender.tag]["isLiked"] = "true"
             
+            //Convert from string to Int -> plus 1 -> convert from Int to String
             var tempCount = Int(appData[sender.tag]["likes"] ?? "0")!
             tempCount += 1
             appData[sender.tag]["likes"] = String(tempCount)
             
+            //Set image to full heart with red color
             sender.setImage(UIImage(systemName: "heart.fill"), for: .normal)
             sender.tintColor = UIColor.red
         } else {
             appData[sender.tag]["isLiked"] = "false"
             
+            //Convert from string to Int -> minus 1 -> convert from Int to String
             var tempCount = Int(appData[sender.tag]["likes"] ?? "0")!
             tempCount -= 1
             appData[sender.tag]["likes"] = String(tempCount)
             
+            //Set image to empty heart with black color
             sender.setImage(UIImage(systemName: "heart"), for: .normal)
             sender.tintColor = UIColor.black
         }
@@ -215,8 +230,19 @@ class HomeTableViewController: UITableViewController {
     
     // MARK: - Table view header
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
+        //Create headerView and headerLabel
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 50))
+        let headerLabel = UILabel(frame: headerView.bounds)
+        
+        //headerLabel set up
+        headerLabel.text = appData[section]["date"]
+        headerLabel.textColor = .white
+        headerLabel.textAlignment = .center
+        
+        //Add headerLabel to headerView
+        headerView.addSubview(headerLabel)
 
+        //headerView set up
         headerView.backgroundColor = .orange
         headerView.layer.cornerRadius = 4
         
