@@ -42,7 +42,7 @@ class HomeTableViewController: UITableViewController {
         //register cell
         tableView.register(UINib(nibName: "ScheduleTableViewCell", bundle: nil), forCellReuseIdentifier: "scheduleCell")
         
-        //Create talbe
+        //Create table view header
         setupTalbeViewHeader()
         
         //Register Cells
@@ -53,7 +53,7 @@ class HomeTableViewController: UITableViewController {
     }
     
     func setupTalbeViewHeader() {
-        let header = HeaderView(frame: .zero)
+        let header = HeaderView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 50))
         
         //Set frame size before populate view to have initial size
         var size = header.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
@@ -87,7 +87,7 @@ class HomeTableViewController: UITableViewController {
             switch indexPath.row {
             case 0:
                 let cell = tableView.dequeueReusableCell(withIdentifier: ScheduleTableViewCell.identifier) as! ScheduleTableViewCell
-
+                
                 cell.date.text = appData[indexPath.section]["date"]
                 cell.title.text = appData[indexPath.section]["title"]
                 cell.date2.text = appData[indexPath.section]["date"]
@@ -95,11 +95,11 @@ class HomeTableViewController: UITableViewController {
                 
                 //cell.timeColumn.layer.cornerRadius = 4
                 cell.timeColumn.layer.borderWidth = 1
-                cell.timeColumn.layer.borderColor = UIColor(named: "blue")?.cgColor
+                cell.timeColumn.layer.borderColor = UIColor.systemBlue.cgColor
                 
                 //cell.infoColumn.layer.cornerRadius = 4
                 cell.infoColumn.layer.borderWidth = 1
-                cell.infoColumn.layer.borderColor = UIColor(named: "blue")?.cgColor
+                cell.infoColumn.layer.borderColor = UIColor.systemBlue.cgColor
 
                 return cell
             default:
@@ -111,11 +111,12 @@ class HomeTableViewController: UITableViewController {
                 
                 //cell.timeColumn.layer.cornerRadius = 4
                 cell.timeColumn.layer.borderWidth = 1
-                cell.timeColumn.layer.borderColor = UIColor(named: "blue")?.cgColor
+                cell.timeColumn.layer.borderColor = UIColor.systemBlue.cgColor
                 
                 //cell.infoColumn.layer.cornerRadius = 4
                 cell.infoColumn.layer.borderWidth = 1
-                cell.infoColumn.layer.borderColor = UIColor(named: "blue")?.cgColor
+                cell.infoColumn.layer.borderColor = UIColor.systemBlue.cgColor
+                
                 
                 return cell
             }
@@ -128,21 +129,34 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return 230.0
+            return 250.0
         default:
-            return 20
+            return 100
         }
     }
     
     // MARK: - Table view delegate
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("\(appData[indexPath.section]["date"])")
+        print("I was tapped")
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 20.0
+        return 0
     }
     
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50.0
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width-50, height: 50))
+        
+        headerView.backgroundColor = .orange
+        
+        return headerView
+    }
+    
+
 }

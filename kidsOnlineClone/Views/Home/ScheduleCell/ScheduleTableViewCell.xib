@@ -81,24 +81,27 @@
                         </subviews>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pK2-Tf-mXD">
-                        <rect key="frame" x="35" y="204.5" width="425" height="20.5"/>
+                        <rect key="frame" x="35" y="204.5" width="425" height="50"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Thời gian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1n-Zk-BsV">
-                                <rect key="frame" x="0.0" y="0.0" width="75" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Thời gian" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1n-Zk-BsV">
+                                <rect key="frame" x="0.0" y="0.0" width="90" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="41i-pc-tqt"/>
+                                    <constraint firstAttribute="width" constant="90" id="41i-pc-tqt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nội dung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gho-oj-gKa">
-                                <rect key="frame" x="75" y="0.0" width="350" height="20.5"/>
+                                <rect key="frame" x="90" y="0.0" width="335" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="PYu-e3-GDZ"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>

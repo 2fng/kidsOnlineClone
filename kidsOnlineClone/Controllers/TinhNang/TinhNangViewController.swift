@@ -20,7 +20,7 @@ class TinhNangViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let layout = UICollectionViewFlowLayout()
+        //let layout = UICollectionViewFlowLayout()
     }
     
     private func configTableView() {
@@ -43,7 +43,7 @@ extension TinhNangViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let tableViewCell = cell as! TinhNangTableViewCell
+        //let tableViewCell = cell as! TinhNangTableViewCell
         //tableViewCell.setupCollectionView(dataSourceDelegate: self, forRow: indexPath.row)
     }
     

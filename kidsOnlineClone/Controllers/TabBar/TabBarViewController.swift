@@ -16,7 +16,7 @@ class TabBarViewController: UITabBarController {
         
         // Setup tabbar
         let homeVC = HomeTableViewController()
-        let taiKhoanVC = TaiKhoanViewController()
+        let taiKhoanVC = TaiKhoanTableViewController()
         let tinhNangVC = TinhNangViewController()
         let thongBaoVC = ThongBaoTableViewController()
         
