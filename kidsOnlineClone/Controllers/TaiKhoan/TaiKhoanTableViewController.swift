@@ -69,6 +69,9 @@ class TaiKhoanTableViewController: UITableViewController {
         cell.buttonImage.image = UIImage(systemName: rowContents[indexPath.row-1]["image"]!)
         cell.buttonImage.tintColor = .orange
         
+        //Hide single line separator
+        cell.separatorInset = UIEdgeInsets(top: 0, left: cell.bounds.size.width, bottom: 0, right: 0)
+        
         return cell
     }
     
