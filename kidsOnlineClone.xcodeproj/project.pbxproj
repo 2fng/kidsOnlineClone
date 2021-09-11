@@ -14,6 +14,8 @@
 		DF5F930426EAFF49000C9FDC /* BaiVietTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F930226EAFF49000C9FDC /* BaiVietTableViewCell.swift */; };
 		DF5F930526EAFF49000C9FDC /* BaiVietTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F930326EAFF49000C9FDC /* BaiVietTableViewCell.xib */; };
 		DF5F930826EC3791000C9FDC /* HomeCustomSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F930726EC3791000C9FDC /* HomeCustomSectionHeader.swift */; };
+		DF5F930C26EC47D9000C9FDC /* AvatarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F930A26EC47D9000C9FDC /* AvatarTableViewCell.swift */; };
+		DF5F930D26EC47D9000C9FDC /* AvatarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F930B26EC47D9000C9FDC /* AvatarTableViewCell.xib */; };
 		DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14026E5CAF100EB718E /* AppDelegate.swift */; };
 		DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */; };
 		DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB14926E5CAF400EB718E /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 		DF5F930226EAFF49000C9FDC /* BaiVietTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiVietTableViewCell.swift; sourceTree = "<group>"; };
 		DF5F930326EAFF49000C9FDC /* BaiVietTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiVietTableViewCell.xib; sourceTree = "<group>"; };
 		DF5F930726EC3791000C9FDC /* HomeCustomSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomSectionHeader.swift; sourceTree = "<group>"; };
+		DF5F930A26EC47D9000C9FDC /* AvatarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarTableViewCell.swift; sourceTree = "<group>"; };
+		DF5F930B26EC47D9000C9FDC /* AvatarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarTableViewCell.xib; sourceTree = "<group>"; };
 		DFCAB13D26E5CAF100EB718E /* kidsOnlineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsOnlineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCAB14026E5CAF100EB718E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +102,15 @@
 			path = SectionHeaderView;
 			sourceTree = "<group>";
 		};
+		DF5F930926EC47A7000C9FDC /* TaiKhoan */ = {
+			isa = PBXGroup;
+			children = (
+				DF5F930A26EC47D9000C9FDC /* AvatarTableViewCell.swift */,
+				DF5F930B26EC47D9000C9FDC /* AvatarTableViewCell.xib */,
+			);
+			path = TaiKhoan;
+			sourceTree = "<group>";
+		};
 		DFCAB13426E5CAF100EB718E = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +153,7 @@
 		DFCAB15526E5D33100EB718E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DF5F930926EC47A7000C9FDC /* TaiKhoan */,
 				DFCAB17B26E7183800EB718E /* TinhNang */,
 				DFCAB16F26E6FB7700EB718E /* ThongBao */,
 				DFCAB16626E5F8CD00EB718E /* Home */,
@@ -316,6 +330,7 @@
 				DFCAB19F26E86CE900EB718E /* HeaderView.xib in Resources */,
 				DF33AC8C26E8B2A80000E137 /* TimeInfoTableViewCell.xib in Resources */,
 				DF5F930526EAFF49000C9FDC /* BaiVietTableViewCell.xib in Resources */,
+				DF5F930D26EC47D9000C9FDC /* AvatarTableViewCell.xib in Resources */,
 				DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */,
 				DFCAB19926E864D500EB718E /* ScheduleTableViewCell.xib in Resources */,
 				DFCAB18D26E847D400EB718E /* TabBarViewController.xib in Resources */,
@@ -331,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF5F930C26EC47D9000C9FDC /* AvatarTableViewCell.swift in Sources */,
 				DFCAB17E26E7185800EB718E /* TinhNangTableViewCell.swift in Sources */,
 				DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */,
 				DFCAB16E26E6F88500EB718E /* ThongBaoTableViewController.swift in Sources */,
