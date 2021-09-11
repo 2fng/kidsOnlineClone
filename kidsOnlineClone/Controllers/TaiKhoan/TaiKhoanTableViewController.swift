@@ -9,14 +9,33 @@ import UIKit
 
 class TaiKhoanTableViewController: UITableViewController {
     
-    enum rowContent: CaseIterable {
-        case avatar, hoSo, thongTinTaiKhoan, thongtinKidsOnline, huongDanSuDung, gopY, doiMatKhau, caiDat, dangXuat
-    }
+    //language button
+    let languageNavButton = UIBarButtonItem(image: UIImage(systemName: "flag.badge.ellipsis.fill"), style: .plain, target: self, action: nil)
+    
+    //Create cases for the tableview buttons
+    let rowContents = [
+        ["title": "Ho so cua be", "image": "newspaper.fill"],
+        ["title": "Thong tin tai khoan", "image": "person.crop.circle"],
+        ["title": "Thong tin ve KidsOnline", "image": "bubble.left.and.bubble.right.fill"],
+        ["title": "Huong dan su dung", "image": "info.circle.fill"],
+        ["title": "Gop y ung dung", "image": "rectangle.and.pencil.and.ellipsis"],
+        ["title": "Doi mat khau", "image": "key"],
+        ["title": "Cai dat", "image": "gearshape"],
+        ["title": "Dang xuat", "image": "eject.circle"]
+    
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //Set up navigation bar
+        navigationItem.rightBarButtonItem = languageNavButton
+        languageNavButton.tintColor = .orange
+        
+        
+        //Register Cell
         tableView.register(AvatarTableViewCell.nib(), forCellReuseIdentifier: AvatarTableViewCell.identifier)
+        tableView.register(ButtonTableViewCell.nib(), forCellReuseIdentifier: ButtonTableViewCell.identifier)
     }
 
     // MARK: - Table view data source
@@ -28,7 +47,7 @@ class TaiKhoanTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return rowContent.allCases.count
+        return rowContents.count+1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,17 +63,23 @@ class TaiKhoanTableViewController: UITableViewController {
             return cell
         }
         
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: ButtonTableViewCell.identifier, for: indexPath) as! ButtonTableViewCell
+        
+        cell.buttonLabel.text = rowContents[indexPath.row-1]["title"]
+        cell.buttonImage.image = UIImage(systemName: rowContents[indexPath.row-1]["image"]!)
+        cell.buttonImage.tintColor = .orange
+        
+        return cell
     }
     
     // MARK: - Table view delegate
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 250
+            return 300
         }
         
-        return 50
+        return 70
     }
     
 }
