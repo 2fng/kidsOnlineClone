@@ -17,9 +17,10 @@ class HomeTableViewController: UITableViewController {
     //type is the cell type ( 1: schedule, 2: post )
     var appData = [["date": "08/09/2021", "title": "Hoat dong hoc cua be Cat Tien", "subTitle": "Ke hoach thang 9", "subTitleDetail": "Tuan 1 thang 9 nam 2021", "image": "", "isLiked": "", "likes": "0", "type": "1"],
                    ["date": "09/09/2021", "title": "Cam nang phong benh mua he cho tre", "subTitle": "", "subTitleDetail": "", "image": "image2", "isLiked": "false", "likes": "3", "type": "2"],
-                   ["date": "10/09/2021", "title": "Cam nang phong benh mua he cho tre", "subTitle": "", "subTitleDetail": "", "image": "image3", "isLiked": "true", "likes": "4", "type": "2"],
-                   ["date": "11/09/2021", "title": "Cam nang phong benh mua he cho tre", "subTitle": "", "subTitleDetail": "", "image": "image1", "isLiked": "false", "likes": "5", "type": "2"],
-                   ["date": "09/08/2021", "title": "Hoat dong hoc cua be Cat Tien", "subTitle": "Ke hoach thang 8", "subTitleDetail": "Tuan 4 thang 8 nam 2021", "image": "image2", "isLiked": "false", "likes": "3", "type": "1"]
+                   ["date": "09/08/2021", "title": "Hoat dong hoc cua be Cat Tien", "subTitle": "Ke hoach thang 8", "subTitleDetail": "Tuan 4 thang 8 nam 2021", "image": "image2", "isLiked": "false", "likes": "3", "type": "1"],
+                   ["date": "10/09/2021", "title": "Cam nang phong benh mua he cho tre", "subTitle": "", "subTitleDetail": "", "image": "image3", "isLiked": "true", "likes": "5", "type": "2"],
+                   ["date": "11/09/2021", "title": "Cam nang phong benh mua he cho tre", "subTitle": "", "subTitleDetail": "", "image": "image1", "isLiked": "false", "likes": "5", "type": "2"]
+                   
     ]
     
     //Daily schedule
@@ -59,6 +60,8 @@ class HomeTableViewController: UITableViewController {
         tableView.register(TimeInfoTableViewCell.nib(), forCellReuseIdentifier: TimeInfoTableViewCell.identifier)
         tableView.register(BaiVietTableViewCell.nib(), forCellReuseIdentifier: BaiVietTableViewCell.identifier)
         
+        //Register section header
+        tableView.register(HomeCustomSectionHeader.self, forHeaderFooterViewReuseIdentifier: "sectionHeader")
         
     }
     
@@ -88,16 +91,19 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        //If table type = schedule then return schedule.count+1 rows per section
         if appData[section]["type"] == "1"{
             return schedule.count+1
         }
         
+        //If table type = bang tin then return 1 row per section
         else if appData[section]["type"] == "2" {
             return 1
         }
         return 0
     }
     
+    // MARK: - Set up cells
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // MARK: - Type 1
@@ -231,22 +237,12 @@ class HomeTableViewController: UITableViewController {
     // MARK: - Table view header
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         //Create headerView and headerLabel
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 50))
-        let headerLabel = UILabel(frame: headerView.bounds)
+        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader") as! HomeCustomSectionHeader
         
-        //headerLabel set up
-        headerLabel.text = appData[section]["date"]
-        headerLabel.textColor = .white
-        headerLabel.textAlignment = .center
         
-        //Add headerLabel to headerView
-        headerView.addSubview(headerLabel)
-
-        //headerView set up
-        headerView.backgroundColor = .orange
-        headerView.layer.cornerRadius = 4
+        view.title.text = appData[section]["date"]
         
-        return headerView
+        return view
     }
     
 }

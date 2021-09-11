@@ -13,6 +13,7 @@
 		DF33AC9026EAFCA10000E137 /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF33AC8F26EAFCA10000E137 /* HomeTableViewController.xib */; };
 		DF5F930426EAFF49000C9FDC /* BaiVietTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F930226EAFF49000C9FDC /* BaiVietTableViewCell.swift */; };
 		DF5F930526EAFF49000C9FDC /* BaiVietTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F930326EAFF49000C9FDC /* BaiVietTableViewCell.xib */; };
+		DF5F930826EC3791000C9FDC /* HomeCustomSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F930726EC3791000C9FDC /* HomeCustomSectionHeader.swift */; };
 		DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14026E5CAF100EB718E /* AppDelegate.swift */; };
 		DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */; };
 		DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB14926E5CAF400EB718E /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		DF33AC8F26EAFCA10000E137 /* HomeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewController.xib; sourceTree = "<group>"; };
 		DF5F930226EAFF49000C9FDC /* BaiVietTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiVietTableViewCell.swift; sourceTree = "<group>"; };
 		DF5F930326EAFF49000C9FDC /* BaiVietTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiVietTableViewCell.xib; sourceTree = "<group>"; };
+		DF5F930726EC3791000C9FDC /* HomeCustomSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomSectionHeader.swift; sourceTree = "<group>"; };
 		DFCAB13D26E5CAF100EB718E /* kidsOnlineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsOnlineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCAB14026E5CAF100EB718E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 				DF5F930326EAFF49000C9FDC /* BaiVietTableViewCell.xib */,
 			);
 			path = BaiVietCell;
+			sourceTree = "<group>";
+		};
+		DF5F930626EC3757000C9FDC /* SectionHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				DF5F930726EC3791000C9FDC /* HomeCustomSectionHeader.swift */,
+			);
+			path = SectionHeaderView;
 			sourceTree = "<group>";
 		};
 		DFCAB13426E5CAF100EB718E = {
@@ -161,6 +171,7 @@
 		DFCAB16626E5F8CD00EB718E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DF5F930626EC3757000C9FDC /* SectionHeaderView */,
 				DF5F930126EAFF25000C9FDC /* BaiVietCell */,
 				DFCAB1A026E8935700EB718E /* ScheduleCell */,
 				DFCAB19B26E86CC600EB718E /* HeaderView */,
@@ -332,6 +343,7 @@
 				DF33AC8B26E8B2A80000E137 /* TimeInfoTableViewCell.swift in Sources */,
 				DFCAB19D26E86CD900EB718E /* HeaderView.swift in Sources */,
 				DF33AC8E26EAFC0A0000E137 /* TaiKhoanTableViewController.swift in Sources */,
+				DF5F930826EC3791000C9FDC /* HomeCustomSectionHeader.swift in Sources */,
 				DF5F930426EAFF49000C9FDC /* BaiVietTableViewCell.swift in Sources */,
 				DFCAB18C26E847D400EB718E /* TabBarViewController.swift in Sources */,
 				DFCAB17A26E7165600EB718E /* TinhNangViewController.swift in Sources */,

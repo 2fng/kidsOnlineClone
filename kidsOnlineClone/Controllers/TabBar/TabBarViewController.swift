@@ -14,25 +14,26 @@ class TabBarViewController: UITabBarController {
 
         // Do any additional setup after loading the view.
         
-        // Setup tabbar
+        // Create variable to store view controllers
         let homeVC = HomeTableViewController()
         let taiKhoanVC = TaiKhoanTableViewController()
         let tinhNangVC = TinhNangViewController()
         let thongBaoVC = ThongBaoTableViewController()
         
         
-        //Setup Title
+        // Setup Title
         homeVC.title = "Bảng tin"
         taiKhoanVC.title = "Tài khoản"
         tinhNangVC.title = "Tính năng"
         thongBaoVC.title = "Thông báo"
         
-        //Setup tabBar Image and Title
+        // Setup tabBar Image and Title
         homeVC.tabBarItem = UITabBarItem(title: "Bảng tin", image: UIImage(systemName: "house"), tag: 1)
         taiKhoanVC.tabBarItem = UITabBarItem(title: "Tài khoản", image: UIImage(systemName: "person.circle"), tag: 1)
         tinhNangVC.tabBarItem = UITabBarItem(title: "Tính năng", image: UIImage(systemName: "gearshape.2.fill"), tag: 1)
         thongBaoVC.tabBarItem = UITabBarItem(title: "Thông báo", image: UIImage(systemName: "bell"), tag: 1)
         
+        // Create variable for tab bar and set up tab bar
         let homeNav = UINavigationController(rootViewController: homeVC)
         let taiKhoanNav = UINavigationController(rootViewController: taiKhoanVC)
         let tinhNangNav = UINavigationController(rootViewController: tinhNangVC)
