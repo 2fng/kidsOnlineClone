@@ -25,6 +25,7 @@ class TaiKhoanTableViewController: UITableViewController {
     
     ]
 
+    // MARK: - viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,17 +41,21 @@ class TaiKhoanTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    //Return number of section
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
+    //Return number of rows in section
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return rowContents.count+1
     }
     
+    //Configure cell for each row
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //If indexPath.row == 0 return AvatarTableViewCell ( Contains cover, avatar, 2 labels, 1 button)
         if indexPath.row == 0 {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: AvatarTableViewCell.identifier) as! AvatarTableViewCell
@@ -62,6 +67,7 @@ class TaiKhoanTableViewController: UITableViewController {
             
             return cell
         }
+        //Else return ButtonTableViewCell contains 1 image and 1 label
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ButtonTableViewCell.identifier, for: indexPath) as! ButtonTableViewCell
         
@@ -78,11 +84,24 @@ class TaiKhoanTableViewController: UITableViewController {
     // MARK: - Table view delegate
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        //If Avatarcell return 300 height for row
         if indexPath.row == 0 {
             return 300
         }
         
+        //Return 70 height for row
         return 70
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row == 0 {
+            print("You tapped avatar and cover row")
+        }
+        
+        else {
+            print("You tapped \(rowContents[indexPath.row-1]["title"] ?? "Can't find title")")
+        }
     }
     
 }

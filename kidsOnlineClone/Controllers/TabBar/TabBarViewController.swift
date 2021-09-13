@@ -17,7 +17,7 @@ class TabBarViewController: UITabBarController {
         // Create variable to store view controllers
         let homeVC = HomeTableViewController()
         let taiKhoanVC = TaiKhoanTableViewController()
-        let tinhNangVC = TinhNangViewController()
+        let tinhNangVC = TinhNangTableViewController()
         let thongBaoVC = ThongBaoTableViewController()
         
         

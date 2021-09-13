@@ -18,6 +18,8 @@
 		DF5F930D26EC47D9000C9FDC /* AvatarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F930B26EC47D9000C9FDC /* AvatarTableViewCell.xib */; };
 		DF5F931026EC5379000C9FDC /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F930E26EC5379000C9FDC /* ButtonTableViewCell.swift */; };
 		DF5F931126EC5379000C9FDC /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F930F26EC5379000C9FDC /* ButtonTableViewCell.xib */; };
+		DF5F931426EEDC50000C9FDC /* TinhNangTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F931226EEDC50000C9FDC /* TinhNangTableViewController.swift */; };
+		DF5F931526EEDC50000C9FDC /* TinhNangTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F931326EEDC50000C9FDC /* TinhNangTableViewController.xib */; };
 		DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14026E5CAF100EB718E /* AppDelegate.swift */; };
 		DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */; };
 		DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB14926E5CAF400EB718E /* Assets.xcassets */; };
@@ -27,7 +29,6 @@
 		DFCAB16E26E6F88500EB718E /* ThongBaoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB16D26E6F88400EB718E /* ThongBaoTableViewController.swift */; };
 		DFCAB17626E6FC6300EB718E /* ThongBaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB17426E6FC6300EB718E /* ThongBaoTableViewCell.swift */; };
 		DFCAB17726E6FC6300EB718E /* ThongBaoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB17526E6FC6300EB718E /* ThongBaoTableViewCell.xib */; };
-		DFCAB17A26E7165600EB718E /* TinhNangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB17926E7165600EB718E /* TinhNangViewController.swift */; };
 		DFCAB17E26E7185800EB718E /* TinhNangTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB17C26E7185800EB718E /* TinhNangTableViewCell.swift */; };
 		DFCAB17F26E7185800EB718E /* TinhNangTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB17D26E7185800EB718E /* TinhNangTableViewCell.xib */; };
 		DFCAB18226E7192700EB718E /* ButtonsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB18026E7192700EB718E /* ButtonsCollectionViewCell.swift */; };
@@ -53,6 +54,8 @@
 		DF5F930B26EC47D9000C9FDC /* AvatarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvatarTableViewCell.xib; sourceTree = "<group>"; };
 		DF5F930E26EC5379000C9FDC /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		DF5F930F26EC5379000C9FDC /* ButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonTableViewCell.xib; sourceTree = "<group>"; };
+		DF5F931226EEDC50000C9FDC /* TinhNangTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinhNangTableViewController.swift; sourceTree = "<group>"; };
+		DF5F931326EEDC50000C9FDC /* TinhNangTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TinhNangTableViewController.xib; sourceTree = "<group>"; };
 		DFCAB13D26E5CAF100EB718E /* kidsOnlineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsOnlineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCAB14026E5CAF100EB718E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +67,6 @@
 		DFCAB16D26E6F88400EB718E /* ThongBaoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThongBaoTableViewController.swift; sourceTree = "<group>"; };
 		DFCAB17426E6FC6300EB718E /* ThongBaoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThongBaoTableViewCell.swift; sourceTree = "<group>"; };
 		DFCAB17526E6FC6300EB718E /* ThongBaoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThongBaoTableViewCell.xib; sourceTree = "<group>"; };
-		DFCAB17926E7165600EB718E /* TinhNangViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinhNangViewController.swift; sourceTree = "<group>"; };
 		DFCAB17C26E7185800EB718E /* TinhNangTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinhNangTableViewCell.swift; sourceTree = "<group>"; };
 		DFCAB17D26E7185800EB718E /* TinhNangTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TinhNangTableViewCell.xib; sourceTree = "<group>"; };
 		DFCAB18026E7192700EB718E /* ButtonsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -220,7 +222,8 @@
 		DFCAB17826E7163B00EB718E /* TinhNang */ = {
 			isa = PBXGroup;
 			children = (
-				DFCAB17926E7165600EB718E /* TinhNangViewController.swift */,
+				DF5F931226EEDC50000C9FDC /* TinhNangTableViewController.swift */,
+				DF5F931326EEDC50000C9FDC /* TinhNangTableViewController.xib */,
 			);
 			path = TinhNang;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				DFCAB19926E864D500EB718E /* ScheduleTableViewCell.xib in Resources */,
 				DFCAB18D26E847D400EB718E /* TabBarViewController.xib in Resources */,
 				DFCAB17F26E7185800EB718E /* TinhNangTableViewCell.xib in Resources */,
+				DF5F931526EEDC50000C9FDC /* TinhNangTableViewController.xib in Resources */,
 				DFCAB17726E6FC6300EB718E /* ThongBaoTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +359,7 @@
 			files = (
 				DF5F930C26EC47D9000C9FDC /* AvatarTableViewCell.swift in Sources */,
 				DFCAB17E26E7185800EB718E /* TinhNangTableViewCell.swift in Sources */,
+				DF5F931426EEDC50000C9FDC /* TinhNangTableViewController.swift in Sources */,
 				DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */,
 				DFCAB16E26E6F88500EB718E /* ThongBaoTableViewController.swift in Sources */,
 				DFCAB16826E5F8E400EB718E /* HomeTableViewCell.swift in Sources */,
@@ -370,7 +375,6 @@
 				DF5F930826EC3791000C9FDC /* HomeCustomSectionHeader.swift in Sources */,
 				DF5F930426EAFF49000C9FDC /* BaiVietTableViewCell.swift in Sources */,
 				DFCAB18C26E847D400EB718E /* TabBarViewController.swift in Sources */,
-				DFCAB17A26E7165600EB718E /* TinhNangViewController.swift in Sources */,
 				DFCAB16526E5EB4800EB718E /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

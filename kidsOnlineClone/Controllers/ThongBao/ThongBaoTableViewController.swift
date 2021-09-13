@@ -46,10 +46,6 @@ class ThongBaoTableViewController: UITableViewController {
         return thongBaoArray.count
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped me")
-    }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ThongBaoTableViewCell.identifier, for: indexPath) as! ThongBaoTableViewCell
         
@@ -65,5 +61,12 @@ class ThongBaoTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80.0
+    }
+    
+    // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        print("You tapped \(thongBaoArray[indexPath.row]["title"] ?? "Can't find title") on date \(thongBaoArray[indexPath.row]["dateTime"] ?? "Can't find date")")
     }
 }
