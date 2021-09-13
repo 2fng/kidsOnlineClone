@@ -22,6 +22,8 @@
 		DF5F931526EEDC50000C9FDC /* TinhNangTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F931326EEDC50000C9FDC /* TinhNangTableViewController.xib */; };
 		DF5F931B26EEF4FE000C9FDC /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F931926EEF4FE000C9FDC /* BookTableViewCell.swift */; };
 		DF5F931C26EEF4FE000C9FDC /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F931A26EEF4FE000C9FDC /* BookTableViewCell.xib */; };
+		DF5F932126EF0218000C9FDC /* SingleLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F931F26EF0218000C9FDC /* SingleLineTableViewCell.swift */; };
+		DF5F932226EF0218000C9FDC /* SingleLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F932026EF0218000C9FDC /* SingleLineTableViewCell.xib */; };
 		DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14026E5CAF100EB718E /* AppDelegate.swift */; };
 		DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */; };
 		DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB14926E5CAF400EB718E /* Assets.xcassets */; };
@@ -60,6 +62,8 @@
 		DF5F931326EEDC50000C9FDC /* TinhNangTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TinhNangTableViewController.xib; sourceTree = "<group>"; };
 		DF5F931926EEF4FE000C9FDC /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		DF5F931A26EEF4FE000C9FDC /* BookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
+		DF5F931F26EF0218000C9FDC /* SingleLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineTableViewCell.swift; sourceTree = "<group>"; };
+		DF5F932026EF0218000C9FDC /* SingleLineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleLineTableViewCell.xib; sourceTree = "<group>"; };
 		DFCAB13D26E5CAF100EB718E /* kidsOnlineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsOnlineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCAB14026E5CAF100EB718E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,15 @@
 				DF5F931A26EEF4FE000C9FDC /* BookTableViewCell.xib */,
 			);
 			path = BookCell;
+			sourceTree = "<group>";
+		};
+		DF5F931D26EF01E4000C9FDC /* SingleLineCell */ = {
+			isa = PBXGroup;
+			children = (
+				DF5F931F26EF0218000C9FDC /* SingleLineTableViewCell.swift */,
+				DF5F932026EF0218000C9FDC /* SingleLineTableViewCell.xib */,
+			);
+			path = SingleLineCell;
 			sourceTree = "<group>";
 		};
 		DFCAB13426E5CAF100EB718E = {
@@ -253,6 +266,7 @@
 		DFCAB17B26E7183800EB718E /* TinhNang */ = {
 			isa = PBXGroup;
 			children = (
+				DF5F931D26EF01E4000C9FDC /* SingleLineCell */,
 				DF5F931826EEF4C4000C9FDC /* BookCell */,
 				DF5F931726EEF475000C9FDC /* ButtonCell */,
 				DFCAB17C26E7185800EB718E /* TinhNangTableViewCell.swift */,
@@ -364,6 +378,7 @@
 				DF5F931126EC5379000C9FDC /* ButtonTableViewCell.xib in Resources */,
 				DF5F930D26EC47D9000C9FDC /* AvatarTableViewCell.xib in Resources */,
 				DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */,
+				DF5F932226EF0218000C9FDC /* SingleLineTableViewCell.xib in Resources */,
 				DFCAB19926E864D500EB718E /* ScheduleTableViewCell.xib in Resources */,
 				DFCAB18D26E847D400EB718E /* TabBarViewController.xib in Resources */,
 				DFCAB17F26E7185800EB718E /* TinhNangTableViewCell.xib in Resources */,
@@ -385,6 +400,7 @@
 				DF5F931426EEDC50000C9FDC /* TinhNangTableViewController.swift in Sources */,
 				DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */,
 				DFCAB16E26E6F88500EB718E /* ThongBaoTableViewController.swift in Sources */,
+				DF5F932126EF0218000C9FDC /* SingleLineTableViewCell.swift in Sources */,
 				DFCAB16826E5F8E400EB718E /* HomeTableViewCell.swift in Sources */,
 				DFCAB17626E6FC6300EB718E /* ThongBaoTableViewCell.swift in Sources */,
 				DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */,
