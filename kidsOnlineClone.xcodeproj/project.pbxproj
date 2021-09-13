@@ -122,6 +122,8 @@
 		DF5F931626EEF286000C9FDC /* ButtonCell */ = {
 			isa = PBXGroup;
 			children = (
+				DFCAB18026E7192700EB718E /* ButtonsCollectionViewCell.swift */,
+				DFCAB18126E7192700EB718E /* ButtonsCollectionViewCell.xib */,
 			);
 			path = ButtonCell;
 			sourceTree = "<group>";
@@ -240,8 +242,6 @@
 			children = (
 				DFCAB17C26E7185800EB718E /* TinhNangTableViewCell.swift */,
 				DFCAB17D26E7185800EB718E /* TinhNangTableViewCell.xib */,
-				DFCAB18026E7192700EB718E /* ButtonsCollectionViewCell.swift */,
-				DFCAB18126E7192700EB718E /* ButtonsCollectionViewCell.xib */,
 				DF5F931626EEF286000C9FDC /* ButtonCell */,
 			);
 			path = TinhNang;
