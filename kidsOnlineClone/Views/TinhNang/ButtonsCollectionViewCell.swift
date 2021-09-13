@@ -11,8 +11,8 @@ class ButtonsCollectionViewCell: UICollectionViewCell {
     
     static var identifier = "ButtonsCollectionViewCell"
     
-    @IBOutlet private weak var buttonImage: UIButton!
-    @IBOutlet private weak var buttonLabel: UILabel!
+    @IBOutlet  weak var buttonImage: UIButton!
+    @IBOutlet  weak var buttonLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

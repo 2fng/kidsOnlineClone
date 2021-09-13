@@ -23,17 +23,39 @@ class TinhNangTableViewController: UITableViewController {
         navigationController?.hidesBarsOnSwipe = true
         navigationItem.title = ""
         navigationItem.leftBarButtonItems = [navButtonImage, navBarTitle]
+        
+        //Register cell
+        tableView.register(TinhNangTableViewCell.nib(), forCellReuseIdentifier: TinhNangTableViewCell.identifier)
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 5
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: TinhNangTableViewCell.identifier) as! TinhNangTableViewCell
+            
+            return cell
+        }
+        
+        return UITableViewCell()
+    }
+    
+    // MARK: - Table view delegate
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return view.frame.size.height/2
+        }
+        
+        return 50
     }
 }

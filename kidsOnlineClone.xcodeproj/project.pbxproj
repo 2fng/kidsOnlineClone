@@ -119,6 +119,13 @@
 			path = TaiKhoan;
 			sourceTree = "<group>";
 		};
+		DF5F931626EEF286000C9FDC /* ButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ButtonCell;
+			sourceTree = "<group>";
+		};
 		DFCAB13426E5CAF100EB718E = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +242,7 @@
 				DFCAB17D26E7185800EB718E /* TinhNangTableViewCell.xib */,
 				DFCAB18026E7192700EB718E /* ButtonsCollectionViewCell.swift */,
 				DFCAB18126E7192700EB718E /* ButtonsCollectionViewCell.xib */,
+				DF5F931626EEF286000C9FDC /* ButtonCell */,
 			);
 			path = TinhNang;
 			sourceTree = "<group>";
