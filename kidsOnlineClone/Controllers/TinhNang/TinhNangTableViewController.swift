@@ -26,6 +26,7 @@ class TinhNangTableViewController: UITableViewController {
         
         //Register cell
         tableView.register(TinhNangTableViewCell.nib(), forCellReuseIdentifier: TinhNangTableViewCell.identifier)
+        tableView.register(BookTableViewCell.nib(), forCellReuseIdentifier: BookTableViewCell.identifier)
     }
 
     // MARK: - Table view data source
@@ -47,6 +48,14 @@ class TinhNangTableViewController: UITableViewController {
             return cell
         }
         
+        if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: BookTableViewCell.identifier) as! BookTableViewCell
+            
+            cell.cellButton.layer.cornerRadius = 15
+            
+            return cell
+        }
+        
         return UITableViewCell()
     }
     
@@ -56,6 +65,6 @@ class TinhNangTableViewController: UITableViewController {
             return view.frame.size.height/2
         }
         
-        return 50
+        return 150
     }
 }

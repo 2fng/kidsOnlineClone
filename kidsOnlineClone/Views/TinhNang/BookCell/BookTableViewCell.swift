@@ -8,10 +8,21 @@
 import UIKit
 
 class BookTableViewCell: UITableViewCell {
+    
+    static let identifier = "tinhNangBookCell"
+    
+    @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var cellImageLabel: UILabel!
+    @IBOutlet weak var cellButton: UIButton!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    static func nib() -> UINib {
+        return UINib(nibName: "BookTableViewCell", bundle: nil)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
