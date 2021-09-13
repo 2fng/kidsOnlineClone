@@ -20,6 +20,8 @@
 		DF5F931126EC5379000C9FDC /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F930F26EC5379000C9FDC /* ButtonTableViewCell.xib */; };
 		DF5F931426EEDC50000C9FDC /* TinhNangTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F931226EEDC50000C9FDC /* TinhNangTableViewController.swift */; };
 		DF5F931526EEDC50000C9FDC /* TinhNangTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F931326EEDC50000C9FDC /* TinhNangTableViewController.xib */; };
+		DF5F931B26EEF4FE000C9FDC /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F931926EEF4FE000C9FDC /* BookTableViewCell.swift */; };
+		DF5F931C26EEF4FE000C9FDC /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F931A26EEF4FE000C9FDC /* BookTableViewCell.xib */; };
 		DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14026E5CAF100EB718E /* AppDelegate.swift */; };
 		DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */; };
 		DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB14926E5CAF400EB718E /* Assets.xcassets */; };
@@ -56,6 +58,8 @@
 		DF5F930F26EC5379000C9FDC /* ButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonTableViewCell.xib; sourceTree = "<group>"; };
 		DF5F931226EEDC50000C9FDC /* TinhNangTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinhNangTableViewController.swift; sourceTree = "<group>"; };
 		DF5F931326EEDC50000C9FDC /* TinhNangTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TinhNangTableViewController.xib; sourceTree = "<group>"; };
+		DF5F931926EEF4FE000C9FDC /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		DF5F931A26EEF4FE000C9FDC /* BookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
 		DFCAB13D26E5CAF100EB718E /* kidsOnlineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsOnlineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCAB14026E5CAF100EB718E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +130,15 @@
 				DFCAB18126E7192700EB718E /* ButtonsCollectionViewCell.xib */,
 			);
 			path = ButtonCell;
+			sourceTree = "<group>";
+		};
+		DF5F931826EEF4C4000C9FDC /* BookCell */ = {
+			isa = PBXGroup;
+			children = (
+				DF5F931926EEF4FE000C9FDC /* BookTableViewCell.swift */,
+				DF5F931A26EEF4FE000C9FDC /* BookTableViewCell.xib */,
+			);
+			path = BookCell;
 			sourceTree = "<group>";
 		};
 		DFCAB13426E5CAF100EB718E = {
@@ -240,6 +253,7 @@
 		DFCAB17B26E7183800EB718E /* TinhNang */ = {
 			isa = PBXGroup;
 			children = (
+				DF5F931826EEF4C4000C9FDC /* BookCell */,
 				DF5F931726EEF475000C9FDC /* ButtonCell */,
 				DFCAB17C26E7185800EB718E /* TinhNangTableViewCell.swift */,
 				DFCAB17D26E7185800EB718E /* TinhNangTableViewCell.xib */,
@@ -355,6 +369,7 @@
 				DFCAB17F26E7185800EB718E /* TinhNangTableViewCell.xib in Resources */,
 				DF5F931526EEDC50000C9FDC /* TinhNangTableViewController.xib in Resources */,
 				DFCAB17726E6FC6300EB718E /* ThongBaoTableViewCell.xib in Resources */,
+				DF5F931C26EEF4FE000C9FDC /* BookTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +388,7 @@
 				DFCAB16826E5F8E400EB718E /* HomeTableViewCell.swift in Sources */,
 				DFCAB17626E6FC6300EB718E /* ThongBaoTableViewCell.swift in Sources */,
 				DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */,
+				DF5F931B26EEF4FE000C9FDC /* BookTableViewCell.swift in Sources */,
 				DFCAB18226E7192700EB718E /* ButtonsCollectionViewCell.swift in Sources */,
 				DFCAB19826E864D500EB718E /* ScheduleTableViewCell.swift in Sources */,
 				DFCAB19426E8621C00EB718E /* HomeTableViewController.swift in Sources */,

@@ -22,10 +22,5 @@ class ButtonsCollectionViewCell: UICollectionViewCell {
     static func nib() -> UINib {
         return UINib(nibName: "ButtonsCollectionViewCell", bundle: nil)
     }
-    
-    func setContentForCell(image: String, label: String) {
-        buttonImage.imageView?.image = UIImage(named: image)
-        buttonLabel.text = label
-    }
 
 }
