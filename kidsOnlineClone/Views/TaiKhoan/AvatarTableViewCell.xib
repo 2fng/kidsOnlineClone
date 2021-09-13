@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -24,7 +24,7 @@
                         </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aZg-L3-yOz">
-                        <rect key="frame" x="100" y="112.5" width="267" height="99"/>
+                        <rect key="frame" x="100" y="113" width="267" height="98.666666666666671"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="100" id="ZQ1-b6-Xqn"/>
                         </constraints>
@@ -33,13 +33,13 @@
                         <rect key="frame" x="120" y="222" width="227" height="45"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbd-mL-PhA">
-                                <rect key="frame" x="96" y="0.0" width="35.5" height="31.5"/>
+                                <rect key="frame" x="96" y="0.0" width="35.333333333333343" height="31.666666666666668"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJL-my-Wo7">
-                                <rect key="frame" x="99.5" y="31.5" width="28.5" height="13.5"/>
+                                <rect key="frame" x="99.333333333333343" y="31.666666666666654" width="28.666666666666657" height="13.333333333333332"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                         </constraints>
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Yo2-nm-P9f">
-                        <rect key="frame" x="268" y="182.5" width="30" height="29"/>
+                        <rect key="frame" x="268" y="183" width="30" height="28.666666666666671"/>
                         <color key="tintColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="oVM-N2-GRI"/>
@@ -66,7 +66,9 @@
                     <constraint firstAttribute="trailing" secondItem="gwU-qq-RIp" secondAttribute="trailing" constant="10" id="ZlT-fH-x1D"/>
                     <constraint firstItem="Yo2-nm-P9f" firstAttribute="bottom" secondItem="aZg-L3-yOz" secondAttribute="bottom" id="c21-gk-mAo"/>
                     <constraint firstItem="gwU-qq-RIp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="gOa-xG-PfD"/>
-                    <constraint firstAttribute="trailing" secondItem="Yo2-nm-P9f" secondAttribute="trailing" constant="169" id="l2n-gj-elo"/>
+                    <constraint firstAttribute="trailing" secondItem="Yo2-nm-P9f" secondAttribute="trailing" constant="169" id="l2n-gj-elo">
+                        <variation key="widthClass=regular" constant="369"/>
+                    </constraint>
                     <constraint firstItem="aZg-L3-yOz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="101" id="mgq-us-YzM"/>
                     <constraint firstAttribute="trailingMargin" secondItem="l90-Tr-WEJ" secondAttribute="trailing" constant="100" id="rDs-HE-4os"/>
                     <constraint firstItem="l90-Tr-WEJ" firstAttribute="top" secondItem="aZg-L3-yOz" secondAttribute="bottom" constant="10" id="wja-Iz-d1U"/>
