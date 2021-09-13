@@ -131,14 +131,15 @@ class HomeTableViewController: UITableViewController {
                 
                 let cell = tableView.dequeueReusableCell(withIdentifier: TimeInfoTableViewCell.identifier, for: indexPath) as! TimeInfoTableViewCell
                 
+                cell.cellContentView.clipsToBounds = true
                 cell.timeColumn.text = schedule[indexPath.row-1]
                 cell.infoColumn.text = activity[indexPath.row-1]
                 
-                //cell.timeColumn.layer.cornerRadius = 4
+                //cell.timeColumn.layer.cornerRadius = 5
                 cell.timeColumn.layer.borderWidth = 1
                 cell.timeColumn.layer.borderColor = UIColor.systemBlue.cgColor
                 
-                //cell.infoColumn.layer.cornerRadius = 4
+                //cell.infoColumn.layer.cornerRadius = 5
                 cell.infoColumn.layer.borderWidth = 1
                 cell.infoColumn.layer.borderColor = UIColor.systemBlue.cgColor
                 

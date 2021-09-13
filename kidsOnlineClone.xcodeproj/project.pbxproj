@@ -24,6 +24,10 @@
 		DF5F931C26EEF4FE000C9FDC /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F931A26EEF4FE000C9FDC /* BookTableViewCell.xib */; };
 		DF5F932126EF0218000C9FDC /* SingleLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F931F26EF0218000C9FDC /* SingleLineTableViewCell.swift */; };
 		DF5F932226EF0218000C9FDC /* SingleLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F932026EF0218000C9FDC /* SingleLineTableViewCell.xib */; };
+		DF5F932626EF2723000C9FDC /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F932426EF2723000C9FDC /* PostTableViewCell.swift */; };
+		DF5F932726EF2723000C9FDC /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F932526EF2723000C9FDC /* PostTableViewCell.xib */; };
+		DF5F932A26EF288B000C9FDC /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F932826EF288B000C9FDC /* PostCollectionViewCell.swift */; };
+		DF5F932B26EF288B000C9FDC /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F932926EF288B000C9FDC /* PostCollectionViewCell.xib */; };
 		DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14026E5CAF100EB718E /* AppDelegate.swift */; };
 		DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */; };
 		DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB14926E5CAF400EB718E /* Assets.xcassets */; };
@@ -64,6 +68,10 @@
 		DF5F931A26EEF4FE000C9FDC /* BookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
 		DF5F931F26EF0218000C9FDC /* SingleLineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLineTableViewCell.swift; sourceTree = "<group>"; };
 		DF5F932026EF0218000C9FDC /* SingleLineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleLineTableViewCell.xib; sourceTree = "<group>"; };
+		DF5F932426EF2723000C9FDC /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		DF5F932526EF2723000C9FDC /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		DF5F932826EF288B000C9FDC /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		DF5F932926EF288B000C9FDC /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
 		DFCAB13D26E5CAF100EB718E /* kidsOnlineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsOnlineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCAB14026E5CAF100EB718E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +160,17 @@
 				DF5F932026EF0218000C9FDC /* SingleLineTableViewCell.xib */,
 			);
 			path = SingleLineCell;
+			sourceTree = "<group>";
+		};
+		DF5F932326EF270F000C9FDC /* PostCell */ = {
+			isa = PBXGroup;
+			children = (
+				DF5F932426EF2723000C9FDC /* PostTableViewCell.swift */,
+				DF5F932526EF2723000C9FDC /* PostTableViewCell.xib */,
+				DF5F932826EF288B000C9FDC /* PostCollectionViewCell.swift */,
+				DF5F932926EF288B000C9FDC /* PostCollectionViewCell.xib */,
+			);
+			path = PostCell;
 			sourceTree = "<group>";
 		};
 		DFCAB13426E5CAF100EB718E = {
@@ -266,6 +285,7 @@
 		DFCAB17B26E7183800EB718E /* TinhNang */ = {
 			isa = PBXGroup;
 			children = (
+				DF5F932326EF270F000C9FDC /* PostCell */,
 				DF5F931D26EF01E4000C9FDC /* SingleLineCell */,
 				DF5F931826EEF4C4000C9FDC /* BookCell */,
 				DF5F931726EEF475000C9FDC /* ButtonCell */,
@@ -381,7 +401,9 @@
 				DF5F932226EF0218000C9FDC /* SingleLineTableViewCell.xib in Resources */,
 				DFCAB19926E864D500EB718E /* ScheduleTableViewCell.xib in Resources */,
 				DFCAB18D26E847D400EB718E /* TabBarViewController.xib in Resources */,
+				DF5F932726EF2723000C9FDC /* PostTableViewCell.xib in Resources */,
 				DFCAB17F26E7185800EB718E /* TinhNangTableViewCell.xib in Resources */,
+				DF5F932B26EF288B000C9FDC /* PostCollectionViewCell.xib in Resources */,
 				DF5F931526EEDC50000C9FDC /* TinhNangTableViewController.xib in Resources */,
 				DFCAB17726E6FC6300EB718E /* ThongBaoTableViewCell.xib in Resources */,
 				DF5F931C26EEF4FE000C9FDC /* BookTableViewCell.xib in Resources */,
@@ -395,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF5F932A26EF288B000C9FDC /* PostCollectionViewCell.swift in Sources */,
 				DF5F930C26EC47D9000C9FDC /* AvatarTableViewCell.swift in Sources */,
 				DFCAB17E26E7185800EB718E /* TinhNangTableViewCell.swift in Sources */,
 				DF5F931426EEDC50000C9FDC /* TinhNangTableViewController.swift in Sources */,
@@ -406,6 +429,7 @@
 				DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */,
 				DF5F931B26EEF4FE000C9FDC /* BookTableViewCell.swift in Sources */,
 				DFCAB18226E7192700EB718E /* ButtonsCollectionViewCell.swift in Sources */,
+				DF5F932626EF2723000C9FDC /* PostTableViewCell.swift in Sources */,
 				DFCAB19826E864D500EB718E /* ScheduleTableViewCell.swift in Sources */,
 				DFCAB19426E8621C00EB718E /* HomeTableViewController.swift in Sources */,
 				DF33AC8B26E8B2A80000E137 /* TimeInfoTableViewCell.swift in Sources */,

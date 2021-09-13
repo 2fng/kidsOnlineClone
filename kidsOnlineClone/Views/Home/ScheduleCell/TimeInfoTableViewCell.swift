@@ -11,6 +11,7 @@ class TimeInfoTableViewCell: UITableViewCell {
     
     static let identifier = "timeInfoCell"
     
+    @IBOutlet var cellContentView: UIView!
     @IBOutlet var timeColumn: UILabel!
     @IBOutlet var infoColumn: UILabel!
 

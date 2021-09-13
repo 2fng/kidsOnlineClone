@@ -38,7 +38,7 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="5vJ-6a-Xzy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="IHk-mv-mtQ"/>
+                    <constraint firstItem="5vJ-6a-Xzy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Gm3-Zi-Uz5"/>
                     <constraint firstItem="5vJ-6a-Xzy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="IhH-64-HaR"/>
                     <constraint firstAttribute="trailing" secondItem="5vJ-6a-Xzy" secondAttribute="trailing" constant="35" id="cFw-Es-F5u"/>
                     <constraint firstAttribute="bottom" secondItem="5vJ-6a-Xzy" secondAttribute="bottom" id="rfW-fh-Cvb"/>
@@ -46,6 +46,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="cellContentView" destination="H2p-sc-9uM" id="MdX-1Z-JuF"/>
                 <outlet property="infoColumn" destination="qQA-8u-vhi" id="iHP-TA-6Cs"/>
                 <outlet property="timeColumn" destination="u24-p0-YFB" id="Lb1-A2-udo"/>
             </connections>

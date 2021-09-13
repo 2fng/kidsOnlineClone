@@ -38,6 +38,7 @@ class TinhNangTableViewController: UITableViewController {
         tableView.register(TinhNangTableViewCell.nib(), forCellReuseIdentifier: TinhNangTableViewCell.identifier)
         tableView.register(BookTableViewCell.nib(), forCellReuseIdentifier: BookTableViewCell.identifier)
         tableView.register(SingleLineTableViewCell.nib(), forCellReuseIdentifier: SingleLineTableViewCell.identifier)
+        tableView.register(PostTableViewCell.nib(), forCellReuseIdentifier: PostTableViewCell.identifier)
     }
 
     // MARK: - Table view data source
@@ -81,7 +82,9 @@ class TinhNangTableViewController: UITableViewController {
             return cell
         }
         
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as! PostTableViewCell
+        
+        return cell
     }
     
     // MARK: - Table view delegate
@@ -98,7 +101,7 @@ class TinhNangTableViewController: UITableViewController {
             return 80
         }
         
-        return 150
+        return 300
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
