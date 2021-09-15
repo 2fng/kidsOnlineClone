@@ -93,7 +93,7 @@ class HomeTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         //If table type = schedule then return schedule.count+1 rows per section
         if appData[section]["type"] == "1"{
-            return schedule.count+1
+            return schedule.count+2
         }
         
         //If table type = bang tin then return 1 row per section
@@ -117,23 +117,25 @@ class HomeTableViewController: UITableViewController {
                 cell.title.text = appData[indexPath.section]["title"]
                 cell.date2.text = appData[indexPath.section]["date"]
                 cell.title2.text = appData[indexPath.section]["subTitle"]
-                
-                //cell.timeColumn.layer.cornerRadius = 4
-                cell.timeColumn.layer.borderWidth = 1
-                cell.timeColumn.layer.borderColor = UIColor.systemBlue.cgColor
-                
-                //cell.infoColumn.layer.cornerRadius = 4
-                cell.infoColumn.layer.borderWidth = 1
-                cell.infoColumn.layer.borderColor = UIColor.systemBlue.cgColor
 
                 return cell
             default:
                 
                 let cell = tableView.dequeueReusableCell(withIdentifier: TimeInfoTableViewCell.identifier, for: indexPath) as! TimeInfoTableViewCell
                 
+                if indexPath.row == 1 {
+                    
+                    cell.timeColumn.text = "Thời gian"
+                    cell.infoColumn.text = "Nội dung"
+                    
+                } else {
+                    
+                    cell.timeColumn.text = schedule[indexPath.row-2]
+                    cell.infoColumn.text = activity[indexPath.row-2]
+                    
+                }
+                
                 cell.cellContentView.clipsToBounds = true
-                cell.timeColumn.text = schedule[indexPath.row-1]
-                cell.infoColumn.text = activity[indexPath.row-1]
                 
                 //cell.timeColumn.layer.cornerRadius = 5
                 cell.timeColumn.layer.borderWidth = 1
