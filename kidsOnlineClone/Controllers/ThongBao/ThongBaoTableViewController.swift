@@ -63,10 +63,30 @@ class ThongBaoTableViewController: UITableViewController {
         return 80.0
     }
     
+    
+    
     // MARK: - Table view delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("You tapped \(thongBaoArray[indexPath.row]["title"] ?? "Can't find title") on date \(thongBaoArray[indexPath.row]["dateTime"] ?? "Can't find date")")
     }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            tableView.beginUpdates()
+            
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            thongBaoArray.remove(at: indexPath.row)
+            
+            tableView.endUpdates()
+        }
+    }
+    
+    
 }
