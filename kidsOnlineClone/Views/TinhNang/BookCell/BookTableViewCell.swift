@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BookTableViewCell: UITableViewCell {
+class BookTableViewCell: UITableViewHeaderFooterView {
     
     static let identifier = "tinhNangBookCell"
     
@@ -25,10 +25,6 @@ class BookTableViewCell: UITableViewCell {
         return UINib(nibName: "BookTableViewCell", bundle: nil)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    
     
 }

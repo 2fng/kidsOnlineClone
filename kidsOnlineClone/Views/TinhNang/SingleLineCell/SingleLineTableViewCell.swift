@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SingleLineTableViewCell: UITableViewCell {
+class SingleLineTableViewCell: UITableViewHeaderFooterView {
     
     static let identifier = "singleLineCell"
     
@@ -22,12 +22,6 @@ class SingleLineTableViewCell: UITableViewCell {
     
     static func nib() -> UINib {
         return UINib(nibName: "SingleLineTableViewCell", bundle: nil)
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

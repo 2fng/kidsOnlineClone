@@ -14,7 +14,7 @@ class TinhNangTableViewController: UITableViewController {
     let navButtonImage = UIBarButtonItem(image: UIImage(systemName: "rectangle.grid.2x2.fill"), style: .plain, target: self, action: nil)
     
     //Cell array
-    let cellArray = ["buttonCell", "bookCell", "singleCell", "singleCell", "postCell"]
+    let cellArray = ["buttonCell", "bookCell", "singleCell", "postCell"]
     
     //Create variables for singleLineCell
     let singleLineCellContents = [
@@ -36,16 +36,20 @@ class TinhNangTableViewController: UITableViewController {
         
         //Register cell
         tableView.register(TinhNangTableViewCell.nib(), forCellReuseIdentifier: TinhNangTableViewCell.identifier)
-        tableView.register(BookTableViewCell.nib(), forCellReuseIdentifier: BookTableViewCell.identifier)
-        tableView.register(SingleLineTableViewCell.nib(), forCellReuseIdentifier: SingleLineTableViewCell.identifier)
+        //tableView.register(BookTableViewCell.nib(), forCellReuseIdentifier: BookTableViewCell.identifier)
+        //tableView.register(SingleLineTableViewCell.nib(), forCellReuseIdentifier: SingleLineTableViewCell.identifier)
         tableView.register(PostTableViewCell.nib(), forCellReuseIdentifier: PostTableViewCell.identifier)
+        
+        //Register header
+        tableView.register(SingleLineTableViewCell.nib(), forHeaderFooterViewReuseIdentifier: SingleLineTableViewCell.identifier)
+        tableView.register(BookTableViewCell.nib(), forHeaderFooterViewReuseIdentifier: BookTableViewCell.identifier)
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 5
+        return cellArray.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,28 +63,6 @@ class TinhNangTableViewController: UITableViewController {
             
             return cell
         }
-        
-        if cellArray[indexPath.section]  == "bookCell" {
-            let cell = tableView.dequeueReusableCell(withIdentifier: BookTableViewCell.identifier) as! BookTableViewCell
-            
-            cell.cellButton.layer.cornerRadius = 15
-            
-            return cell
-        }
-        
-//        if cellArray[indexPath.section]  == "singleCell" {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: SingleLineTableViewCell.identifier) as! SingleLineTableViewCell
-//
-//            cell.cellImage?.image = UIImage(systemName: singleLineCellContents[indexPath.section-2]["image"]!)
-//            cell.cellLabel.text = singleLineCellContents[indexPath.section-2]["title"]
-//            if singleLineCellContents[indexPath.section-2]["imageTintColor"] == "red" {
-//                cell.cellImage.tintColor = UIColor.systemRed
-//            } else {
-//                cell.cellImage.tintColor = UIColor.systemPink
-//            }
-//
-//            return cell
-//        }
         
         if cellArray[indexPath.section] == "postCell" {
             let cell = tableView.dequeueReusableCell(withIdentifier: PostTableViewCell.identifier, for: indexPath) as! PostTableViewCell
@@ -98,11 +80,11 @@ class TinhNangTableViewController: UITableViewController {
         }
         
         if cellArray[indexPath.section] == "bookCell" {
-            return 150
+            return 0
         }
         
         if cellArray[indexPath.section] == "singleCell" {
-            return 80
+            return 0
         }
         
         return 300
@@ -110,5 +92,60 @@ class TinhNangTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    //section header
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        if cellArray[section] == "singleCell" || cellArray[section] == "postCell" {
+            
+            let contentView = UIView()
+            let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: SingleLineTableViewCell.identifier) as! SingleLineTableViewCell
+            
+            view.cellImage?.image = UIImage(systemName: singleLineCellContents[section-2]["image"]!)
+            view.cellLabel.text = singleLineCellContents[section-2]["title"]
+            
+            if singleLineCellContents[section-2]["imageTintColor"] == "red" {
+                
+                view.cellImage.tintColor = UIColor.systemRed
+                
+            } else {
+                
+                view.cellImage.tintColor = UIColor.systemPink
+                
+            }
+            
+            contentView.addSubview(view)
+            contentView.backgroundColor = .white
+            
+            return contentView
+        }
+        
+        if cellArray[section] == "bookCell" {
+            
+            let contentView = UIView()
+            let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: BookTableViewCell.identifier) as! BookTableViewCell
+            
+            view.cellButton.layer.cornerRadius = 15
+            
+            contentView.addSubview(view)
+            contentView.backgroundColor = .white
+            
+            return contentView
+        }
+        
+        return UIView()
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if cellArray[section] == "singleCell" || cellArray[section] == "postCell" {
+            return 80
+        }
+        
+        if cellArray[section] == "bookCell" {
+            return 150
+        }
+        
+        return 0
     }
 }
