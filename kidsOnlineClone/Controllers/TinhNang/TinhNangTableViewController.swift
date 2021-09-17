@@ -76,7 +76,7 @@ class TinhNangTableViewController: UITableViewController {
     // MARK: - Table view delegate
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if cellArray[indexPath.section] == "buttonCell" {
-            return view.frame.size.height/2
+            return view.frame.size.height/2-50
         }
         
         if cellArray[indexPath.section] == "bookCell" {

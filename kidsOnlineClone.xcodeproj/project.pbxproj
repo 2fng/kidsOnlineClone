@@ -30,6 +30,8 @@
 		DF5F932B26EF288B000C9FDC /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F932926EF288B000C9FDC /* PostCollectionViewCell.xib */; };
 		DF5F933326F43AAF000C9FDC /* ButtonContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F933126F43AAE000C9FDC /* ButtonContentCollectionViewCell.swift */; };
 		DF5F933426F43AAF000C9FDC /* ButtonContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F933226F43AAE000C9FDC /* ButtonContentCollectionViewCell.xib */; };
+		DF5F933726F43FD6000C9FDC /* ButtonContentCollectionViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F933526F43FD6000C9FDC /* ButtonContentCollectionViewCell1.swift */; };
+		DF5F933826F43FD6000C9FDC /* ButtonContentCollectionViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F933626F43FD6000C9FDC /* ButtonContentCollectionViewCell1.xib */; };
 		DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14026E5CAF100EB718E /* AppDelegate.swift */; };
 		DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */; };
 		DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB14926E5CAF400EB718E /* Assets.xcassets */; };
@@ -76,6 +78,8 @@
 		DF5F932926EF288B000C9FDC /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
 		DF5F933126F43AAE000C9FDC /* ButtonContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContentCollectionViewCell.swift; sourceTree = "<group>"; };
 		DF5F933226F43AAE000C9FDC /* ButtonContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonContentCollectionViewCell.xib; sourceTree = "<group>"; };
+		DF5F933526F43FD6000C9FDC /* ButtonContentCollectionViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContentCollectionViewCell1.swift; sourceTree = "<group>"; };
+		DF5F933626F43FD6000C9FDC /* ButtonContentCollectionViewCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonContentCollectionViewCell1.xib; sourceTree = "<group>"; };
 		DFCAB13D26E5CAF100EB718E /* kidsOnlineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsOnlineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCAB14026E5CAF100EB718E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +186,8 @@
 			children = (
 				DF5F933126F43AAE000C9FDC /* ButtonContentCollectionViewCell.swift */,
 				DF5F933226F43AAE000C9FDC /* ButtonContentCollectionViewCell.xib */,
+				DF5F933526F43FD6000C9FDC /* ButtonContentCollectionViewCell1.swift */,
+				DF5F933626F43FD6000C9FDC /* ButtonContentCollectionViewCell1.xib */,
 			);
 			path = ButtonContentCell;
 			sourceTree = "<group>";
@@ -407,6 +413,7 @@
 				DFCAB18326E7192700EB718E /* ButtonsCollectionViewCell.xib in Resources */,
 				DFCAB14D26E5CAF400EB718E /* LaunchScreen.storyboard in Resources */,
 				DFCAB19F26E86CE900EB718E /* HeaderView.xib in Resources */,
+				DF5F933826F43FD6000C9FDC /* ButtonContentCollectionViewCell1.xib in Resources */,
 				DF33AC8C26E8B2A80000E137 /* TimeInfoTableViewCell.xib in Resources */,
 				DF5F930526EAFF49000C9FDC /* BaiVietTableViewCell.xib in Resources */,
 				DF5F931126EC5379000C9FDC /* ButtonTableViewCell.xib in Resources */,
@@ -443,6 +450,7 @@
 				DFCAB16826E5F8E400EB718E /* HomeTableViewCell.swift in Sources */,
 				DFCAB17626E6FC6300EB718E /* ThongBaoTableViewCell.swift in Sources */,
 				DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */,
+				DF5F933726F43FD6000C9FDC /* ButtonContentCollectionViewCell1.swift in Sources */,
 				DF5F931B26EEF4FE000C9FDC /* BookTableViewCell.swift in Sources */,
 				DFCAB18226E7192700EB718E /* ButtonsCollectionViewCell.swift in Sources */,
 				DF5F932626EF2723000C9FDC /* PostTableViewCell.swift in Sources */,

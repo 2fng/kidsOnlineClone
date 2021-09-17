@@ -18,10 +18,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="345" height="115"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AkR-oW-0Lf">
-                        <rect key="frame" x="0.0" y="0.0" width="345" height="115"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AkR-oW-0Lf">
+                        <rect key="frame" x="10" y="0.0" width="325" height="115"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JM5-oz-Zde">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JM5-oz-Zde">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -40,8 +40,8 @@
                     <constraint firstItem="AkR-oW-0Lf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="a9J-XO-jgV"/>
                     <constraint firstAttribute="bottom" secondItem="XaF-7O-Fo3" secondAttribute="bottom" id="fVg-yx-obY"/>
                     <constraint firstAttribute="top" secondItem="AkR-oW-0Lf" secondAttribute="top" id="ktA-3r-5At"/>
-                    <constraint firstAttribute="trailing" secondItem="AkR-oW-0Lf" secondAttribute="trailing" id="pF9-uv-jxA"/>
-                    <constraint firstItem="AkR-oW-0Lf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rpn-4a-hzZ"/>
+                    <constraint firstAttribute="trailing" secondItem="AkR-oW-0Lf" secondAttribute="trailing" constant="10" id="pF9-uv-jxA"/>
+                    <constraint firstItem="AkR-oW-0Lf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="rpn-4a-hzZ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
