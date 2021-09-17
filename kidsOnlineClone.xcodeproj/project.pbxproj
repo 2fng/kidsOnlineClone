@@ -28,6 +28,8 @@
 		DF5F932726EF2723000C9FDC /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F932526EF2723000C9FDC /* PostTableViewCell.xib */; };
 		DF5F932A26EF288B000C9FDC /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F932826EF288B000C9FDC /* PostCollectionViewCell.swift */; };
 		DF5F932B26EF288B000C9FDC /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F932926EF288B000C9FDC /* PostCollectionViewCell.xib */; };
+		DF5F933326F43AAF000C9FDC /* ButtonContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F933126F43AAE000C9FDC /* ButtonContentCollectionViewCell.swift */; };
+		DF5F933426F43AAF000C9FDC /* ButtonContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F933226F43AAE000C9FDC /* ButtonContentCollectionViewCell.xib */; };
 		DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14026E5CAF100EB718E /* AppDelegate.swift */; };
 		DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */; };
 		DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB14926E5CAF400EB718E /* Assets.xcassets */; };
@@ -72,6 +74,8 @@
 		DF5F932526EF2723000C9FDC /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		DF5F932826EF288B000C9FDC /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		DF5F932926EF288B000C9FDC /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
+		DF5F933126F43AAE000C9FDC /* ButtonContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContentCollectionViewCell.swift; sourceTree = "<group>"; };
+		DF5F933226F43AAE000C9FDC /* ButtonContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonContentCollectionViewCell.xib; sourceTree = "<group>"; };
 		DFCAB13D26E5CAF100EB718E /* kidsOnlineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsOnlineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCAB14026E5CAF100EB718E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +175,15 @@
 				DF5F932926EF288B000C9FDC /* PostCollectionViewCell.xib */,
 			);
 			path = PostCell;
+			sourceTree = "<group>";
+		};
+		DF5F933026F43A89000C9FDC /* ButtonContentCell */ = {
+			isa = PBXGroup;
+			children = (
+				DF5F933126F43AAE000C9FDC /* ButtonContentCollectionViewCell.swift */,
+				DF5F933226F43AAE000C9FDC /* ButtonContentCollectionViewCell.xib */,
+			);
+			path = ButtonContentCell;
 			sourceTree = "<group>";
 		};
 		DFCAB13426E5CAF100EB718E = {
@@ -285,6 +298,7 @@
 		DFCAB17B26E7183800EB718E /* TinhNang */ = {
 			isa = PBXGroup;
 			children = (
+				DF5F933026F43A89000C9FDC /* ButtonContentCell */,
 				DF5F932326EF270F000C9FDC /* PostCell */,
 				DF5F931D26EF01E4000C9FDC /* SingleLineCell */,
 				DF5F931826EEF4C4000C9FDC /* BookCell */,
@@ -406,6 +420,7 @@
 				DF5F932B26EF288B000C9FDC /* PostCollectionViewCell.xib in Resources */,
 				DF5F931526EEDC50000C9FDC /* TinhNangTableViewController.xib in Resources */,
 				DFCAB17726E6FC6300EB718E /* ThongBaoTableViewCell.xib in Resources */,
+				DF5F933426F43AAF000C9FDC /* ButtonContentCollectionViewCell.xib in Resources */,
 				DF5F931C26EEF4FE000C9FDC /* BookTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +438,7 @@
 				DF5F931426EEDC50000C9FDC /* TinhNangTableViewController.swift in Sources */,
 				DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */,
 				DFCAB16E26E6F88500EB718E /* ThongBaoTableViewController.swift in Sources */,
+				DF5F933326F43AAF000C9FDC /* ButtonContentCollectionViewCell.swift in Sources */,
 				DF5F932126EF0218000C9FDC /* SingleLineTableViewCell.swift in Sources */,
 				DFCAB16826E5F8E400EB718E /* HomeTableViewCell.swift in Sources */,
 				DFCAB17626E6FC6300EB718E /* ThongBaoTableViewCell.swift in Sources */,

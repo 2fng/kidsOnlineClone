@@ -35,12 +35,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="qQA-8u-vhi" firstAttribute="leading" secondItem="u24-p0-YFB" secondAttribute="trailing" id="sau-fU-Sqi"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="5vJ-6a-Xzy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Gm3-Zi-Uz5"/>
                     <constraint firstItem="5vJ-6a-Xzy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="IhH-64-HaR"/>
                     <constraint firstAttribute="trailing" secondItem="5vJ-6a-Xzy" secondAttribute="trailing" constant="35" id="cFw-Es-F5u"/>
+                    <constraint firstItem="5vJ-6a-Xzy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ifY-hZ-GFJ"/>
                     <constraint firstAttribute="bottom" secondItem="5vJ-6a-Xzy" secondAttribute="bottom" id="rfW-fh-Cvb"/>
                 </constraints>
             </tableViewCellContentView>
