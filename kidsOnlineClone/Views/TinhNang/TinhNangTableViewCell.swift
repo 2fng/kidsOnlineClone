@@ -111,6 +111,6 @@ extension TinhNangTableViewCell: UICollectionViewDataSource {
 //MARK: - Collection view delegate flow layout
 extension TinhNangTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 80, height: 100)
+        return CGSize(width: 90, height: 75)
     }
 }
