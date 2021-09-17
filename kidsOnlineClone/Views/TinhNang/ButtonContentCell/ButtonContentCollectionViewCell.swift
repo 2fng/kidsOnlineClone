@@ -72,6 +72,10 @@ extension ButtonContentCollectionViewCell: UICollectionViewDataSource {
 
 extension ButtonContentCollectionViewCell: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        print("You tapped \(cellContents[indexPath.item]["title"])")
+    }
 }
 
 extension ButtonContentCollectionViewCell: UICollectionViewDelegateFlowLayout {

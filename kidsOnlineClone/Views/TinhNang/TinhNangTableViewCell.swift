@@ -31,11 +31,12 @@ class TinhNangTableViewCell: UITableViewCell {
 
     }
     
+    //Update currentPage
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
         let x = targetContentOffset.pointee.x
         
-        print(x, contentView.frame.width, x/(contentView.frame.width-20))
+        //print(x, contentView.frame.width, x/(contentView.frame.width-20))
         
         tinhNangPageControl.currentPage = Int(x/(contentView.frame.width-20))
     }
