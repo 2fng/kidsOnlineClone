@@ -26,6 +26,8 @@ class TinhNangTableViewCell: UITableViewCell {
     ]
     
     @IBOutlet private weak var tinhNangCollectionView: UICollectionView!
+    @IBOutlet private weak var tinhNangPageControl: UIPageControl!
+    
     static var identifier = "TinhNangTableViewCell"
 
     override func awakeFromNib() {
@@ -35,6 +37,10 @@ class TinhNangTableViewCell: UITableViewCell {
         tinhNangCollectionView.register(ButtonsCollectionViewCell.nib(), forCellWithReuseIdentifier: ButtonsCollectionViewCell.identifier)
         tinhNangCollectionView.delegate = self
         tinhNangCollectionView.dataSource = self
+        
+        tinhNangPageControl.currentPage = 0
+        tinhNangPageControl.numberOfPages = 2
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -59,20 +65,44 @@ extension TinhNangTableViewCell: UICollectionViewDelegate {
 //MARK: - Collection view data source
 extension TinhNangTableViewCell: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cellContents.count
+        
+        if section == 0 {
+            return 12
+        }
+        
+        return 1
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ButtonsCollectionViewCell.identifier, for: indexPath) as! ButtonsCollectionViewCell
         
-        cell.buttonImage.setImage(UIImage(systemName: cellContents[indexPath.item]["image"]!), for: .normal)
-        cell.buttonLabel.text = cellContents[indexPath.item]["title"] ?? "Unknown"
-        
-        return cell
+        if indexPath.section == 0 {
+            
+            tinhNangPageControl.currentPage = indexPath.section
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ButtonsCollectionViewCell.identifier, for: indexPath) as! ButtonsCollectionViewCell
+            
+            cell.buttonImage.setImage(UIImage(systemName: cellContents[indexPath.item]["image"]!), for: .normal)
+            cell.buttonLabel.text = cellContents[indexPath.item]["title"] ?? "Unknown"
+            
+            return cell
+            
+        } else {
+            
+            tinhNangPageControl.currentPage = indexPath.section
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ButtonsCollectionViewCell.identifier, for: indexPath) as! ButtonsCollectionViewCell
+            
+            cell.buttonImage.setImage(UIImage(systemName: cellContents[12]["image"]!), for: .normal)
+            cell.buttonLabel.text = cellContents[12]["title"] ?? "Unknown"
+            
+            return cell
+        }
     }
     
     

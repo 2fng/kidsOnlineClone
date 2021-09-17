@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="345" height="115"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AkR-oW-0Lf">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AkR-oW-0Lf">
                         <rect key="frame" x="10" y="0.0" width="325" height="115"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vmR-c1-tSv">
@@ -27,10 +28,18 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="XaF-7O-Fo3">
+                        <rect key="frame" x="121.5" y="87.5" width="102.5" height="27.5"/>
+                        <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="currentPageIndicatorTintColor" name="AccentColor"/>
+                    </pageControl>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="XaF-7O-Fo3" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="IBc-rQ-ibO"/>
                     <constraint firstAttribute="bottom" secondItem="AkR-oW-0Lf" secondAttribute="bottom" id="X9D-QV-TxI"/>
                     <constraint firstItem="AkR-oW-0Lf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="a9J-XO-jgV"/>
+                    <constraint firstAttribute="bottom" secondItem="XaF-7O-Fo3" secondAttribute="bottom" id="fVg-yx-obY"/>
+                    <constraint firstAttribute="top" secondItem="AkR-oW-0Lf" secondAttribute="top" id="ktA-3r-5At"/>
                     <constraint firstAttribute="trailing" secondItem="AkR-oW-0Lf" secondAttribute="trailing" constant="10" id="pF9-uv-jxA"/>
                     <constraint firstItem="AkR-oW-0Lf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="rpn-4a-hzZ"/>
                 </constraints>
@@ -38,11 +47,15 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="tinhNangCollectionView" destination="AkR-oW-0Lf" id="hqy-wt-mVK"/>
+                <outlet property="tinhNangPageControl" destination="XaF-7O-Fo3" id="9XQ-yB-3GD"/>
             </connections>
             <point key="canvasLocation" x="148.55072463768118" y="113.50446428571428"/>
         </tableViewCell>
     </objects>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
