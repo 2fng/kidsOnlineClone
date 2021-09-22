@@ -13,23 +13,25 @@ class ThongBaoTableViewController: UITableViewController {
     let params: [String: Any] = ["load_type": 1, "time": 0]
     
     var headers: HTTPHeaders = HTTPHeaders([
-                "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQwOTkyNywiaXNzIjoiaHR0cDovL21udm4ua28uZWR1LnZuL2FwaS92NC9ndWFyZGlhbi9sb2dpbiIsImlhdCI6MTYzMjI5ODI5MywiZXhwIjoxNjM3NDgyMjkzLCJuYmYiOjE2MzIyOTgyOTMsImp0aSI6IlJYYVVMUUtvSVEwb25jMWwifQ.6vz2trRzlYspDjlF2q9uS2x8KDg5yokSEQmD1TvRJ2M"
+                "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQwOTkyNywiaXNzIjoiaHR0cDovL21udm4ua28uZWR1LnZuL2FwaS92NC9ndWFyZGlhbi9sb2dpbiIsImlhdCI6MTYzMjI5ODI5MywiZXhwIjoxNjM3NDgyMjkzLCJuYmYiOjE2MzIyOTgyOTMsImp0aSI6IlJYYVVMUUtvSVEwb25jMWwifQ.6vz2trRzlYspDjlF2q9uS2x8KDg5yokSEQmD1TvRJ2M"
             ])
     
     let editButton = UIBarButtonItem(image: UIImage(systemName: "pencil.circle"), style: .plain, target: self, action: nil)
     
-    var notifications = [["image": "image1", "title": "khao sat test 27/07", "detail": "bai khao sat test", "dateTime": "10:52 27/07/2021"],                     ["image": "image2", "title": "khao sat nhu cau hoc ngoai khoa", "detail": "Quy phu huynh vui long tra loi bai khao sat ho tro nha truong len ke hoach mo cac lop ngoai khoa", "dateTime": "10:07 22/07/2021"],
-                         ["image": "image3", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-                         ["image": "image1", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-                         ["image": "image2", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-                         ["image": "image3", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-                         ["image": "image1", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-                         ["image": "image2", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-                         ["image": "image3", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-                         ["image": "image1", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-                         ["image": "image2", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-                         ["image": "image3", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"]
-    ]
+//    var notifications = [["image": "image1", "title": "khao sat test 27/07", "detail": "bai khao sat test", "dateTime": "10:52 27/07/2021"],                     ["image": "image2", "title": "khao sat nhu cau hoc ngoai khoa", "detail": "Quy phu huynh vui long tra loi bai khao sat ho tro nha truong len ke hoach mo cac lop ngoai khoa", "dateTime": "10:07 22/07/2021"],
+//                         ["image": "image3", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
+//                         ["image": "image1", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
+//                         ["image": "image2", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
+//                         ["image": "image3", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
+//                         ["image": "image1", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
+//                         ["image": "image2", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
+//                         ["image": "image3", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
+//                         ["image": "image1", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
+//                         ["image": "image2", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
+//                         ["image": "image3", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"]
+//    ]
+    
+    var notifications: [Notification] = []
     
     //Create refresh control variable
     let thongBaoViewRefreshControl: UIRefreshControl =  {
@@ -80,12 +82,12 @@ class ThongBaoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ThongBaoTableViewCell.identifier, for: indexPath) as! ThongBaoTableViewCell
         
-        cell.thongBaoImageView?.image = UIImage(named: notifications[indexPath.row]["image"]!)
-        cell.thongBaoTitle.text = notifications[indexPath.row]["title"]
-        cell.thongBaoDetail.text = notifications[indexPath.row]["detail"]
+        cell.thongBaoImageView?.image = UIImage(named: notifications[indexPath.row].avatar)
+        cell.thongBaoTitle.text = notifications[indexPath.row].title
+        //cell.thongBaoDetail.text = notifications[indexPath.row]["detail"]
         cell.thongBaoDetail.lineBreakMode = .byTruncatingTail
         cell.thongBaoDetail.numberOfLines = 1
-        cell.thongBaoDateTime.text = notifications[indexPath.row]["dateTime"]
+        //cell.thongBaoDateTime.text = "\(notifications[indexPath.row].date)"
         
         return cell
     }
@@ -100,7 +102,7 @@ class ThongBaoTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print("You tapped \(notifications[indexPath.row]["title"] ?? "Can't find title") on date \(notifications[indexPath.row]["dateTime"] ?? "Can't find date")")
+        print("You tapped \(notifications[indexPath.row].title) on date \(notifications[indexPath.row].date)")
     }
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
@@ -122,6 +124,7 @@ class ThongBaoTableViewController: UITableViewController {
     
 }
 
+// MARK: - HTTP request
 extension ThongBaoTableViewController {
 
     func fetchData() {
@@ -142,6 +145,7 @@ extension ThongBaoTableViewController {
             case .failure(let error as Error):
                 print("Respose: Failed")
                 print(error)
+                print("ffertre: \(String(describing: response.response?.statusCode))")
                 
             }
         })
