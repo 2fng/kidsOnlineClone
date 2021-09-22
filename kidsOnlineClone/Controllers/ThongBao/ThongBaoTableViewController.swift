@@ -6,8 +6,15 @@
 //
 
 import UIKit
+import Alamofire
 
 class ThongBaoTableViewController: UITableViewController {
+    
+    let params: [String: Any] = ["load_type": 1, "time": 0]
+    
+    var headers: HTTPHeaders = HTTPHeaders([
+                "Authorization": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQwOTkyNywiaXNzIjoiaHR0cDovL21udm4ua28uZWR1LnZuL2FwaS92NC9ndWFyZGlhbi9sb2dpbiIsImlhdCI6MTYzMjI5ODI5MywiZXhwIjoxNjM3NDgyMjkzLCJuYmYiOjE2MzIyOTgyOTMsImp0aSI6IlJYYVVMUUtvSVEwb25jMWwifQ.6vz2trRzlYspDjlF2q9uS2x8KDg5yokSEQmD1TvRJ2M"
+            ])
     
     let editButton = UIBarButtonItem(image: UIImage(systemName: "pencil.circle"), style: .plain, target: self, action: nil)
     
@@ -41,6 +48,8 @@ class ThongBaoTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fetchData()
         
         //Set up right bar button
         navigationItem.rightBarButtonItem = editButton
@@ -111,4 +120,30 @@ class ThongBaoTableViewController: UITableViewController {
     }
     
     
+}
+
+extension ThongBaoTableViewController {
+
+    func fetchData() {
+        //1
+        let request = AF.request("https://notification.mnvn.ko.edu.vn/api/parents/load", method: HTTPMethod(rawValue: "POST"),
+            parameters: params,
+            encoding: JSONEncoding.default,
+            headers: headers)
+        
+        request.responseJSON(completionHandler: { (response) in
+            
+            switch response.result {
+            
+            case .success(let JSON):
+                print("Response: Success")
+                print(JSON)
+                
+            case .failure(let error as Error):
+                print("Respose: Failed")
+                print(error)
+                
+            }
+        })
+    }
 }
