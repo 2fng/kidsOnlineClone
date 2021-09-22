@@ -135,7 +135,7 @@ class HomeTableViewController: UITableViewController {
                     
                 }
                 
-                cell.cellContentView.clipsToBounds = true
+                cell.clipsToBounds = true
                 
                 //cell.timeColumn.layer.cornerRadius = 5
                 cell.timeColumn.layer.borderWidth = 1

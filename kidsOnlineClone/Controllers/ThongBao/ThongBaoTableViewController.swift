@@ -24,6 +24,20 @@ class ThongBaoTableViewController: UITableViewController {
                          ["image": "image3", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"]
     ]
     
+    //Create refresh control variable
+    let thongBaoViewRefreshControl: UIRefreshControl =  {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+        
+        return refreshControl
+    }()
+    
+    @objc private func refresh(sender: UIRefreshControl) {
+        
+        tableView.reloadData()
+        
+        sender.endRefreshing()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +49,7 @@ class ThongBaoTableViewController: UITableViewController {
         tableView.register(ThongBaoTableViewCell.nib(), forCellReuseIdentifier: ThongBaoTableViewCell.identifier)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.refreshControl = thongBaoViewRefreshControl
         
         
     }

@@ -60,7 +60,6 @@ class TaiKhoanTableViewController: UITableViewController {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: AvatarTableViewCell.identifier) as! AvatarTableViewCell
             
-            
             cell.nameLabel.text = "Me be Cat Tien"
             cell.detailLabel.text = "Tai khoan: phuhuynh39"
             

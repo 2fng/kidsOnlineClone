@@ -36,10 +36,11 @@ class TinhNangTableViewCell: UITableViewCell {
         
         let x = targetContentOffset.pointee.x
         
-        //print(x, contentView.frame.width, x/(contentView.frame.width-20))
+        print(x, contentView.frame.width, x/(contentView.frame.width-20))
         
         tinhNangPageControl.currentPage = Int(x/(contentView.frame.width-20))
     }
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

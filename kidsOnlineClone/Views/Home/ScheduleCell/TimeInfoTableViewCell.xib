@@ -42,8 +42,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="5vJ-6a-Xzy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="IhH-64-HaR"/>
+                    <constraint firstItem="5vJ-6a-Xzy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Pwh-Iu-0gk"/>
                     <constraint firstAttribute="trailing" secondItem="5vJ-6a-Xzy" secondAttribute="trailing" constant="35" id="cFw-Es-F5u"/>
-                    <constraint firstItem="5vJ-6a-Xzy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ifY-hZ-GFJ"/>
                     <constraint firstAttribute="bottom" secondItem="5vJ-6a-Xzy" secondAttribute="bottom" id="rfW-fh-Cvb"/>
                 </constraints>
             </tableViewCellContentView>

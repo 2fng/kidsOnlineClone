@@ -82,7 +82,7 @@
                 <outlet property="editButton" destination="Yo2-nm-P9f" id="nwu-if-Bl9"/>
                 <outlet property="nameLabel" destination="Nbd-mL-PhA" id="AJI-g0-CNJ"/>
             </connections>
-            <point key="canvasLocation" x="238.40579710144928" y="176.11607142857142"/>
+            <point key="canvasLocation" x="237.61682242990653" y="175.5939524838013"/>
         </tableViewCell>
     </objects>
     <resources>
