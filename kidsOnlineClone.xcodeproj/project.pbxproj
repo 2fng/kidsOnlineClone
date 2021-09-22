@@ -52,6 +52,7 @@
 		DFCAB19926E864D500EB718E /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB19726E864D500EB718E /* ScheduleTableViewCell.xib */; };
 		DFCAB19D26E86CD900EB718E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB19C26E86CD800EB718E /* HeaderView.swift */; };
 		DFCAB19F26E86CE900EB718E /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB19E26E86CE900EB718E /* HeaderView.xib */; };
+		DFED617426FADB52001E7B31 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED617326FADB52001E7B31 /* Notification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		DFCAB19726E864D500EB718E /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		DFCAB19C26E86CD800EB718E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		DFCAB19E26E86CE900EB718E /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		DFED617326FADB52001E7B31 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				DFCAB16426E5EB4800EB718E /* Student.swift */,
+				DFED617326FADB52001E7B31 /* Notification.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				DF33AC8B26E8B2A80000E137 /* TimeInfoTableViewCell.swift in Sources */,
 				DF5F931026EC5379000C9FDC /* ButtonTableViewCell.swift in Sources */,
 				DFCAB19D26E86CD900EB718E /* HeaderView.swift in Sources */,
+				DFED617426FADB52001E7B31 /* Notification.swift in Sources */,
 				DF33AC8E26EAFC0A0000E137 /* TaiKhoanTableViewController.swift in Sources */,
 				DF5F930826EC3791000C9FDC /* HomeCustomSectionHeader.swift in Sources */,
 				DF5F930426EAFF49000C9FDC /* BaiVietTableViewCell.swift in Sources */,
