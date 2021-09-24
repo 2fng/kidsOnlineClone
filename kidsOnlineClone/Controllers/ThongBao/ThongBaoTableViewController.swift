@@ -84,16 +84,16 @@ class ThongBaoTableViewController: UITableViewController {
         
         cell.thongBaoImageView?.image = UIImage(named: notifications[indexPath.row].avatar)
         cell.thongBaoTitle.text = notifications[indexPath.row].title
-        //cell.thongBaoDetail.text = notifications[indexPath.row]["detail"]
+        cell.thongBaoDetail.text = notifications[indexPath.row].sub_title
         cell.thongBaoDetail.lineBreakMode = .byTruncatingTail
         cell.thongBaoDetail.numberOfLines = 1
-        //cell.thongBaoDateTime.text = "\(notifications[indexPath.row].date)"
+        cell.thongBaoDateTime.text = "\(notifications[indexPath.row].date)"
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80.0
+        return 100.0
     }
     
     
@@ -160,6 +160,7 @@ extension ThongBaoTableViewController {
                     let data = ResponseNotification(data:(json?["data"] as? [String: Any]) ?? [:])
                     
                     self.notifications = data.arrayNotification
+                    print(JSON)
                     self.tableView.reloadData()
                     
                 } catch {
