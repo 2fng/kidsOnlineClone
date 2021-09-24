@@ -11,6 +11,7 @@ import Alamofire
 class ThongBaoTableViewController: UITableViewController {
     
     let params: [String: Any] = ["load_type": 1, "time": 0]
+
     
     var headers: HTTPHeaders = HTTPHeaders([
                 "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQwOTkyNywiaXNzIjoiaHR0cDovL21udm4ua28uZWR1LnZuL2FwaS92NC9ndWFyZGlhbi9sb2dpbiIsImlhdCI6MTYzMjI5ODI5MywiZXhwIjoxNjM3NDgyMjkzLCJuYmYiOjE2MzIyOTgyOTMsImp0aSI6IlJYYVVMUUtvSVEwb25jMWwifQ.6vz2trRzlYspDjlF2q9uS2x8KDg5yokSEQmD1TvRJ2M"
@@ -19,6 +20,7 @@ class ThongBaoTableViewController: UITableViewController {
     let editButton = UIBarButtonItem(image: UIImage(systemName: "pencil.circle"), style: .plain, target: self, action: nil)
     
     var notifications: [Notification] = []
+    var isReadNotifications: [String] = []
     
     //Create refresh control variable
     let thongBaoViewRefreshControl: UIRefreshControl =  {
@@ -49,7 +51,7 @@ class ThongBaoTableViewController: UITableViewController {
         tableView.delegate = self
         tableView.refreshControl = thongBaoViewRefreshControl
         
-        //MARK: - HTTP Request
+        //MARK: - HTTP Request URL and request
         // Create URL Request
         let url = URL(string: "https://notification.mnvn.ko.edu.vn/api/parents/load")!
         var request = URLRequest(url: url)
@@ -76,6 +78,13 @@ class ThongBaoTableViewController: UITableViewController {
         cell.thongBaoDetail.numberOfLines = 1
         cell.thongBaoDateTime.text = "\(notifications[indexPath.row].date)"
         
+        if notifications[indexPath.row].is_read == 0 {
+            cell.contentView.backgroundColor = .lightGray
+        } else {
+            isReadNotifications.append(notifications[indexPath.row].notification_id)
+            cell.contentView.backgroundColor = nil
+        }
+        
         return cell
     }
     
@@ -87,8 +96,14 @@ class ThongBaoTableViewController: UITableViewController {
     
     // MARK: - Table view delegate
     
+    //Cell is press
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        isReadNotifications.append(notifications[indexPath.row].notification_id)
+        isReadStatusUpdate()
+        notifications[indexPath.row].is_read = 1
+        tableView.reloadData()
         print("You tapped \(notifications[indexPath.row].title) on date \(notifications[indexPath.row].date)")
     }
     
@@ -96,6 +111,7 @@ class ThongBaoTableViewController: UITableViewController {
         return .delete
     }
     
+    //Slide left to delete
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
@@ -166,6 +182,33 @@ extension ThongBaoTableViewController {
                 print(error)
                 print("ffertre: \(String(describing: response.response?.statusCode))")
 
+            }
+        }
+    }
+    
+    //send data, fetch updated is_read notifications
+    func isReadStatusUpdate() {
+        
+        let isReadParam: [String: Any] = ["notification_ids": isReadNotifications]
+        
+        let request = AF.request("https://notification.mnvn.ko.edu.vn/api/parents/read",
+                                 method: HTTPMethod(rawValue: "POST"),
+                                 parameters: isReadParam,
+                                 encoding: JSONEncoding.default,
+                                 headers: headers)
+        
+        request.responseJSON { (response) in
+            
+            switch response.result {
+            case .success(let JSON):
+                
+                print(JSON)
+                
+            case .failure(let error as Error):
+                
+                print("Respose: Failed")
+                print(error)
+                print("ffertre: \(String(describing: response.response?.statusCode))")
             }
         }
     }
