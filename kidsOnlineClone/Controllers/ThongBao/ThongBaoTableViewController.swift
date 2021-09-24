@@ -126,6 +126,20 @@ class ThongBaoTableViewController: UITableViewController {
 
 // MARK: - HTTP request
 extension ThongBaoTableViewController {
+    
+    enum APIResult {
+        case success(Any)
+        case failure(APIError)
+    }
+    
+    
+    struct notificationRespond{
+        var arrayNotification: [Notification]
+    }
+    
+    enum APIError {
+        
+    }
 
     func fetchData() {
         //1
@@ -134,20 +148,34 @@ extension ThongBaoTableViewController {
             encoding: JSONEncoding.default,
             headers: headers)
         
-        request.responseJSON(completionHandler: { (response) in
-            
+        request.responseJSON { (response) in
             switch response.result {
-            
+
             case .success(let JSON):
-                print("Response: Success")
-                print(JSON)
+                do {
+                    let jsonData = try JSONSerialization.data(withJSONObject: JSON, options: .prettyPrinted)
+                    
+                    let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: AnyObject]
+                    
+                    let data = ResponseNotification(data:(json?["data"] as? [String: Any]) ?? [:])
+                    
+                    self.notifications = data.arrayNotification
+                    self.tableView.reloadData()
+                    
+                } catch {
+                    
+                    print(error)
+                    
+                }
                 
+
             case .failure(let error as Error):
                 print("Respose: Failed")
                 print(error)
                 print("ffertre: \(String(describing: response.response?.statusCode))")
-                
+
             }
-        })
+
+        }
     }
 }

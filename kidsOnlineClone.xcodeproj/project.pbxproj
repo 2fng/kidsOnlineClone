@@ -12,6 +12,7 @@
 		DF33AC8C26E8B2A80000E137 /* TimeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF33AC8A26E8B2A80000E137 /* TimeInfoTableViewCell.xib */; };
 		DF33AC8E26EAFC0A0000E137 /* TaiKhoanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF33AC8D26EAFC0A0000E137 /* TaiKhoanTableViewController.swift */; };
 		DF33AC9026EAFCA10000E137 /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF33AC8F26EAFCA10000E137 /* HomeTableViewController.xib */; };
+		DF49400926FD7ADA000CDBE4 /* ResponseNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF49400826FD7ADA000CDBE4 /* ResponseNotification.swift */; };
 		DF5F930426EAFF49000C9FDC /* BaiVietTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F930226EAFF49000C9FDC /* BaiVietTableViewCell.swift */; };
 		DF5F930526EAFF49000C9FDC /* BaiVietTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F930326EAFF49000C9FDC /* BaiVietTableViewCell.xib */; };
 		DF5F930826EC3791000C9FDC /* HomeCustomSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F930726EC3791000C9FDC /* HomeCustomSectionHeader.swift */; };
@@ -64,6 +65,7 @@
 		DF33AC8A26E8B2A80000E137 /* TimeInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeInfoTableViewCell.xib; sourceTree = "<group>"; };
 		DF33AC8D26EAFC0A0000E137 /* TaiKhoanTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiKhoanTableViewController.swift; sourceTree = "<group>"; };
 		DF33AC8F26EAFCA10000E137 /* HomeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewController.xib; sourceTree = "<group>"; };
+		DF49400826FD7ADA000CDBE4 /* ResponseNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseNotification.swift; sourceTree = "<group>"; };
 		DF5F930226EAFF49000C9FDC /* BaiVietTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiVietTableViewCell.swift; sourceTree = "<group>"; };
 		DF5F930326EAFF49000C9FDC /* BaiVietTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiVietTableViewCell.xib; sourceTree = "<group>"; };
 		DF5F930726EC3791000C9FDC /* HomeCustomSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomSectionHeader.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			children = (
 				DFCAB16426E5EB4800EB718E /* Student.swift */,
 				DFED617326FADB52001E7B31 /* Notification.swift */,
+				DF49400826FD7ADA000CDBE4 /* ResponseNotification.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 			files = (
 				DF5F932A26EF288B000C9FDC /* PostCollectionViewCell.swift in Sources */,
 				DF5F930C26EC47D9000C9FDC /* AvatarTableViewCell.swift in Sources */,
+				DF49400926FD7ADA000CDBE4 /* ResponseNotification.swift in Sources */,
 				DFCAB17E26E7185800EB718E /* TinhNangTableViewCell.swift in Sources */,
 				DF5F931426EEDC50000C9FDC /* TinhNangTableViewController.swift in Sources */,
 				DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */,
