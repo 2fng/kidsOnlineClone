@@ -11,6 +11,7 @@ import Alamofire
 class ThongBaoTableViewController: UITableViewController {
     
     let params: [String: Any] = ["load_type": 1, "time": 0]
+    let loadMoreParams: [String: Any] = ["load_type": 2, "time": 0]
 
     
     var headers: HTTPHeaders = HTTPHeaders([
@@ -34,6 +35,8 @@ class ThongBaoTableViewController: UITableViewController {
     }()
     
     @objc private func refresh(sender: UIRefreshControl) {
+        
+        fetchData()
         
         tableView.reloadData()
         
@@ -69,7 +72,7 @@ class ThongBaoTableViewController: UITableViewController {
         
         let optionMenu = UIAlertController(title: nil, message: nil , preferredStyle: .actionSheet)
         
-        let readAll = UIAlertAction(title: "Đã đọc tất cả", style: .default, handler: nil)
+        let readAll = UIAlertAction(title: "Đã đọc tất cả", style: .default, handler: readAllButtonIsTapped(sender: ))
         optionMenu.addAction(readAll)
         
         let deleteAll = UIAlertAction(title: "Xoá tất cả", style: .default, handler: nil)
@@ -79,6 +82,29 @@ class ThongBaoTableViewController: UITableViewController {
         optionMenu.addAction(cancelAction)
         
         present(optionMenu, animated: true, completion: nil)
+    }
+    
+    func readAllButtonIsTapped(sender: UIAlertAction) {
+        
+        //If notifications object.is_read == false,
+        notifications.filter({ $0.is_read == false }).forEach({ noti in
+            
+            
+            if let pos = isReadNotifications.firstIndex(where: { $0 == noti.notification_id }) {
+                isReadNotifications[pos] = noti.notification_id
+            } else {
+                
+                isReadNotifications.append(noti.notification_id)
+            }
+            
+        })
+        
+        isReadStatusUpdate()
+        tableView.reloadData()
+    }
+    
+    func deleteAllButtonIsTapped(sender: UIAlertAction) {
+        //
     }
 
     // MARK: - Table view data source
@@ -103,12 +129,15 @@ class ThongBaoTableViewController: UITableViewController {
             cell.thongBaoDetail.numberOfLines = 1
             cell.thongBaoDateTime.text = "\(notifications[indexPath.row].date)"
             
-            if notifications[indexPath.row].is_read == 0 {
-                cell.contentView.backgroundColor = .lightGray
-            } else {
-                isReadNotifications.append(notifications[indexPath.row].notification_id)
-                cell.contentView.backgroundColor = nil
-            }
+//            if notifications[indexPath.row].is_read == false {
+//                cell.contentView.backgroundColor = .lightGray
+//            } else {
+//                isReadNotifications.append(notifications[indexPath.row].notification_id)
+//                cell.contentView.backgroundColor = nil
+//            }
+            
+            cell.contentView.backgroundColor = notifications[indexPath.row].is_read ? nil : .lightGray
+            
             
             return cell
         }
@@ -132,7 +161,7 @@ class ThongBaoTableViewController: UITableViewController {
         
         isReadNotifications.append(notifications[indexPath.row].notification_id)
         isReadStatusUpdate()
-        notifications[indexPath.row].is_read = 1
+        notifications[indexPath.row].is_read = true
         tableView.reloadData()
         print("You tapped \(notifications[indexPath.row].title) on date \(notifications[indexPath.row].date)")
     }
@@ -159,7 +188,28 @@ class ThongBaoTableViewController: UITableViewController {
         }
     }
     
+    //Load more
     
+    override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
+        self.tableView.tableFooterView = createSpinnerFooter()
+        loadMoreData()
+        
+        tableView.reloadData()
+    }
+    
+    func createSpinnerFooter() -> UIView {
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 50))
+        
+        let spinner = UIActivityIndicatorView()
+        
+        spinner.center = footerView.center
+        footerView.addSubview(spinner)
+        
+        spinner.startAnimating()
+        
+        return footerView
+    }
 }
 
 // MARK: - HTTP request
@@ -201,9 +251,54 @@ extension ThongBaoTableViewController {
                     
                     let data = ResponseNotification(data:(json?["data"] as? [String: Any]) ?? [:])
                     
+                    self.notifications += data.arrayNotification
+                    
+                    self.tableView.reloadData()
+                    
+                } catch {
+                    
+                    print(error)
+                    
+                }
+                
+            case .failure(let error as Error):
+                print("Respose: Failed")
+                print(error)
+                print("ffertre: \(String(describing: response.response?.statusCode))")
+
+            }
+        }
+    }
+    
+    func loadMoreData() {
+        //fetch data from url using AF.request
+        //First parameter is url string, 2nd is http request method (POST, GET, DELETE,...)
+        //parameters: params (line 13)
+        //headers: headers (line 15)
+        
+        //params la nhung tham so api request, trong truong hop nay can chuyen 2 tham so "load_type" va "time"
+        //header chua token (luu y nho tu khoa "Bearer")
+        
+        let request = AF.request("https://notification.mnvn.ko.edu.vn/api/parents/load", method: HTTPMethod(rawValue: "POST"),
+            parameters: loadMoreParams,
+            encoding: JSONEncoding.default,
+            headers: headers)
+        
+        request.responseJSON { (response) in
+            switch response.result {
+
+            case .success(let JSON):
+                do {
+                    //Parse from dictionary to data
+                    let jsonData = try JSONSerialization.data(withJSONObject: JSON, options: .prettyPrinted)
+                    
+                    //Parse from data to jsonObject
+                    let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: AnyObject]
+                    
+                    let data = ResponseNotification(data:(json?["data"] as? [String: Any]) ?? [:])
+                    
                     self.notifications = data.arrayNotification
                     
-                    //print(JSON)
                     self.tableView.reloadData()
                     
                 } catch {
@@ -238,6 +333,34 @@ extension ThongBaoTableViewController {
             case .success(let JSON):
                 
                 print(JSON)
+                
+                do {
+                    //Parse from dictionary to data
+                    let jsonData = try JSONSerialization.data(withJSONObject: JSON, options: .prettyPrinted)
+                    
+                    //Parse from data to jsonObject
+                    let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: AnyObject]
+                    
+                    let data = ResponseIsReadNotification(data:(json?["data"] as? [String: Any]) ?? [:])
+                    
+                    //If server return notification that has notification_id == notificationId => do nothing
+                    //If server return notification that notification_id != notificationId => set notifications[position].is_read = true
+                    for notificationId in data.arrayNotificationRead {
+                        guard let pos = self.notifications.firstIndex(where: { $0.notification_id == notificationId }) else { return  }
+                        
+                        self.notifications[pos].is_read = true
+                        
+                    }
+                    
+                    //print(JSON)
+                    self.tableView.reloadData()
+                    
+                } catch {
+                    
+                    print(error)
+                    
+                }
+                
                             
             case .failure(let error as Error):
                 

@@ -19,7 +19,7 @@ struct Notification {
     let sub_title: String
     let sub_title_en: String
     let date: Double
-    var is_read: Int
+    var is_read: Bool
     var is_delete: Int
     let action: Int
     let created_at: Double
@@ -52,7 +52,7 @@ struct Notification {
         self.sub_title = (data["sub_title"] as? String) ?? ""
         self.sub_title_en = (data["sub_title_en"] as? String) ?? ""
         self.date = (data["date"] as? Double) ?? 0.0
-        self.is_read = (data["is_read"] as? Int) ?? 0
+        self.is_read = ((data["is_read"] as? Int) ?? 0) == 1
         self.is_delete = (data["is_delete"] as? Int) ?? 0
         self.action = (data["action"] as? Int) ?? 0
         self.created_at = (data["created_at"]  as? Double) ?? 0.0
