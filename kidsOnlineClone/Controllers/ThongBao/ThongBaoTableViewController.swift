@@ -18,19 +18,6 @@ class ThongBaoTableViewController: UITableViewController {
     
     let editButton = UIBarButtonItem(image: UIImage(systemName: "pencil.circle"), style: .plain, target: self, action: nil)
     
-//    var notifications = [["image": "image1", "title": "khao sat test 27/07", "detail": "bai khao sat test", "dateTime": "10:52 27/07/2021"],                     ["image": "image2", "title": "khao sat nhu cau hoc ngoai khoa", "detail": "Quy phu huynh vui long tra loi bai khao sat ho tro nha truong len ke hoach mo cac lop ngoai khoa", "dateTime": "10:07 22/07/2021"],
-//                         ["image": "image3", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-//                         ["image": "image1", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-//                         ["image": "image2", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-//                         ["image": "image3", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-//                         ["image": "image1", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-//                         ["image": "image2", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-//                         ["image": "image3", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-//                         ["image": "image1", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-//                         ["image": "image2", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"],
-//                         ["image": "image3", "title": "khao sat dich te", "detail": "Phu huynh vui long bam vao thong bao khao sat de tra loi cau hoi", "dateTime": "10:52 27/07/2021"]
-//    ]
-    
     var notifications: [Notification] = []
     
     //Create refresh control variable
@@ -132,17 +119,19 @@ extension ThongBaoTableViewController {
         case failure(APIError)
     }
     
-    
-    struct notificationRespond{
-        var arrayNotification: [Notification]
-    }
-    
     enum APIError {
         
     }
 
     func fetchData() {
-        //1
+        //fetch data from url using AF.request
+        //First parameter is url string, 2nd is http request method (POST, GET, DELETE,...)
+        //parameters: params (line 13)
+        //headers: headers (line 15)
+        
+        //params la nhung tham so api request, trong truong hop nay can chuyen 2 tham so "load_type" va "time"
+        //header chua token (luu y nho tu khoa "Bearer")
+        
         let request = AF.request("https://notification.mnvn.ko.edu.vn/api/parents/load", method: HTTPMethod(rawValue: "POST"),
             parameters: params,
             encoding: JSONEncoding.default,
@@ -153,14 +142,17 @@ extension ThongBaoTableViewController {
 
             case .success(let JSON):
                 do {
+                    //Parse from dictionary to data
                     let jsonData = try JSONSerialization.data(withJSONObject: JSON, options: .prettyPrinted)
                     
+                    //Parse from data to jsonObject
                     let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: AnyObject]
                     
                     let data = ResponseNotification(data:(json?["data"] as? [String: Any]) ?? [:])
                     
                     self.notifications = data.arrayNotification
-                    print(JSON)
+                    
+                    //print(JSON)
                     self.tableView.reloadData()
                     
                 } catch {
@@ -169,14 +161,12 @@ extension ThongBaoTableViewController {
                     
                 }
                 
-
             case .failure(let error as Error):
                 print("Respose: Failed")
                 print(error)
                 print("ffertre: \(String(describing: response.response?.statusCode))")
 
             }
-
         }
     }
 }
