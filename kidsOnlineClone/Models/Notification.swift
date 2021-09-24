@@ -20,7 +20,7 @@ struct Notification {
     let sub_title_en: String
     let date: Double
     var is_read: Int
-    let is_delete: Int
+    var is_delete: Int
     let action: Int
     let created_at: Double
     let url: String?
