@@ -280,11 +280,7 @@ extension ThongBaoTableViewController {
     
     func loadMoreData() {
         
-        var timeLoad = notifications.sorted(by: { $0.created_at > $1.created_at }).last
-        
-        print("gfhbffgfgh: \(timeLoad?.created_at)")
-        
-        let loadMoreParams: [String: Any] = ["load_type": 2, "time": timeLoad?.created_at ?? 0]
+        let loadMoreParams: [String: Any] = ["load_type": 2, "time": notifications[notifications.count-1].created_at]
 
         print("Time: ", notifications[notifications.count-1].created_at)
         //print(loadMoreParams)
