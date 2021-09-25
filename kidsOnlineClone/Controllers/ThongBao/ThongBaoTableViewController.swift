@@ -120,6 +120,10 @@ class ThongBaoTableViewController: UITableViewController {
         
         if notifications[indexPath.row].is_delete == 0 {
             
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd-MM-yyyy"
+            
+            let date = NSDate(timeIntervalSince1970: notifications[indexPath.row].created_at)
             
             
             cell.thongBaoImageView?.image = UIImage(named: notifications[indexPath.row].avatar)
@@ -127,14 +131,7 @@ class ThongBaoTableViewController: UITableViewController {
             cell.thongBaoDetail.text = notifications[indexPath.row].sub_title
             cell.thongBaoDetail.lineBreakMode = .byTruncatingTail
             cell.thongBaoDetail.numberOfLines = 1
-            cell.thongBaoDateTime.text = "\(notifications[indexPath.row].date)"
-            
-//            if notifications[indexPath.row].is_read == false {
-//                cell.contentView.backgroundColor = .lightGray
-//            } else {
-//                isReadNotifications.append(notifications[indexPath.row].notification_id)
-//                cell.contentView.backgroundColor = nil
-//            }
+            cell.thongBaoDateTime.text = dateFormatter.string(from: date as Date)
             
             cell.contentView.backgroundColor = notifications[indexPath.row].is_read ? nil : .lightGray
             
@@ -316,10 +313,12 @@ extension ThongBaoTableViewController {
                     
                     print("count data recieved",data.arrayNotification.count)
                     self.isLoadMore = data.arrayNotification.count > 1
+                    
                     if self.isLoadMore == false {
                         print("no more data")
                         self.tableView.tableFooterView = nil
                     }
+                    
                     print("isLoadMore value", self.isLoadMore)
                     
                     data.arrayNotification.forEach({ noti in
