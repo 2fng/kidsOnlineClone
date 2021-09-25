@@ -22,7 +22,7 @@ struct Notification {
     var is_read: Bool
     var is_delete: Int
     let action: Int
-    let created_at: Double
+    var created_at: Double
     let url: String?
     let item_id: Int
     let item_type: Int

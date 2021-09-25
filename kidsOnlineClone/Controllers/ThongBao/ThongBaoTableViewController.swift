@@ -194,17 +194,6 @@ class ThongBaoTableViewController: UITableViewController {
         
         guard (scrollView.contentOffset.y + scrollView.frame.height) > scrollView.contentSize.height else { return }
         
-        
-        guard isLoadMore else {
-            
-            print("no more data")
-            self.tableView.tableFooterView = nil
-            self.tableView.reloadData()
-            
-            return
-            
-        }
-        
         loadMoreData()
         
         print("Load more data")
@@ -291,7 +280,11 @@ extension ThongBaoTableViewController {
     
     func loadMoreData() {
         
-        let loadMoreParams: [String: Any] = ["load_type": 2, "time": notifications[notifications.count-1].created_at]
+        var timeLoad = notifications.sorted(by: { $0.created_at > $1.created_at }).last
+        
+        print("gfhbffgfgh: \(timeLoad?.created_at)")
+        
+        let loadMoreParams: [String: Any] = ["load_type": 2, "time": timeLoad?.created_at ?? 0]
 
         print("Time: ", notifications[notifications.count-1].created_at)
         //print(loadMoreParams)
@@ -327,6 +320,10 @@ extension ThongBaoTableViewController {
                     
                     print("count data recieved",data.arrayNotification.count)
                     self.isLoadMore = data.arrayNotification.count > 1
+                    if self.isLoadMore == false {
+                        print("no more data")
+                        self.tableView.tableFooterView = nil
+                    }
                     print("isLoadMore value", self.isLoadMore)
                     
                     data.arrayNotification.forEach({ noti in
@@ -339,7 +336,7 @@ extension ThongBaoTableViewController {
                             
                         } else {
         
-                            print(JSON)
+                            print("load more data here: ",JSON)
                             self.notifications += data.arrayNotification
 
                         }
