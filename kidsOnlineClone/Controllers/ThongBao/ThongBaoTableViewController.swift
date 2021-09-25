@@ -11,8 +11,7 @@ import Alamofire
 class ThongBaoTableViewController: UITableViewController {
     
     let params: [String: Any] = ["load_type": 1, "time": 0]
-    let loadMoreParams: [String: Any] = ["load_type": 2, "time": 0]
-
+    var isLoadMore: Bool = true
     
     var headers: HTTPHeaders = HTTPHeaders([
                 "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQwOTkyNywiaXNzIjoiaHR0cDovL21udm4ua28uZWR1LnZuL2FwaS92NC9ndWFyZGlhbi9sb2dpbiIsImlhdCI6MTYzMjI5ODI5MywiZXhwIjoxNjM3NDgyMjkzLCJuYmYiOjE2MzIyOTgyOTMsImp0aSI6IlJYYVVMUUtvSVEwb25jMWwifQ.6vz2trRzlYspDjlF2q9uS2x8KDg5yokSEQmD1TvRJ2M"
@@ -25,6 +24,7 @@ class ThongBaoTableViewController: UITableViewController {
     var notifications: [Notification] = []
     var isReadNotifications: [String] = []
     var isDeletedNotifications: [String] = []
+    
     
     //Create refresh control variable
     let thongBaoViewRefreshControl: UIRefreshControl =  {
@@ -192,14 +192,30 @@ class ThongBaoTableViewController: UITableViewController {
     
     override func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         
-        self.tableView.tableFooterView = createSpinnerFooter()
+        guard (scrollView.contentOffset.y + scrollView.frame.height) > scrollView.contentSize.height else { return }
+        
+        
+        guard isLoadMore else {
+            
+            print("no more data")
+            self.tableView.tableFooterView = nil
+            self.tableView.reloadData()
+            
+            return
+            
+        }
+        
         loadMoreData()
+        
+        print("Load more data")
+        
+        self.tableView.tableFooterView = createSpinnerFooter()
         
         tableView.reloadData()
     }
     
     func createSpinnerFooter() -> UIView {
-        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 50))
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 100))
         
         let spinner = UIActivityIndicatorView()
         
@@ -243,6 +259,9 @@ extension ThongBaoTableViewController {
 
             case .success(let JSON):
                 do {
+                    
+                    //print(JSON)
+                    
                     //Parse from dictionary to data
                     let jsonData = try JSONSerialization.data(withJSONObject: JSON, options: .prettyPrinted)
                     
@@ -271,6 +290,11 @@ extension ThongBaoTableViewController {
     }
     
     func loadMoreData() {
+        
+        let loadMoreParams: [String: Any] = ["load_type": 2, "time": notifications[notifications.count-1].created_at]
+
+        print("Time: ", notifications[notifications.count-1].created_at)
+        //print(loadMoreParams)
         //fetch data from url using AF.request
         //First parameter is url string, 2nd is http request method (POST, GET, DELETE,...)
         //parameters: params (line 13)
@@ -289,6 +313,10 @@ extension ThongBaoTableViewController {
 
             case .success(let JSON):
                 do {
+                    
+                    
+                    //print(JSON)
+                    
                     //Parse from dictionary to data
                     let jsonData = try JSONSerialization.data(withJSONObject: JSON, options: .prettyPrinted)
                     
@@ -297,7 +325,28 @@ extension ThongBaoTableViewController {
                     
                     let data = ResponseNotification(data:(json?["data"] as? [String: Any]) ?? [:])
                     
-                    self.notifications = data.arrayNotification
+                    print("count data recieved",data.arrayNotification.count)
+                    self.isLoadMore = data.arrayNotification.count > 1
+                    print("isLoadMore value", self.isLoadMore)
+                    
+                    data.arrayNotification.forEach({ noti in
+                        
+                        if let pos = self.notifications.firstIndex(where: { $0.notification_id == noti.notification_id }) {
+                            
+                            print("Same id")
+                            self.notifications[pos] = noti
+                            
+                            
+                        } else {
+        
+                            print(JSON)
+                            self.notifications += data.arrayNotification
+
+                        }
+                        
+                    })
+                    
+                    
                     
                     self.tableView.reloadData()
                     

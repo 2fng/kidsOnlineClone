@@ -55,7 +55,7 @@ struct Notification {
         self.is_read = ((data["is_read"] as? Int) ?? 0) == 1
         self.is_delete = (data["is_delete"] as? Int) ?? 0
         self.action = (data["action"] as? Int) ?? 0
-        self.created_at = (data["created_at"]  as? Double) ?? 0.0
+        self.created_at = (data["created_at"]  as? Double) ?? 0
         self.url = (data["url"] as? String) ?? ""
         self.item_id = (data["item_id"] as? Int) ?? 0
         self.item_type = (data["item_type"] as? Int) ?? 0
