@@ -39,6 +39,8 @@
 		DF5F933426F43AAF000C9FDC /* ButtonContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F933226F43AAE000C9FDC /* ButtonContentCollectionViewCell.xib */; };
 		DF5F933726F43FD6000C9FDC /* ButtonContentCollectionViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F933526F43FD6000C9FDC /* ButtonContentCollectionViewCell1.swift */; };
 		DF5F933826F43FD6000C9FDC /* ButtonContentCollectionViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F933626F43FD6000C9FDC /* ButtonContentCollectionViewCell1.xib */; };
+		DF756F552701CE97006C11FA /* DiningTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF756F532701CE97006C11FA /* DiningTableViewCell.swift */; };
+		DF756F562701CE97006C11FA /* DiningTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF756F542701CE97006C11FA /* DiningTableViewCell.xib */; };
 		DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14026E5CAF100EB718E /* AppDelegate.swift */; };
 		DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */; };
 		DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB14926E5CAF400EB718E /* Assets.xcassets */; };
@@ -97,6 +99,8 @@
 		DF5F933226F43AAE000C9FDC /* ButtonContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonContentCollectionViewCell.xib; sourceTree = "<group>"; };
 		DF5F933526F43FD6000C9FDC /* ButtonContentCollectionViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonContentCollectionViewCell1.swift; sourceTree = "<group>"; };
 		DF5F933626F43FD6000C9FDC /* ButtonContentCollectionViewCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonContentCollectionViewCell1.xib; sourceTree = "<group>"; };
+		DF756F532701CE97006C11FA /* DiningTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningTableViewCell.swift; sourceTree = "<group>"; };
+		DF756F542701CE97006C11FA /* DiningTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiningTableViewCell.xib; sourceTree = "<group>"; };
 		DFCAB13D26E5CAF100EB718E /* kidsOnlineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsOnlineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCAB14026E5CAF100EB718E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -332,6 +336,8 @@
 				DFCAB1A026E8935700EB718E /* ScheduleCell */,
 				DFCAB19B26E86CC600EB718E /* HeaderView */,
 				DFCAB16726E5F8E400EB718E /* HomeTableViewCell.swift */,
+				DF756F532701CE97006C11FA /* DiningTableViewCell.swift */,
+				DF756F542701CE97006C11FA /* DiningTableViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -474,6 +480,7 @@
 			files = (
 				DF33AC9026EAFCA10000E137 /* HomeTableViewController.xib in Resources */,
 				DFCAB18326E7192700EB718E /* ButtonsCollectionViewCell.xib in Resources */,
+				DF756F562701CE97006C11FA /* DiningTableViewCell.xib in Resources */,
 				DF4940152701B74D000CDBE4 /* CalendarCollectionViewCell.xib in Resources */,
 				DFCAB14D26E5CAF400EB718E /* LaunchScreen.storyboard in Resources */,
 				DFCAB19F26E86CE900EB718E /* HeaderView.xib in Resources */,
@@ -562,6 +569,7 @@
 				DF5F933726F43FD6000C9FDC /* ButtonContentCollectionViewCell1.swift in Sources */,
 				DF5F931B26EEF4FE000C9FDC /* BookTableViewCell.swift in Sources */,
 				DFCAB18226E7192700EB718E /* ButtonsCollectionViewCell.swift in Sources */,
+				DF756F552701CE97006C11FA /* DiningTableViewCell.swift in Sources */,
 				DF5F932626EF2723000C9FDC /* PostTableViewCell.swift in Sources */,
 				DFCAB19826E864D500EB718E /* ScheduleTableViewCell.swift in Sources */,
 				DF49400F2701A89F000CDBE4 /* HoatDongHangNgayViewController.swift in Sources */,

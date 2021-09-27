@@ -26,6 +26,7 @@ class HoatDongHangNgayViewController: UIViewController {
         super.viewDidLoad()
 
         
+        //Register nib for CollectionView
         collectionView.register(CalendarCollectionViewCell.nib(), forCellWithReuseIdentifier: CalendarCollectionViewCell.identifier)
         // Do any additional setup after loading the view.
         self.view.backgroundColor = .systemGray6
