@@ -7,8 +7,9 @@
 
 import UIKit
 
+//Contents buttonCollectionView cell.
+
 class TinhNangTableViewCell: UITableViewCell {
-    
     
     
     @IBOutlet private weak var tinhNangCollectionView: UICollectionView!
@@ -32,6 +33,7 @@ class TinhNangTableViewCell: UITableViewCell {
     }
     
     //Update currentPage
+    //Change page according to x offSet. When x/(contentView.frame.width-20) == 1 => page 1. x/(contentView.frame.width-20) == 2 => page 2
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
         let x = targetContentOffset.pointee.x
@@ -73,6 +75,13 @@ extension TinhNangTableViewCell: UICollectionViewDataSource {
         return 1
         
     }
+    
+    
+    //There are 13 buttons, split into 2 different pages. 12 on page 1, 1 button on page 2 => Split CollectionView into 2 section, section 1 containts 12 buttons (using ButtonContentCollectionViewCell), section 2 containts 1 button (using ButtonContentCollectionViewCell1)
+    
+    //Buttons in both ButtonContentCollectionViewCell and ButtonContentCollectionViewCell1 are using ButtonCell in Views/TinhNang/ButtonCell
+    
+    //Buttons in collectionView displayed verticaly
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
