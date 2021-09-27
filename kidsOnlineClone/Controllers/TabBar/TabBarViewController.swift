@@ -23,7 +23,7 @@ class TabBarViewController: UITabBarController {
         
         
         // Setup Title
-        homeVC.title = "Bảng tin"
+        homeVC.title = ""
         taiKhoanVC.title = "Tài khoản"
         tinhNangVC.title = "Tính năng"
         plusButtonVC.title = nil

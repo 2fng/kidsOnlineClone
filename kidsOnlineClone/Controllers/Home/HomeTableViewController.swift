@@ -224,7 +224,11 @@ class HomeTableViewController: UITableViewController {
     // MARK: - Table view delegate
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let hoatDongHangNgayVC = HoatDongHangNgayViewController(date: appData[indexPath.section]["date"] ?? "Date is missing")
         print("I was tapped")
+        navigationController?.pushViewController(hoatDongHangNgayVC, animated: true)
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

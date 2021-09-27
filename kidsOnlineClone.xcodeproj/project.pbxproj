@@ -14,6 +14,10 @@
 		DF33AC9026EAFCA10000E137 /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF33AC8F26EAFCA10000E137 /* HomeTableViewController.xib */; };
 		DF49400926FD7ADA000CDBE4 /* ResponseNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF49400826FD7ADA000CDBE4 /* ResponseNotification.swift */; };
 		DF49400B26FDC7CD000CDBE4 /* ResponseIsReadNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF49400A26FDC7CD000CDBE4 /* ResponseIsReadNotification.swift */; };
+		DF49400F2701A89F000CDBE4 /* HoatDongHangNgayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF49400D2701A89F000CDBE4 /* HoatDongHangNgayViewController.swift */; };
+		DF4940102701A89F000CDBE4 /* HoatDongHangNgayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF49400E2701A89F000CDBE4 /* HoatDongHangNgayViewController.xib */; };
+		DF4940142701B74D000CDBE4 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4940122701B74D000CDBE4 /* CalendarCollectionViewCell.swift */; };
+		DF4940152701B74D000CDBE4 /* CalendarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4940132701B74D000CDBE4 /* CalendarCollectionViewCell.xib */; };
 		DF5F930426EAFF49000C9FDC /* BaiVietTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F930226EAFF49000C9FDC /* BaiVietTableViewCell.swift */; };
 		DF5F930526EAFF49000C9FDC /* BaiVietTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F930326EAFF49000C9FDC /* BaiVietTableViewCell.xib */; };
 		DF5F930826EC3791000C9FDC /* HomeCustomSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F930726EC3791000C9FDC /* HomeCustomSectionHeader.swift */; };
@@ -68,6 +72,10 @@
 		DF33AC8F26EAFCA10000E137 /* HomeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewController.xib; sourceTree = "<group>"; };
 		DF49400826FD7ADA000CDBE4 /* ResponseNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseNotification.swift; sourceTree = "<group>"; };
 		DF49400A26FDC7CD000CDBE4 /* ResponseIsReadNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseIsReadNotification.swift; sourceTree = "<group>"; };
+		DF49400D2701A89F000CDBE4 /* HoatDongHangNgayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoatDongHangNgayViewController.swift; sourceTree = "<group>"; };
+		DF49400E2701A89F000CDBE4 /* HoatDongHangNgayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HoatDongHangNgayViewController.xib; sourceTree = "<group>"; };
+		DF4940122701B74D000CDBE4 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		DF4940132701B74D000CDBE4 /* CalendarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCollectionViewCell.xib; sourceTree = "<group>"; };
 		DF5F930226EAFF49000C9FDC /* BaiVietTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiVietTableViewCell.swift; sourceTree = "<group>"; };
 		DF5F930326EAFF49000C9FDC /* BaiVietTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiVietTableViewCell.xib; sourceTree = "<group>"; };
 		DF5F930726EC3791000C9FDC /* HomeCustomSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomSectionHeader.swift; sourceTree = "<group>"; };
@@ -141,6 +149,24 @@
 				5277310C06EBAA47E7CBF6EC /* Pods_kidsOnlineClone.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF49400C2701A86E000CDBE4 /* HoatDongHangNgay */ = {
+			isa = PBXGroup;
+			children = (
+				DF49400D2701A89F000CDBE4 /* HoatDongHangNgayViewController.swift */,
+				DF49400E2701A89F000CDBE4 /* HoatDongHangNgayViewController.xib */,
+			);
+			path = HoatDongHangNgay;
+			sourceTree = "<group>";
+		};
+		DF4940112701B726000CDBE4 /* HoatDongHangNgayView */ = {
+			isa = PBXGroup;
+			children = (
+				DF4940122701B74D000CDBE4 /* CalendarCollectionViewCell.swift */,
+				DF4940132701B74D000CDBE4 /* CalendarCollectionViewCell.xib */,
+			);
+			path = HoatDongHangNgayView;
 			sourceTree = "<group>";
 		};
 		DF5F930126EAFF25000C9FDC /* BaiVietCell */ = {
@@ -290,6 +316,7 @@
 		DFCAB15726E5D42C00EB718E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DF49400C2701A86E000CDBE4 /* HoatDongHangNgay */,
 				DFCAB19226E8621C00EB718E /* HomeTableViewController.swift */,
 				DF33AC8F26EAFCA10000E137 /* HomeTableViewController.xib */,
 			);
@@ -299,6 +326,7 @@
 		DFCAB16626E5F8CD00EB718E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DF4940112701B726000CDBE4 /* HoatDongHangNgayView */,
 				DF5F930626EC3757000C9FDC /* SectionHeaderView */,
 				DF5F930126EAFF25000C9FDC /* BaiVietCell */,
 				DFCAB1A026E8935700EB718E /* ScheduleCell */,
@@ -446,12 +474,14 @@
 			files = (
 				DF33AC9026EAFCA10000E137 /* HomeTableViewController.xib in Resources */,
 				DFCAB18326E7192700EB718E /* ButtonsCollectionViewCell.xib in Resources */,
+				DF4940152701B74D000CDBE4 /* CalendarCollectionViewCell.xib in Resources */,
 				DFCAB14D26E5CAF400EB718E /* LaunchScreen.storyboard in Resources */,
 				DFCAB19F26E86CE900EB718E /* HeaderView.xib in Resources */,
 				DF5F933826F43FD6000C9FDC /* ButtonContentCollectionViewCell1.xib in Resources */,
 				DF33AC8C26E8B2A80000E137 /* TimeInfoTableViewCell.xib in Resources */,
 				DF5F930526EAFF49000C9FDC /* BaiVietTableViewCell.xib in Resources */,
 				DF5F931126EC5379000C9FDC /* ButtonTableViewCell.xib in Resources */,
+				DF4940102701A89F000CDBE4 /* HoatDongHangNgayViewController.xib in Resources */,
 				DF5F930D26EC47D9000C9FDC /* AvatarTableViewCell.xib in Resources */,
 				DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */,
 				DF5F932226EF0218000C9FDC /* SingleLineTableViewCell.xib in Resources */,
@@ -534,11 +564,13 @@
 				DFCAB18226E7192700EB718E /* ButtonsCollectionViewCell.swift in Sources */,
 				DF5F932626EF2723000C9FDC /* PostTableViewCell.swift in Sources */,
 				DFCAB19826E864D500EB718E /* ScheduleTableViewCell.swift in Sources */,
+				DF49400F2701A89F000CDBE4 /* HoatDongHangNgayViewController.swift in Sources */,
 				DFCAB19426E8621C00EB718E /* HomeTableViewController.swift in Sources */,
 				DF33AC8B26E8B2A80000E137 /* TimeInfoTableViewCell.swift in Sources */,
 				DF5F931026EC5379000C9FDC /* ButtonTableViewCell.swift in Sources */,
 				DFCAB19D26E86CD900EB718E /* HeaderView.swift in Sources */,
 				DFED617426FADB52001E7B31 /* Notification.swift in Sources */,
+				DF4940142701B74D000CDBE4 /* CalendarCollectionViewCell.swift in Sources */,
 				DF33AC8E26EAFC0A0000E137 /* TaiKhoanTableViewController.swift in Sources */,
 				DF5F930826EC3791000C9FDC /* HomeCustomSectionHeader.swift in Sources */,
 				DF5F930426EAFF49000C9FDC /* BaiVietTableViewCell.swift in Sources */,

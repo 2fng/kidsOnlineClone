@@ -14,7 +14,7 @@ class ThongBaoTableViewController: UITableViewController {
     var isLoadMore: Bool = true
     
     var headers: HTTPHeaders = HTTPHeaders([
-                "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQwOTkyNywiaXNzIjoiaHR0cDovL21udm4ua28uZWR1LnZuL2FwaS92NC9ndWFyZGlhbi9sb2dpbiIsImlhdCI6MTYzMjI5ODI5MywiZXhwIjoxNjM3NDgyMjkzLCJuYmYiOjE2MzIyOTgyOTMsImp0aSI6IlJYYVVMUUtvSVEwb25jMWwifQ.6vz2trRzlYspDjlF2q9uS2x8KDg5yokSEQmD1TvRJ2M"
+                "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjQwOTkyNywiaXNzIjoiaHR0cDovL21udm4ua28uZWR1LnZuLy9hcGkvdjQvZ3VhcmRpYW4vbG9naW4iLCJpYXQiOjE2MzI3Mjg1ODUsImV4cCI6MTYzNzkxMjU4NSwibmJmIjoxNjMyNzI4NTg1LCJqdGkiOiJoQzYxRDMzd0VzN0FLZTZzIn0.EEn6M5mYCYoKtvBw2IlNOnPj40OX5SO1_1Wb5xUzGK0"
             ])
     
 //    let editButton = UIBarButtonItem(image: UIImage(systemName: "pencil.circle"), style: .plain, target: self, action: #selector(editButtonIsTapped(sender: )))
