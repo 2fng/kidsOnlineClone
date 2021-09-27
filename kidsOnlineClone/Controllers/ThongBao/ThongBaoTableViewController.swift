@@ -317,6 +317,7 @@ extension ThongBaoTableViewController {
                     self.isLoadMore = data.arrayNotification.count > 1
                     
                     if self.isLoadMore == false {
+                        print("")
                         print("no more data")
                         self.tableView.tableFooterView = nil
                     }
@@ -339,8 +340,6 @@ extension ThongBaoTableViewController {
                         }
                         
                     })
-                    
-                    
                     
                     self.tableView.reloadData()
                     
