@@ -124,7 +124,7 @@ class ThongBaoTableViewController: UITableViewController {
             dateFormatter.dateFormat = "HH:mm dd/MM/yyyy "
             
             let date = NSDate(timeIntervalSince1970: notifications[indexPath.row].created_at)
-            let url = URL(string: "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80")!
+            let url = URL(string: "https://thudaumot.binhduong.gov.vn/Portals/0/images/default.jpg")!
 
             cell.loadImage(url: url)
             
@@ -162,7 +162,7 @@ class ThongBaoTableViewController: UITableViewController {
         isReadStatusUpdate()
         notifications[indexPath.row].is_read = true
         tableView.reloadData()
-        print("You tapped \(notifications[indexPath.row].title) on date \(notifications[indexPath.row].date)")
+        print("You tapped \(notifications[indexPath.row].title)")
     }
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
