@@ -21,6 +21,7 @@ class HoatDongHangNgayViewController: UIViewController {
 
     private let dateTitle: String
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,10 @@ class HoatDongHangNgayViewController: UIViewController {
         
         //Register nib for CollectionView
         collectionView.register(CalendarCollectionViewCell.nib(), forCellWithReuseIdentifier: CalendarCollectionViewCell.identifier)
+        
+        //Register nib for TableView
+        tableView.register(DiningTableViewCell.nib(), forCellReuseIdentifier: DiningTableViewCell.identifier)
+        
         // Do any additional setup after loading the view.
         self.view.backgroundColor = .systemGray6
         
@@ -44,6 +49,10 @@ class HoatDongHangNgayViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.showsHorizontalScrollIndicator = false
+        
+        //Set up tableView
+        tableView.delegate = self
+        tableView.dataSource = self
         
     }
     
@@ -66,6 +75,7 @@ class HoatDongHangNgayViewController: UIViewController {
     
 }
 
+// MARK: - CollectionView set up
 extension HoatDongHangNgayViewController: UICollectionViewDelegate {
     
 }
@@ -108,4 +118,23 @@ extension HoatDongHangNgayViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 60, height: 60)
     }
+}
+
+// MARK: - TableView set up
+
+extension HoatDongHangNgayViewController: UITableViewDelegate {
+    
+}
+
+extension HoatDongHangNgayViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    
 }
