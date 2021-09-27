@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CalendarCollectionViewCell" customModule="kidsOnlineClone" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="calendarCollectionView" id="gTV-IL-0wX" customClass="CalendarCollectionViewCell" customModule="kidsOnlineClone" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="110" height="112"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -21,25 +21,28 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dF0-V8-ZjZ">
                         <rect key="frame" x="0.0" y="0.0" width="110" height="112"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1Z-Vo-9dX">
-                                <rect key="frame" x="34" y="25" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qU-Ss-LCE">
-                                <rect key="frame" x="34" y="56" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8Mx-RW-fDE">
+                                <rect key="frame" x="38.5" y="37.5" width="33" height="37"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1Z-Vo-9dX">
+                                        <rect key="frame" x="0.0" y="0.0" width="33" height="16"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qU-Ss-LCE">
+                                        <rect key="frame" x="0.0" y="21" width="33" height="16"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7qU-Ss-LCE" firstAttribute="top" secondItem="t1Z-Vo-9dX" secondAttribute="bottom" constant="10" id="F5K-6H-Qsj"/>
-                            <constraint firstItem="t1Z-Vo-9dX" firstAttribute="top" secondItem="dF0-V8-ZjZ" secondAttribute="top" constant="25" id="INB-UP-iwd"/>
-                            <constraint firstItem="7qU-Ss-LCE" firstAttribute="centerX" secondItem="dF0-V8-ZjZ" secondAttribute="centerX" id="j0E-vj-e5p"/>
-                            <constraint firstItem="t1Z-Vo-9dX" firstAttribute="centerX" secondItem="dF0-V8-ZjZ" secondAttribute="centerX" id="l3K-La-SM9"/>
+                            <constraint firstItem="8Mx-RW-fDE" firstAttribute="centerX" secondItem="dF0-V8-ZjZ" secondAttribute="centerX" id="6Ux-zH-a3v"/>
+                            <constraint firstItem="8Mx-RW-fDE" firstAttribute="centerY" secondItem="dF0-V8-ZjZ" secondAttribute="centerY" id="QkH-rk-4W3"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -52,6 +55,11 @@
                 <constraint firstItem="dF0-V8-ZjZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sXg-Qm-z1O"/>
             </constraints>
             <size key="customSize" width="110" height="112"/>
+            <connections>
+                <outlet property="dateContentView" destination="dF0-V8-ZjZ" id="yh6-os-i4P"/>
+                <outlet property="dateLabel" destination="7qU-Ss-LCE" id="0OY-CK-51E"/>
+                <outlet property="dayLabel" destination="t1Z-Vo-9dX" id="2lT-E2-BWE"/>
+            </connections>
             <point key="canvasLocation" x="214.49275362318843" y="118.52678571428571"/>
         </collectionViewCell>
     </objects>

@@ -11,6 +11,10 @@ class CalendarCollectionViewCell: UICollectionViewCell {
 
     static let identifier = "calendarCollectionView"
     
+    @IBOutlet weak var dateContentView: UIView!
+    @IBOutlet weak var dayLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
