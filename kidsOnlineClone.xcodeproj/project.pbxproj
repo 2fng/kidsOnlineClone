@@ -250,6 +250,15 @@
 			path = ButtonContentCell;
 			sourceTree = "<group>";
 		};
+		DF756F572701CEF3006C11FA /* DiningCell */ = {
+			isa = PBXGroup;
+			children = (
+				DF756F532701CE97006C11FA /* DiningTableViewCell.swift */,
+				DF756F542701CE97006C11FA /* DiningTableViewCell.xib */,
+			);
+			path = DiningCell;
+			sourceTree = "<group>";
+		};
 		DFCAB13426E5CAF100EB718E = {
 			isa = PBXGroup;
 			children = (
@@ -330,14 +339,13 @@
 		DFCAB16626E5F8CD00EB718E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DF756F572701CEF3006C11FA /* DiningCell */,
 				DF4940112701B726000CDBE4 /* HoatDongHangNgayView */,
 				DF5F930626EC3757000C9FDC /* SectionHeaderView */,
 				DF5F930126EAFF25000C9FDC /* BaiVietCell */,
 				DFCAB1A026E8935700EB718E /* ScheduleCell */,
 				DFCAB19B26E86CC600EB718E /* HeaderView */,
 				DFCAB16726E5F8E400EB718E /* HomeTableViewCell.swift */,
-				DF756F532701CE97006C11FA /* DiningTableViewCell.swift */,
-				DF756F542701CE97006C11FA /* DiningTableViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
