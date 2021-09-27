@@ -33,4 +33,12 @@ class ThongBaoTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func loadImage(url: URL) {
+        if let data = try? Data(contentsOf: url) {
+            if let image = UIImage(data: data) {
+                self.thongBaoImageView.image = image
+            }
+        }
+    }
+    
 }

@@ -121,12 +121,14 @@ class ThongBaoTableViewController: UITableViewController {
         if notifications[indexPath.row].is_delete == 0 {
             
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd-MM-yyyy"
+            dateFormatter.dateFormat = "HH:mm dd/MM/yyyy "
             
             let date = NSDate(timeIntervalSince1970: notifications[indexPath.row].created_at)
+            let url = URL(string: "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80")!
+
+            cell.loadImage(url: url)
             
-            
-            cell.thongBaoImageView?.image = UIImage(named: notifications[indexPath.row].avatar)
+            //cell.thongBaoImageView?.image = UIImage(named: notifications[indexPath.row].avatar)
             cell.thongBaoTitle.text = notifications[indexPath.row].title
             cell.thongBaoDetail.text = notifications[indexPath.row].sub_title
             cell.thongBaoDetail.lineBreakMode = .byTruncatingTail
@@ -246,7 +248,7 @@ extension ThongBaoTableViewController {
             case .success(let JSON):
                 do {
                     
-                    //print(JSON)
+                    print(JSON)
                     
                     //Parse from dictionary to data
                     let jsonData = try JSONSerialization.data(withJSONObject: JSON, options: .prettyPrinted)
