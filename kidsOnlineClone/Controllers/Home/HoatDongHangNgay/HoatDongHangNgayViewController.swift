@@ -38,10 +38,15 @@ class HoatDongHangNgayViewController: UIViewController {
         
         
         //Navigation bar set up
-        let heartCalendarImage = UIImage(named: "heartCalendar")
-        let rightNavBarButton = UIBarButtonItem(image: heartCalendarImage, style: .plain, target: self, action: nil)
+        let heartCalendarImage = UIImage(named: "heartCalendar")?.withRenderingMode(.alwaysOriginal)
         
+        
+        let rightNavBarButton = UIBarButtonItem(image: heartCalendarImage, style: .plain, target: self, action: nil)
+        rightNavBarButton.tintColor = .red
+        
+        self.view.backgroundColor = .white
         self.navigationController?.hidesBarsOnSwipe = false
+        self.navigationController?.navigationBar.backgroundColor = .white
         self.navigationItem.title = dateTitle
         self.navigationItem.rightBarButtonItem = rightNavBarButton
         
