@@ -52,7 +52,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K54-b3-IQC">
-                                <rect key="frame" x="25" y="50" width="5" height="99"/>
+                                <rect key="frame" x="25" y="50" width="5" height="215"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="5" id="YYw-lL-27N"/>
@@ -65,7 +65,7 @@
                             <constraint firstItem="svD-fg-ILz" firstAttribute="top" secondItem="3SL-pk-4uu" secondAttribute="top" constant="5" id="AZb-M0-RFc"/>
                             <constraint firstItem="nU6-IH-wIW" firstAttribute="leading" secondItem="3SL-pk-4uu" secondAttribute="leading" constant="5" id="Jvl-PR-CcK"/>
                             <constraint firstItem="K54-b3-IQC" firstAttribute="top" secondItem="nU6-IH-wIW" secondAttribute="bottom" constant="5" id="Rx8-Db-c9O"/>
-                            <constraint firstAttribute="bottom" secondItem="K54-b3-IQC" secondAttribute="bottom" constant="126" id="Vvw-ym-VEv"/>
+                            <constraint firstAttribute="bottom" secondItem="K54-b3-IQC" secondAttribute="bottom" constant="10" id="Vvw-ym-VEv"/>
                             <constraint firstItem="svD-fg-ILz" firstAttribute="leading" secondItem="nU6-IH-wIW" secondAttribute="trailing" constant="5" id="gJd-uh-oXI"/>
                             <constraint firstItem="nU6-IH-wIW" firstAttribute="top" secondItem="3SL-pk-4uu" secondAttribute="top" constant="5" id="j6p-mg-Tkx"/>
                             <constraint firstItem="fn0-tJ-Zzb" firstAttribute="leading" secondItem="K54-b3-IQC" secondAttribute="trailing" constant="20" id="jnZ-yY-B5l"/>

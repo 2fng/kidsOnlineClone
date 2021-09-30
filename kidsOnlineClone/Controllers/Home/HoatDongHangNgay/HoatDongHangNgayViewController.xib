@@ -51,17 +51,25 @@
                             <rect key="frame" x="0.0" y="100" width="414" height="50"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="adU-ta-OrK">
-                                    <rect key="frame" x="15" y="5.5" width="35" height="34"/>
+                                    <rect key="frame" x="15" y="10.5" width="35" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="35" id="SDi-2b-Xve"/>
                                         <constraint firstAttribute="width" constant="35" id="pSl-Vo-wej"/>
                                     </constraints>
                                 </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đang xem thông tin bé Cát Tiên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tau-cF-tmG">
+                                    <rect key="frame" x="60" y="15" width="240.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstItem="adU-ta-OrK" firstAttribute="top" secondItem="R2T-hQ-Yle" secondAttribute="top" constant="5" id="LLD-gf-Cvn"/>
+                                <constraint firstItem="adU-ta-OrK" firstAttribute="top" secondItem="R2T-hQ-Yle" secondAttribute="top" constant="10" id="LLD-gf-Cvn"/>
                                 <constraint firstItem="adU-ta-OrK" firstAttribute="leading" secondItem="R2T-hQ-Yle" secondAttribute="leading" constant="15" id="Pvl-xI-GLf"/>
+                                <constraint firstItem="tau-cF-tmG" firstAttribute="leading" secondItem="adU-ta-OrK" secondAttribute="trailing" constant="10" id="UEO-RG-HqI"/>
+                                <constraint firstItem="tau-cF-tmG" firstAttribute="top" secondItem="R2T-hQ-Yle" secondAttribute="top" constant="15" id="d5Y-3o-uZu"/>
                                 <constraint firstAttribute="height" constant="50" id="i9O-Kp-mno"/>
                             </constraints>
                         </view>
