@@ -66,6 +66,8 @@
 		DFCAB19926E864D500EB718E /* ScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB19726E864D500EB718E /* ScheduleTableViewCell.xib */; };
 		DFCAB19D26E86CD900EB718E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB19C26E86CD800EB718E /* HeaderView.swift */; };
 		DFCAB19F26E86CE900EB718E /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB19E26E86CE900EB718E /* HeaderView.xib */; };
+		DFE9B75127070A9C00C4EA72 /* DiningHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE9B75027070A9C00C4EA72 /* DiningHeaderView.swift */; };
+		DFE9B75327070ABB00C4EA72 /* DiningHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE9B75227070ABB00C4EA72 /* DiningHeaderView.xib */; };
 		DFED617426FADB52001E7B31 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFED617326FADB52001E7B31 /* Notification.swift */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +135,8 @@
 		DFCAB19726E864D500EB718E /* ScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		DFCAB19C26E86CD800EB718E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		DFCAB19E26E86CE900EB718E /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		DFE9B75027070A9C00C4EA72 /* DiningHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningHeaderView.swift; sourceTree = "<group>"; };
+		DFE9B75227070ABB00C4EA72 /* DiningHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiningHeaderView.xib; sourceTree = "<group>"; };
 		DFED617326FADB52001E7B31 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -265,6 +269,8 @@
 			children = (
 				DF756F532701CE97006C11FA /* DiningTableViewCell.swift */,
 				DF756F542701CE97006C11FA /* DiningTableViewCell.xib */,
+				DFE9B75027070A9C00C4EA72 /* DiningHeaderView.swift */,
+				DFE9B75227070ABB00C4EA72 /* DiningHeaderView.xib */,
 			);
 			path = DiningCell;
 			sourceTree = "<group>";
@@ -519,6 +525,7 @@
 			files = (
 				DF33AC9026EAFCA10000E137 /* HomeTableViewController.xib in Resources */,
 				DFCAB18326E7192700EB718E /* ButtonsCollectionViewCell.xib in Resources */,
+				DFE9B75327070ABB00C4EA72 /* DiningHeaderView.xib in Resources */,
 				DF756F562701CE97006C11FA /* DiningTableViewCell.xib in Resources */,
 				DF4940152701B74D000CDBE4 /* CalendarCollectionViewCell.xib in Resources */,
 				DFCAB14D26E5CAF400EB718E /* LaunchScreen.storyboard in Resources */,
@@ -606,6 +613,7 @@
 				DF5F933326F43AAF000C9FDC /* ButtonContentCollectionViewCell.swift in Sources */,
 				DF5F932126EF0218000C9FDC /* SingleLineTableViewCell.swift in Sources */,
 				DFCAB16826E5F8E400EB718E /* HomeTableViewCell.swift in Sources */,
+				DFE9B75127070A9C00C4EA72 /* DiningHeaderView.swift in Sources */,
 				DFCAB17626E6FC6300EB718E /* ThongBaoTableViewCell.swift in Sources */,
 				DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */,
 				DF5F933726F43FD6000C9FDC /* ButtonContentCollectionViewCell1.swift in Sources */,
