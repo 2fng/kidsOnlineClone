@@ -9,7 +9,7 @@ import Foundation
 
 struct HoatDongTheoNgay {
     
-    let dining: Dining
+    let dining: Dining //Hoat dong an
     
     init(data: [String: Any]) {
         self.dining = (data["dining"] as? Dining) ?? Dining(data: [:])
