@@ -76,7 +76,8 @@ class HoatDongHangNgayViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.layer.cornerRadius = 5
-        tableView.showsVerticalScrollIndicator = false
+        //tableView.showsVerticalScrollIndicator = false
+        tableView.backgroundColor = .systemGray6
         
     }
     
@@ -112,7 +113,7 @@ extension HoatDongHangNgayViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return scheDuleDates.count+1
+        return scheDuleDates.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -156,6 +157,13 @@ extension HoatDongHangNgayViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 50
+    }
 }
 
 extension HoatDongHangNgayViewController: UITableViewDataSource {
@@ -168,9 +176,14 @@ extension HoatDongHangNgayViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: DiningTableViewCell.identifier) as! DiningTableViewCell
         
+        cell.contentView.backgroundColor = .systemGray6
+        
         cell.selectionStyle = .none
         
         if indexPath.row == 0 {
+            cell.cellContentView.backgroundColor = .white
+            cell.cellContentView.layer.cornerRadius = 4
+            
             cell.mealIcon.image = UIImage(named: "buaSang")
             cell.mealLabel.text = "Bữa sáng".uppercased()
             cell.mealLabel.textColor = UIColor.systemOrange
@@ -180,6 +193,7 @@ extension HoatDongHangNgayViewController: UITableViewDataSource {
         }
         
         if indexPath.row == 1 {
+            
             cell.mealIcon.image = UIImage(named: "phuSang")
             cell.mealLabel.text = "Phụ sáng".uppercased()
             cell.mealLabel.textColor = UIColor.systemGreen
@@ -207,6 +221,9 @@ extension HoatDongHangNgayViewController: UITableViewDataSource {
         }
         
         if indexPath.row == 4 {
+            
+            cell.cellContentView.layer.cornerRadius = 4
+            
             cell.mealIcon.image = UIImage(named: "suaChieu")
             cell.mealLabel.text = "sữa chiều".uppercased()
             cell.mealLabel.textColor = UIColor.systemOrange
