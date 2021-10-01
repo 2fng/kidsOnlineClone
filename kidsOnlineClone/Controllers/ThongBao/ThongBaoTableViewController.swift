@@ -10,7 +10,10 @@ import Alamofire
 
 class ThongBaoTableViewController: UITableViewController {
     
-    let params: [String: Any] = ["load_type": 1, "time": 0]
+    let params: [String: Any] = [
+        "load_type": 1,
+        "time": 0
+    ]
     var isLoadMore: Bool = true
     
     var headers: HTTPHeaders = HTTPHeaders([
@@ -256,7 +259,7 @@ extension ThongBaoTableViewController {
                     //Parse from data to jsonObject
                     let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: AnyObject]
                     
-                    let data = ResponseNotification(data:(json?["data"] as? [String: Any]) ?? [:])
+                    let data = ResponseNotification(data: (json?["data"] as? [String: Any]) ?? [:])
                     
                     self.notifications += data.arrayNotification
                     

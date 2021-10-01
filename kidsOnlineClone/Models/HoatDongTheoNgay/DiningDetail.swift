@@ -15,8 +15,8 @@ struct DiningDetail {
     
     init(data: [String: Any]) {
         
-        self.name = (data["name"] as? String) ?? ""
-        self.content = (data["content"] as? String) ?? ""
-        self.comment = (data["comment"] as? String) ?? ""
+        self.name = (data["name"] as? String) ?? "name has no data"
+        self.content = (data["content"] as? String) ?? "content has no data"
+        self.comment = (data["comment"] as? String) ?? "comment has no data"
     }
 }

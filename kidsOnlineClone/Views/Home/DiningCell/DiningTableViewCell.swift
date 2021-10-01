@@ -11,6 +11,7 @@ class DiningTableViewCell: UITableViewCell {
 
     static let identifier = "diningCell"
     
+    @IBOutlet var cellContentView: UIView!
     @IBOutlet var mealIcon: UIImageView!
     @IBOutlet var verticalLine: UIView!
     @IBOutlet var mealLabel: UILabel!

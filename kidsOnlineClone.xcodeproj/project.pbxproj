@@ -44,6 +44,8 @@
 		DF78145A2706A31600325314 /* HoatDongTheoNgay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7814592706A31600325314 /* HoatDongTheoNgay.swift */; };
 		DF78145C2706A32400325314 /* Dining.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78145B2706A32400325314 /* Dining.swift */; };
 		DF78145E2706A36200325314 /* DiningDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF78145D2706A36200325314 /* DiningDetail.swift */; };
+		DF7814612706A86300325314 /* ResponseHoatDongHangNgay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7814602706A86300325314 /* ResponseHoatDongHangNgay.swift */; };
+		DF7814632706AC5400325314 /* ResponseDining.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7814622706AC5400325314 /* ResponseDining.swift */; };
 		DFCAB14126E5CAF100EB718E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14026E5CAF100EB718E /* AppDelegate.swift */; };
 		DFCAB14326E5CAF100EB718E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */; };
 		DFCAB14A26E5CAF400EB718E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFCAB14926E5CAF400EB718E /* Assets.xcassets */; };
@@ -107,6 +109,8 @@
 		DF7814592706A31600325314 /* HoatDongTheoNgay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoatDongTheoNgay.swift; sourceTree = "<group>"; };
 		DF78145B2706A32400325314 /* Dining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dining.swift; sourceTree = "<group>"; };
 		DF78145D2706A36200325314 /* DiningDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningDetail.swift; sourceTree = "<group>"; };
+		DF7814602706A86300325314 /* ResponseHoatDongHangNgay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHoatDongHangNgay.swift; sourceTree = "<group>"; };
+		DF7814622706AC5400325314 /* ResponseDining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDining.swift; sourceTree = "<group>"; };
 		DFCAB13D26E5CAF100EB718E /* kidsOnlineClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidsOnlineClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCAB14026E5CAF100EB718E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCAB14226E5CAF100EB718E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -271,6 +275,8 @@
 				DF7814592706A31600325314 /* HoatDongTheoNgay.swift */,
 				DF78145B2706A32400325314 /* Dining.swift */,
 				DF78145D2706A36200325314 /* DiningDetail.swift */,
+				DF7814602706A86300325314 /* ResponseHoatDongHangNgay.swift */,
+				DF7814622706AC5400325314 /* ResponseDining.swift */,
 			);
 			path = HoatDongTheoNgay;
 			sourceTree = "<group>";
@@ -589,6 +595,7 @@
 				DF5F932A26EF288B000C9FDC /* PostCollectionViewCell.swift in Sources */,
 				DF5F930C26EC47D9000C9FDC /* AvatarTableViewCell.swift in Sources */,
 				DF49400926FD7ADA000CDBE4 /* ResponseNotification.swift in Sources */,
+				DF7814632706AC5400325314 /* ResponseDining.swift in Sources */,
 				DFCAB17E26E7185800EB718E /* TinhNangTableViewCell.swift in Sources */,
 				DF78145A2706A31600325314 /* HoatDongTheoNgay.swift in Sources */,
 				DF5F931426EEDC50000C9FDC /* TinhNangTableViewController.swift in Sources */,
@@ -608,6 +615,7 @@
 				DF5F932626EF2723000C9FDC /* PostTableViewCell.swift in Sources */,
 				DFCAB19826E864D500EB718E /* ScheduleTableViewCell.swift in Sources */,
 				DF49400F2701A89F000CDBE4 /* HoatDongHangNgayViewController.swift in Sources */,
+				DF7814612706A86300325314 /* ResponseHoatDongHangNgay.swift in Sources */,
 				DF78145C2706A32400325314 /* Dining.swift in Sources */,
 				DFCAB19426E8621C00EB718E /* HomeTableViewController.swift in Sources */,
 				DF33AC8B26E8B2A80000E137 /* TimeInfoTableViewCell.swift in Sources */,

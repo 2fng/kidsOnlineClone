@@ -83,6 +83,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="cellContentView" destination="3SL-pk-4uu" id="sw0-jB-Lc7"/>
                 <outlet property="mealDetail" destination="fn0-tJ-Zzb" id="NYp-2s-I9U"/>
                 <outlet property="mealIcon" destination="nU6-IH-wIW" id="iCM-U2-DC9"/>
                 <outlet property="mealLabel" destination="l2L-0E-JVV" id="dzO-dD-ZIn"/>

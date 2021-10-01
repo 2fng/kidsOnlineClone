@@ -23,7 +23,7 @@ struct Dining {
         self.url = (data["url"] as? String) ?? ""
         self.comment_type = (data["comment_type"] as? Int) ?? 1
         self.comment = (data["comment"] as? String) ?? ""
-        self.details = (data["details"] as? DiningDetail ?? DiningDetail(data: [:]))
+        self.details = (data["details"] as? DiningDetail) ?? DiningDetail(data: [:])
         self.view_menu = (data["view_menu"] as? Int) ?? 0
         
     }

@@ -6,8 +6,22 @@
 //
 
 import UIKit
+import Alamofire
 
 class HoatDongHangNgayViewController: UIViewController {
+    
+    let params: [String: Any] = [
+        "student_id": 263267,
+        "class_id": 15860,
+        "date": 1630602000
+    ]
+    
+    var headers: HTTPHeaders = HTTPHeaders([
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjM3MzkwMSwiaXNzIjoiaHR0cDovL21udm4ua28uZWR1LnZuLy9hcGkvdjQvZ3VhcmRpYW4vbG9naW4iLCJpYXQiOjE2MzMwNTkyMzAsImV4cCI6MTYzODI0MzIzMCwibmJmIjoxNjMzMDU5MjMwLCJqdGkiOiJYWkg2WjFTaFAwRVQ0Y25CIn0.O0ygUgMJKKSKdLFuOuuq4Sk2ol7Fyy3fCbKEwHfx0VQ"
+    ])
+    
+    var dinings: [Dining] = []
+    var diningDetails: [DiningDetail] = []
     
     private let scheDuleDates = [
         ["day": "CN", "date": "05/09"],
@@ -27,6 +41,9 @@ class HoatDongHangNgayViewController: UIViewController {
         super.viewDidLoad()
 
         
+        fetchData()
+        
+        print("dinings count: ", diningDetails.count)
         //Register nib for CollectionView
         collectionView.register(CalendarCollectionViewCell.nib(), forCellWithReuseIdentifier: CalendarCollectionViewCell.identifier)
         
@@ -42,7 +59,6 @@ class HoatDongHangNgayViewController: UIViewController {
         
         
         let rightNavBarButton = UIBarButtonItem(image: heartCalendarImage, style: .plain, target: self, action: nil)
-        rightNavBarButton.tintColor = .red
         
         self.view.backgroundColor = .white
         self.navigationController?.hidesBarsOnSwipe = false
@@ -129,17 +145,83 @@ extension HoatDongHangNgayViewController: UICollectionViewDelegateFlowLayout {
 
 extension HoatDongHangNgayViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
+    }
+    
 }
 
 extension HoatDongHangNgayViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return diningDetails.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: DiningTableViewCell.identifier) as! DiningTableViewCell
+        
+        cell.mealLabel.text = "Bua"
+        cell.mealDetail.text = "\(diningDetails[indexPath.row].content)"
+        cell.mealTime.text = "(\(diningDetails[indexPath.row].name))"
+        
+        return cell
     }
     
+}
+
+extension HoatDongHangNgayViewController {
+    
+    enum APIResult {
+        case success(Any)
+        case failure(APIError)
+    }
+    
+    enum APIError {
+        
+    }
+    
+    func fetchData() {
+        
+        let request = AF.request( "https://mnvn.ko.edu.vn//api/v4/guardian/activity/date", method: HTTPMethod(rawValue: "POST"), parameters: params, encoding: JSONEncoding.default, headers: headers)
+        
+        request.responseJSON { (response) in
+            
+            switch response.result {
+            case.success(let JSON):
+                do {
+                    
+                    print(JSON)
+                    
+                    //parse from dictionary to data
+                    let jsonData = try JSONSerialization.data(withJSONObject: JSON, options: .prettyPrinted)
+                    
+                    //parse from data to jsonObject
+                    let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: AnyObject]
+                    
+                    //print("print json", json?["data"]!["dining"])
+                    
+                    let data = ResponseHoatDongHangNgay(data: (json?["data"]!["dining"] as? [String: Any]) ?? [:])
+                    
+                    print("data print", data)
+                    
+                    self.diningDetails += data.diningDetailArray
+                    
+                    print("diningDetails print", self.diningDetails)
+                    
+                    self.tableView.reloadData()
+                    
+                } catch {
+                    print(error)
+                }
+             
+            case.failure(let error as Error):
+                
+                print("Respose: Failed")
+                print(error)
+                print("ffertre: \(String(describing: response.response?.statusCode))")
+            }
+        }
+    }
     
 }
