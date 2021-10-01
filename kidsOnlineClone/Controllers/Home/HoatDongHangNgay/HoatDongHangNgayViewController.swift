@@ -60,7 +60,7 @@ class HoatDongHangNgayViewController: UIViewController {
         
         let rightNavBarButton = UIBarButtonItem(image: heartCalendarImage, style: .plain, target: self, action: nil)
         
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = .systemGray6
         self.navigationController?.hidesBarsOnSwipe = false
         self.navigationController?.navigationBar.backgroundColor = .white
         self.navigationItem.title = dateTitle
@@ -74,6 +74,9 @@ class HoatDongHangNgayViewController: UIViewController {
         //Set up tableView
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.layer.cornerRadius = 5
+        tableView.showsVerticalScrollIndicator = false
         
     }
     
@@ -109,7 +112,7 @@ extension HoatDongHangNgayViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return scheDuleDates.count
+        return scheDuleDates.count+1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -149,6 +152,10 @@ extension HoatDongHangNgayViewController: UITableViewDelegate {
         return 250
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }
 
 extension HoatDongHangNgayViewController: UITableViewDataSource {
@@ -161,9 +168,59 @@ extension HoatDongHangNgayViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: DiningTableViewCell.identifier) as! DiningTableViewCell
         
-        cell.mealLabel.text = "Bua"
-        cell.mealDetail.text = "\(diningDetails[indexPath.row].content)"
-        cell.mealTime.text = "(\(diningDetails[indexPath.row].name))"
+        cell.selectionStyle = .none
+        
+        if indexPath.row == 0 {
+            cell.mealIcon.image = UIImage(named: "buaSang")
+            cell.mealLabel.text = "Bữa sáng".uppercased()
+            cell.mealLabel.textColor = UIColor.systemOrange
+            cell.mealDetail.text = "\(diningDetails[indexPath.row].content)"
+            cell.mealTime.text = "(\(diningDetails[indexPath.row].name))"
+            cell.mealTime.textColor = UIColor.systemOrange
+        }
+        
+        if indexPath.row == 1 {
+            cell.mealIcon.image = UIImage(named: "phuSang")
+            cell.mealLabel.text = "Phụ sáng".uppercased()
+            cell.mealLabel.textColor = UIColor.systemGreen
+            cell.mealDetail.text = "\(diningDetails[indexPath.row].content)"
+            cell.mealTime.text = "(\(diningDetails[indexPath.row].name))"
+            cell.mealTime.textColor = UIColor.systemGreen
+        }
+        
+        if indexPath.row == 2 {
+            cell.mealIcon.image = UIImage(named: "buaSang")
+            cell.mealLabel.text = "trưa".uppercased()
+            cell.mealLabel.textColor = UIColor.systemRed
+            cell.mealDetail.text = "\(diningDetails[indexPath.row].content)"
+            cell.mealTime.text = "(\(diningDetails[indexPath.row].name))"
+            cell.mealTime.textColor = UIColor.systemRed
+        }
+        
+        if indexPath.row == 3 {
+            cell.mealIcon.image = UIImage(named: "buaChieu")
+            cell.mealLabel.text = "chiều".uppercased()
+            cell.mealLabel.textColor = UIColor.systemBlue
+            cell.mealDetail.text = "\(diningDetails[indexPath.row].content)"
+            cell.mealTime.text = "(\(diningDetails[indexPath.row].name))"
+            cell.mealTime.textColor = UIColor.systemBlue
+        }
+        
+        if indexPath.row == 4 {
+            cell.mealIcon.image = UIImage(named: "suaChieu")
+            cell.mealLabel.text = "sữa chiều".uppercased()
+            cell.mealLabel.textColor = UIColor.systemOrange
+            cell.mealDetail.text = "\(diningDetails[indexPath.row].content)"
+            cell.mealTime.text = "(\(diningDetails[indexPath.row].name))"
+            cell.mealTime.textColor = UIColor.systemOrange
+        }
+        
+        if indexPath.row == 5 {
+            //
+        }
+        
+        cell.mealLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        cell.mealTime.font = UIFont.boldSystemFont(ofSize: 16)
         
         return cell
     }

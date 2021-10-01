@@ -76,19 +76,19 @@
                     </subviews>
                 </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KHT-tY-PWs">
-                    <rect key="frame" x="5" y="199" width="404" height="658"/>
+                    <rect key="frame" x="15" y="194" width="384" height="653"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KHT-tY-PWs" secondAttribute="trailing" constant="5" id="3mr-kp-rYw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KHT-tY-PWs" secondAttribute="bottom" constant="15" id="GdV-8l-LqO"/>
                 <constraint firstItem="kLy-Y8-Yj0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ltu-dV-vVe"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KHT-tY-PWs" secondAttribute="bottom" constant="5" id="QO0-YC-mxz"/>
-                <constraint firstItem="KHT-tY-PWs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="RFX-xv-UYc"/>
+                <constraint firstItem="KHT-tY-PWs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="RFX-xv-UYc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KHT-tY-PWs" secondAttribute="trailing" constant="15" id="UiW-am-RTR"/>
                 <constraint firstItem="kLy-Y8-Yj0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kRZ-N7-MM0"/>
-                <constraint firstItem="KHT-tY-PWs" firstAttribute="top" secondItem="kLy-Y8-Yj0" secondAttribute="bottom" constant="5" id="kny-a8-V0c"/>
+                <constraint firstItem="KHT-tY-PWs" firstAttribute="top" secondItem="kLy-Y8-Yj0" secondAttribute="bottom" id="kny-a8-V0c"/>
                 <constraint firstItem="kLy-Y8-Yj0" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="wNu-Xw-l6L"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
