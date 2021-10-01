@@ -9,4 +9,9 @@ import Foundation
 
 struct HoatDongTheoNgay {
     
+    let dining: Dining
+    
+    init(data: [String: Any]) {
+        self.dining = (data["dining"] as? Dining) ?? Dining(data: [:])
+    }
 }

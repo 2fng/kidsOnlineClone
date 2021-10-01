@@ -9,9 +9,9 @@ import Foundation
 
 struct DiningDetail {
     
-    let name: String
-    let content: String
-    let comment: String
+    let name: String //Tên bữa (Sáng, sáng phụ, trưa,...)
+    let content: String //Nội dung thực đơn
+    let comment: String //Ghi chú của giáo viên ( áp dụng khi comment_type ở Dining == 1)
     
     init(data: [String: Any]) {
         
