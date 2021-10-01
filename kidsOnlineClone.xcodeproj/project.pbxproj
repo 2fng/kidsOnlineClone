@@ -275,6 +275,16 @@
 			path = HoatDongTheoNgay;
 			sourceTree = "<group>";
 		};
+		DF78145F2706A7F200325314 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				DFED617326FADB52001E7B31 /* Notification.swift */,
+				DF49400826FD7ADA000CDBE4 /* ResponseNotification.swift */,
+				DF49400A26FDC7CD000CDBE4 /* ResponseIsReadNotification.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		DFCAB13426E5CAF100EB718E = {
 			isa = PBXGroup;
 			children = (
@@ -311,11 +321,9 @@
 		DFCAB15426E5D32800EB718E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DF78145F2706A7F200325314 /* Notification */,
 				DF7814582706A2FC00325314 /* HoatDongTheoNgay */,
 				DFCAB16426E5EB4800EB718E /* Student.swift */,
-				DFED617326FADB52001E7B31 /* Notification.swift */,
-				DF49400826FD7ADA000CDBE4 /* ResponseNotification.swift */,
-				DF49400A26FDC7CD000CDBE4 /* ResponseIsReadNotification.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
