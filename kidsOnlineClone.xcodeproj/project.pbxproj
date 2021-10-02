@@ -20,6 +20,8 @@
 		DF4940152701B74D000CDBE4 /* CalendarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4940132701B74D000CDBE4 /* CalendarCollectionViewCell.xib */; };
 		DF5F8DBD27080F7600C37C08 /* DiningButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F8DBB27080F7600C37C08 /* DiningButtonTableViewCell.swift */; };
 		DF5F8DBE27080F7600C37C08 /* DiningButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F8DBC27080F7600C37C08 /* DiningButtonTableViewCell.xib */; };
+		DF5F8DC12708161E00C37C08 /* DiningFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F8DC02708161E00C37C08 /* DiningFooterView.swift */; };
+		DF5F8DC32708163200C37C08 /* DiningFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F8DC22708163200C37C08 /* DiningFooterView.xib */; };
 		DF5F930426EAFF49000C9FDC /* BaiVietTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F930226EAFF49000C9FDC /* BaiVietTableViewCell.swift */; };
 		DF5F930526EAFF49000C9FDC /* BaiVietTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F930326EAFF49000C9FDC /* BaiVietTableViewCell.xib */; };
 		DF5F930826EC3791000C9FDC /* HomeCustomSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F930726EC3791000C9FDC /* HomeCustomSectionHeader.swift */; };
@@ -89,6 +91,8 @@
 		DF4940132701B74D000CDBE4 /* CalendarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCollectionViewCell.xib; sourceTree = "<group>"; };
 		DF5F8DBB27080F7600C37C08 /* DiningButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningButtonTableViewCell.swift; sourceTree = "<group>"; };
 		DF5F8DBC27080F7600C37C08 /* DiningButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiningButtonTableViewCell.xib; sourceTree = "<group>"; };
+		DF5F8DC02708161E00C37C08 /* DiningFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningFooterView.swift; sourceTree = "<group>"; };
+		DF5F8DC22708163200C37C08 /* DiningFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiningFooterView.xib; sourceTree = "<group>"; };
 		DF5F930226EAFF49000C9FDC /* BaiVietTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiVietTableViewCell.swift; sourceTree = "<group>"; };
 		DF5F930326EAFF49000C9FDC /* BaiVietTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiVietTableViewCell.xib; sourceTree = "<group>"; };
 		DF5F930726EC3791000C9FDC /* HomeCustomSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomSectionHeader.swift; sourceTree = "<group>"; };
@@ -277,6 +281,8 @@
 				DFE9B75227070ABB00C4EA72 /* DiningHeaderView.xib */,
 				DF5F8DBB27080F7600C37C08 /* DiningButtonTableViewCell.swift */,
 				DF5F8DBC27080F7600C37C08 /* DiningButtonTableViewCell.xib */,
+				DF5F8DC02708161E00C37C08 /* DiningFooterView.swift */,
+				DF5F8DC22708163200C37C08 /* DiningFooterView.xib */,
 			);
 			path = DiningCell;
 			sourceTree = "<group>";
@@ -535,6 +541,7 @@
 				DF756F562701CE97006C11FA /* DiningTableViewCell.xib in Resources */,
 				DF5F8DBE27080F7600C37C08 /* DiningButtonTableViewCell.xib in Resources */,
 				DF4940152701B74D000CDBE4 /* CalendarCollectionViewCell.xib in Resources */,
+				DF5F8DC32708163200C37C08 /* DiningFooterView.xib in Resources */,
 				DFCAB14D26E5CAF400EB718E /* LaunchScreen.storyboard in Resources */,
 				DFCAB19F26E86CE900EB718E /* HeaderView.xib in Resources */,
 				DF5F933826F43FD6000C9FDC /* ButtonContentCollectionViewCell1.xib in Resources */,
@@ -609,6 +616,7 @@
 				DF5F932A26EF288B000C9FDC /* PostCollectionViewCell.swift in Sources */,
 				DF5F930C26EC47D9000C9FDC /* AvatarTableViewCell.swift in Sources */,
 				DF49400926FD7ADA000CDBE4 /* ResponseNotification.swift in Sources */,
+				DF5F8DC12708161E00C37C08 /* DiningFooterView.swift in Sources */,
 				DF7814632706AC5400325314 /* ResponseDining.swift in Sources */,
 				DFCAB17E26E7185800EB718E /* TinhNangTableViewCell.swift in Sources */,
 				DF78145A2706A31600325314 /* HoatDongTheoNgay.swift in Sources */,
