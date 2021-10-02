@@ -20,4 +20,32 @@ class DiningFooterView: UIView {
         return UINib(nibName: "DiningFooterView", bundle: nil)
     }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+        cellImage.image?.withRenderingMode(.alwaysOriginal)
+    }
+    
+    required init?(coder aCoder: NSCoder) {
+        super.init(coder: aCoder)
+        commonInit()
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: UIView.noIntrinsicMetric, height: 300)
+    }
+    
+    private func commonInit() {
+        let bundle = Bundle(for: DiningFooterView.self)
+        bundle.loadNibNamed("DiningFooterView", owner: self, options: nil)
+        addSubview(cellContentView)
+        
+        cellContentView.translatesAutoresizingMaskIntoConstraints = false
+        cellContentView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        cellContentView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        cellContentView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        cellContentView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+    }
+    
 }

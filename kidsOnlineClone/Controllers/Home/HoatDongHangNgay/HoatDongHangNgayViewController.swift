@@ -78,10 +78,15 @@ class HoatDongHangNgayViewController: UIViewController {
         tableView.layer.cornerRadius = 5
         //tableView.showsVerticalScrollIndicator = false
         tableView.backgroundColor = .systemGray6
+        
+        //register nib
         tableView.register(DiningHeaderView.nib(), forHeaderFooterViewReuseIdentifier: DiningHeaderView.identifier)
+        tableView.register(DiningFooterView.nib(), forHeaderFooterViewReuseIdentifier: DiningFooterView.identifier)
+        
         tableView.register(DiningButtonTableViewCell.nib(), forCellReuseIdentifier: DiningButtonTableViewCell.identifier)
         
         tableView.tableHeaderView = DiningHeaderView(frame: .zero)
+        tableView.tableFooterView = DiningFooterView(frame: .zero)
     }
     
     init(date: String) {
@@ -169,7 +174,7 @@ extension HoatDongHangNgayViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 50
+        return 300
     }
 }
 
