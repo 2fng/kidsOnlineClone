@@ -18,6 +18,8 @@
 		DF4940102701A89F000CDBE4 /* HoatDongHangNgayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF49400E2701A89F000CDBE4 /* HoatDongHangNgayViewController.xib */; };
 		DF4940142701B74D000CDBE4 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4940122701B74D000CDBE4 /* CalendarCollectionViewCell.swift */; };
 		DF4940152701B74D000CDBE4 /* CalendarCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF4940132701B74D000CDBE4 /* CalendarCollectionViewCell.xib */; };
+		DF5F8DBD27080F7600C37C08 /* DiningButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F8DBB27080F7600C37C08 /* DiningButtonTableViewCell.swift */; };
+		DF5F8DBE27080F7600C37C08 /* DiningButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F8DBC27080F7600C37C08 /* DiningButtonTableViewCell.xib */; };
 		DF5F930426EAFF49000C9FDC /* BaiVietTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F930226EAFF49000C9FDC /* BaiVietTableViewCell.swift */; };
 		DF5F930526EAFF49000C9FDC /* BaiVietTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5F930326EAFF49000C9FDC /* BaiVietTableViewCell.xib */; };
 		DF5F930826EC3791000C9FDC /* HomeCustomSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5F930726EC3791000C9FDC /* HomeCustomSectionHeader.swift */; };
@@ -85,6 +87,8 @@
 		DF49400E2701A89F000CDBE4 /* HoatDongHangNgayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HoatDongHangNgayViewController.xib; sourceTree = "<group>"; };
 		DF4940122701B74D000CDBE4 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		DF4940132701B74D000CDBE4 /* CalendarCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCollectionViewCell.xib; sourceTree = "<group>"; };
+		DF5F8DBB27080F7600C37C08 /* DiningButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningButtonTableViewCell.swift; sourceTree = "<group>"; };
+		DF5F8DBC27080F7600C37C08 /* DiningButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiningButtonTableViewCell.xib; sourceTree = "<group>"; };
 		DF5F930226EAFF49000C9FDC /* BaiVietTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaiVietTableViewCell.swift; sourceTree = "<group>"; };
 		DF5F930326EAFF49000C9FDC /* BaiVietTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaiVietTableViewCell.xib; sourceTree = "<group>"; };
 		DF5F930726EC3791000C9FDC /* HomeCustomSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCustomSectionHeader.swift; sourceTree = "<group>"; };
@@ -271,6 +275,8 @@
 				DF756F542701CE97006C11FA /* DiningTableViewCell.xib */,
 				DFE9B75027070A9C00C4EA72 /* DiningHeaderView.swift */,
 				DFE9B75227070ABB00C4EA72 /* DiningHeaderView.xib */,
+				DF5F8DBB27080F7600C37C08 /* DiningButtonTableViewCell.swift */,
+				DF5F8DBC27080F7600C37C08 /* DiningButtonTableViewCell.xib */,
 			);
 			path = DiningCell;
 			sourceTree = "<group>";
@@ -527,6 +533,7 @@
 				DFCAB18326E7192700EB718E /* ButtonsCollectionViewCell.xib in Resources */,
 				DFE9B75327070ABB00C4EA72 /* DiningHeaderView.xib in Resources */,
 				DF756F562701CE97006C11FA /* DiningTableViewCell.xib in Resources */,
+				DF5F8DBE27080F7600C37C08 /* DiningButtonTableViewCell.xib in Resources */,
 				DF4940152701B74D000CDBE4 /* CalendarCollectionViewCell.xib in Resources */,
 				DFCAB14D26E5CAF400EB718E /* LaunchScreen.storyboard in Resources */,
 				DFCAB19F26E86CE900EB718E /* HeaderView.xib in Resources */,
@@ -623,6 +630,7 @@
 				DF5F932626EF2723000C9FDC /* PostTableViewCell.swift in Sources */,
 				DFCAB19826E864D500EB718E /* ScheduleTableViewCell.swift in Sources */,
 				DF49400F2701A89F000CDBE4 /* HoatDongHangNgayViewController.swift in Sources */,
+				DF5F8DBD27080F7600C37C08 /* DiningButtonTableViewCell.swift in Sources */,
 				DF7814612706A86300325314 /* ResponseHoatDongHangNgay.swift in Sources */,
 				DF78145C2706A32400325314 /* Dining.swift in Sources */,
 				DFCAB19426E8621C00EB718E /* HomeTableViewController.swift in Sources */,

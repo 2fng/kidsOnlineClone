@@ -79,6 +79,7 @@ class HoatDongHangNgayViewController: UIViewController {
         //tableView.showsVerticalScrollIndicator = false
         tableView.backgroundColor = .systemGray6
         tableView.register(DiningHeaderView.nib(), forHeaderFooterViewReuseIdentifier: DiningHeaderView.identifier)
+        tableView.register(DiningButtonTableViewCell.nib(), forCellReuseIdentifier: DiningButtonTableViewCell.identifier)
         
         tableView.tableHeaderView = DiningHeaderView(frame: .zero)
     }
@@ -219,6 +220,7 @@ extension HoatDongHangNgayViewController: UITableViewDataSource {
         }
         
         if indexPath.row == 3 {
+            
             cell.mealIcon.image = UIImage(named: "buaChieu")
             cell.mealLabel.text = "chiều".uppercased()
             cell.mealLabel.textColor = UIColor.systemBlue
@@ -229,8 +231,6 @@ extension HoatDongHangNgayViewController: UITableViewDataSource {
         
         if indexPath.row == 4 {
             
-            cell.cellContentView.layer.cornerRadius = 4
-            
             cell.mealIcon.image = UIImage(named: "suaChieu")
             cell.mealLabel.text = "sữa chiều".uppercased()
             cell.mealLabel.textColor = UIColor.systemOrange
@@ -240,7 +240,11 @@ extension HoatDongHangNgayViewController: UITableViewDataSource {
         }
         
         if indexPath.row == 5 {
-            return UITableViewCell()
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: DiningButtonTableViewCell.identifier) as! DiningButtonTableViewCell
+            cell.cellContentView.layer.cornerRadius = 4
+            
+            return cell
         }
         
         cell.mealLabel.font = UIFont.boldSystemFont(ofSize: 16)
