@@ -23,7 +23,6 @@ class DiningFooterView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
-        cellImage.image?.withRenderingMode(.alwaysOriginal)
     }
     
     required init?(coder aCoder: NSCoder) {
@@ -46,6 +45,15 @@ class DiningFooterView: UIView {
         cellContentView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         cellContentView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         cellContentView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        
+        //setup image
+        cellImage.image?.withRenderingMode(.alwaysOriginal)
+        
+        //setup button
+        cellButton.titleLabel?.textColor = .white
+        cellButton.tintColor = .white
+        cellButton.layer.cornerRadius = 15
+        cellButton.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.6)
     }
     
 }
