@@ -30,14 +30,21 @@
                                 <constraint firstAttribute="height" constant="100" id="Rld-Xg-gO4"/>
                             </constraints>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Km9-Hx-r3E">
+                            <rect key="frame" x="235" y="158" width="116" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Gửi lời cảm ơn"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="Keq-UH-ULx" firstAttribute="top" secondItem="zkH-mO-pFN" secondAttribute="top" id="2O2-9F-fB9"/>
+                        <constraint firstItem="Km9-Hx-r3E" firstAttribute="centerX" secondItem="zkH-mO-pFN" secondAttribute="centerX" id="6UV-PZ-DNa"/>
                         <constraint firstAttribute="bottom" secondItem="Keq-UH-ULx" secondAttribute="bottom" id="8hf-fh-zC5"/>
                         <constraint firstItem="Hgg-Yw-ebN" firstAttribute="leading" secondItem="zkH-mO-pFN" secondAttribute="leading" constant="-20" id="Ydn-cl-bZv"/>
                         <constraint firstAttribute="trailing" secondItem="Keq-UH-ULx" secondAttribute="trailing" id="dY1-si-gMK"/>
                         <constraint firstAttribute="bottom" secondItem="Hgg-Yw-ebN" secondAttribute="bottom" constant="-5" id="hTk-9i-djL"/>
+                        <constraint firstAttribute="bottom" secondItem="Km9-Hx-r3E" secondAttribute="bottom" constant="10" id="uPA-Xb-8xP"/>
                         <constraint firstItem="Keq-UH-ULx" firstAttribute="leading" secondItem="zkH-mO-pFN" secondAttribute="leading" id="v8H-ky-rws"/>
                     </constraints>
                 </view>
