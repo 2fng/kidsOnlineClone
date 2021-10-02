@@ -9,7 +9,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiningFooterView" customModule="kidsOnlineClone" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiningFooterView" customModule="kidsOnlineClone" customModuleProvider="target">
+            <connections>
+                <outlet property="cellButton" destination="Km9-Hx-r3E" id="Esw-Zh-BTg"/>
+                <outlet property="cellContentView" destination="zkH-mO-pFN" id="gsk-0a-u6b"/>
+                <outlet property="cellImage" destination="Hgg-Yw-ebN" id="Q8a-uK-7rN"/>
+                <outlet property="cellTextField" destination="Keq-UH-ULx" id="YUD-23-Eur"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="616" height="277"/>
