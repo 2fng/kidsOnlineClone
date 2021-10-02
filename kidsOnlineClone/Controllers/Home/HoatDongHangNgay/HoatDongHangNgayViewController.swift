@@ -152,7 +152,11 @@ extension HoatDongHangNgayViewController: UICollectionViewDelegateFlowLayout {
 extension HoatDongHangNgayViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+        if indexPath.row == 2 {
+            return 240
+        }
+        
+        return 100
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
