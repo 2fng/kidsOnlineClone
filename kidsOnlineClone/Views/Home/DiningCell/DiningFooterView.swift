@@ -54,6 +54,12 @@ class DiningFooterView: UIView {
         cellButton.tintColor = .white
         cellButton.layer.cornerRadius = 15
         cellButton.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.6)
+        
+        //setUp textField
+        cellTextField.returnKeyType = .done
+        cellTextField.autocapitalizationType = .words
+        cellTextField.autocorrectionType = .no
+        
     }
     
 }

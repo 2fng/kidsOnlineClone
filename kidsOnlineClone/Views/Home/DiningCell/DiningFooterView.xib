@@ -14,7 +14,7 @@
                 <outlet property="cellButton" destination="Km9-Hx-r3E" id="Esw-Zh-BTg"/>
                 <outlet property="cellContentView" destination="zkH-mO-pFN" id="gsk-0a-u6b"/>
                 <outlet property="cellImage" destination="Hgg-Yw-ebN" id="Q8a-uK-7rN"/>
-                <outlet property="cellTextField" destination="Keq-UH-ULx" id="YUD-23-Eur"/>
+                <outlet property="cellTextField" destination="Keq-UH-ULx" id="Dcu-uk-5Rg"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
