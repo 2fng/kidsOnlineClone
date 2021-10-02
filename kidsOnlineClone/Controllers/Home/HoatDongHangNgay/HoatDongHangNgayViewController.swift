@@ -175,7 +175,8 @@ extension HoatDongHangNgayViewController: UITableViewDelegate {
 extension HoatDongHangNgayViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return diningDetails.count
+        
+        return diningDetails.count + diningDetails.count - 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -239,7 +240,7 @@ extension HoatDongHangNgayViewController: UITableViewDataSource {
         }
         
         if indexPath.row == 5 {
-            //
+            return UITableViewCell()
         }
         
         cell.mealLabel.font = UIFont.boldSystemFont(ofSize: 16)
