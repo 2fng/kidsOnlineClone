@@ -41,8 +41,8 @@ class ThankMessageTableViewCell: UITableViewCell {
         
         cellSubmitButton.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.60)
         cellSubmitButton.layer.cornerRadius = 15
-        cellSubmitButton.titleLabel?.text = "Gửi lời cảm ơn"
         cellSubmitButton.titleLabel?.textColor = .white
+        cellSubmitButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         
     }
     
