@@ -59,6 +59,8 @@ class DiningFooterView: UIView {
         cellTextField.returnKeyType = .done
         cellTextField.autocapitalizationType = .words
         cellTextField.autocorrectionType = .no
+        cellTextField.layer.borderWidth = 1.0
+        cellTextField.layer.borderColor = UIColor.red.cgColor
         
     }
     
