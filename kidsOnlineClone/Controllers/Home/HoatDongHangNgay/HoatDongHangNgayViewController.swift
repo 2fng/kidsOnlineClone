@@ -81,12 +81,14 @@ class HoatDongHangNgayViewController: UIViewController {
         
         //register nib
         tableView.register(DiningHeaderView.nib(), forHeaderFooterViewReuseIdentifier: DiningHeaderView.identifier)
-        tableView.register(DiningFooterView.nib(), forHeaderFooterViewReuseIdentifier: DiningFooterView.identifier)
+//        tableView.register(DiningFooterView.nib(), forHeaderFooterViewReuseIdentifier: DiningFooterView.identifier)
         
         tableView.register(DiningButtonTableViewCell.nib(), forCellReuseIdentifier: DiningButtonTableViewCell.identifier)
+        tableView.register(ThankMessageTableViewCell.nib(), forCellReuseIdentifier: ThankMessageTableViewCell.identifier)
         
         tableView.tableHeaderView = DiningHeaderView(frame: .zero)
-        tableView.tableFooterView = DiningFooterView(frame: .zero)
+//        tableView.tableFooterView = DiningFooterView(frame: .zero)
+//        tableView.tableFooterView?.isUserInteractionEnabled = true
     }
     
     init(date: String) {
@@ -162,6 +164,10 @@ extension HoatDongHangNgayViewController: UITableViewDelegate {
             return 240
         }
         
+        if indexPath.section == 1 {
+            return 250
+        }
+        
         return 100
     }
     
@@ -170,92 +176,116 @@ extension HoatDongHangNgayViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 75
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 250
+        
+        if section == 0 {
+            return 75
+        }
+        
+        return 0
     }
 }
 
 extension HoatDongHangNgayViewController: UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return diningDetails.count + diningDetails.count - 4
+        if section == 0 {
+            return diningDetails.count + diningDetails.count - 4
+        }
+        
+        else {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: DiningTableViewCell.identifier) as! DiningTableViewCell
-        
-        cell.contentView.backgroundColor = .systemGray6
-        
-        cell.selectionStyle = .none
-        
-        if indexPath.row == 0 {
-            cell.cellContentView.backgroundColor = .white
-            cell.cellContentView.layer.cornerRadius = 4
+        if indexPath.section == 0 {
             
-            cell.mealIcon.image = UIImage(named: "buaSang")
-            cell.mealLabel.text = "Bữa sáng".uppercased()
-            cell.mealLabel.textColor = UIColor.systemOrange
-            cell.mealDetail.text = "\(diningDetails[indexPath.row].content)"
-            cell.mealTime.text = "(\(diningDetails[indexPath.row].name))"
-            cell.mealTime.textColor = UIColor.systemOrange
-        }
-        
-        if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: DiningTableViewCell.identifier) as! DiningTableViewCell
             
-            cell.mealIcon.image = UIImage(named: "phuSang")
-            cell.mealLabel.text = "Phụ sáng".uppercased()
-            cell.mealLabel.textColor = UIColor.systemGreen
-            cell.mealDetail.text = "\(diningDetails[indexPath.row].content)"
-            cell.mealTime.text = "(\(diningDetails[indexPath.row].name))"
-            cell.mealTime.textColor = UIColor.systemGreen
-        }
-        
-        if indexPath.row == 2 {
-            cell.mealIcon.image = UIImage(named: "buaSang")
-            cell.mealLabel.text = "trưa".uppercased()
-            cell.mealLabel.textColor = UIColor.systemRed
-            cell.mealDetail.text = "\(diningDetails[indexPath.row].content)"
-            cell.mealTime.text = "(\(diningDetails[indexPath.row].name))"
-            cell.mealTime.textColor = UIColor.systemRed
-        }
-        
-        if indexPath.row == 3 {
+            cell.contentView.backgroundColor = .systemGray6
             
-            cell.mealIcon.image = UIImage(named: "buaChieu")
-            cell.mealLabel.text = "chiều".uppercased()
-            cell.mealLabel.textColor = UIColor.systemBlue
-            cell.mealDetail.text = "\(diningDetails[indexPath.row].content)"
-            cell.mealTime.text = "(\(diningDetails[indexPath.row].name))"
-            cell.mealTime.textColor = UIColor.systemBlue
-        }
-        
-        if indexPath.row == 4 {
+            cell.selectionStyle = .none
             
-            cell.mealIcon.image = UIImage(named: "suaChieu")
-            cell.mealLabel.text = "sữa chiều".uppercased()
-            cell.mealLabel.textColor = UIColor.systemOrange
-            cell.mealDetail.text = "\(diningDetails[indexPath.row].content)"
-            cell.mealTime.text = "(\(diningDetails[indexPath.row].name))"
-            cell.mealTime.textColor = UIColor.systemOrange
-        }
-        
-        if indexPath.row == 5 {
+            if indexPath.row == 0 {
+                cell.cellContentView.backgroundColor = .white
+                cell.cellContentView.layer.cornerRadius = 4
+                
+                cell.mealIcon.image = UIImage(named: "buaSang")
+                cell.mealLabel.text = "Bữa sáng".uppercased()
+                cell.mealLabel.textColor = UIColor.systemOrange
+                cell.mealDetail.text = "\(diningDetails[indexPath.row].content)"
+                cell.mealTime.text = "(\(diningDetails[indexPath.row].name))"
+                cell.mealTime.textColor = UIColor.systemOrange
+            }
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: DiningButtonTableViewCell.identifier) as! DiningButtonTableViewCell
-            cell.cellContentView.layer.cornerRadius = 4
+            if indexPath.row == 1 {
+                
+                cell.mealIcon.image = UIImage(named: "phuSang")
+                cell.mealLabel.text = "Phụ sáng".uppercased()
+                cell.mealLabel.textColor = UIColor.systemGreen
+                cell.mealDetail.text = "\(diningDetails[indexPath.row].content)"
+                cell.mealTime.text = "(\(diningDetails[indexPath.row].name))"
+                cell.mealTime.textColor = UIColor.systemGreen
+            }
+            
+            if indexPath.row == 2 {
+                cell.mealIcon.image = UIImage(named: "buaSang")
+                cell.mealLabel.text = "trưa".uppercased()
+                cell.mealLabel.textColor = UIColor.systemRed
+                cell.mealDetail.text = "\(diningDetails[indexPath.row].content)"
+                cell.mealTime.text = "(\(diningDetails[indexPath.row].name))"
+                cell.mealTime.textColor = UIColor.systemRed
+            }
+            
+            if indexPath.row == 3 {
+                
+                cell.mealIcon.image = UIImage(named: "buaChieu")
+                cell.mealLabel.text = "chiều".uppercased()
+                cell.mealLabel.textColor = UIColor.systemBlue
+                cell.mealDetail.text = "\(diningDetails[indexPath.row].content)"
+                cell.mealTime.text = "(\(diningDetails[indexPath.row].name))"
+                cell.mealTime.textColor = UIColor.systemBlue
+            }
+            
+            if indexPath.row == 4 {
+                
+                cell.mealIcon.image = UIImage(named: "suaChieu")
+                cell.mealLabel.text = "sữa chiều".uppercased()
+                cell.mealLabel.textColor = UIColor.systemOrange
+                cell.mealDetail.text = "\(diningDetails[indexPath.row].content)"
+                cell.mealTime.text = "(\(diningDetails[indexPath.row].name))"
+                cell.mealTime.textColor = UIColor.systemOrange
+            }
+            
+            if indexPath.row == 5 {
+                
+                let cell = tableView.dequeueReusableCell(withIdentifier: DiningButtonTableViewCell.identifier) as! DiningButtonTableViewCell
+                cell.cellContentView.layer.cornerRadius = 4
+                
+                return cell
+            }
+            
+            cell.mealLabel.font = UIFont.boldSystemFont(ofSize: 16)
+            cell.mealTime.font = UIFont.boldSystemFont(ofSize: 16)
             
             return cell
         }
         
-        cell.mealLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        cell.mealTime.font = UIFont.boldSystemFont(ofSize: 16)
+        if indexPath.section == 1 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: ThankMessageTableViewCell.identifier) as! ThankMessageTableViewCell
+            
+            return cell
+            
+        }
         
-        return cell
+        return UITableViewCell()
     }
     
 }
