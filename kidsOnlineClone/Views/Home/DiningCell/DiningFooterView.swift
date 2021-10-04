@@ -12,7 +12,7 @@ class DiningFooterView: UIView {
     static let identifier = "footerViewCell"
 
     @IBOutlet weak var cellContentView: UIView!
-    @IBOutlet weak var cellTextField: UITextField!
+    @IBOutlet weak var cellTextView: UITextView!
     @IBOutlet weak var cellImage: UIImageView!
     @IBOutlet weak var cellButton: UIButton!
     
@@ -39,7 +39,7 @@ class DiningFooterView: UIView {
         let bundle = Bundle(for: DiningFooterView.self)
         bundle.loadNibNamed("DiningFooterView", owner: self, options: nil)
         addSubview(cellContentView)
-        
+
         cellContentView.translatesAutoresizingMaskIntoConstraints = false
         cellContentView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         cellContentView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
@@ -56,11 +56,12 @@ class DiningFooterView: UIView {
         cellButton.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 0.6)
         
         //setUp textField
-        cellTextField.returnKeyType = .done
-        cellTextField.autocapitalizationType = .words
-        cellTextField.autocorrectionType = .no
-        cellTextField.layer.borderWidth = 1.0
-        cellTextField.layer.borderColor = UIColor.red.cgColor
+        cellTextView.returnKeyType = .done
+        cellTextView.autocapitalizationType = .words
+        cellTextView.autocorrectionType = .no
+        cellTextView.layer.borderWidth = 1.0
+        cellTextView.layer.borderColor = UIColor.red.cgColor
+        cellTextView.layer.cornerRadius = 15
         
     }
     

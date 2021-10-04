@@ -174,7 +174,7 @@ extension HoatDongHangNgayViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 300
+        return 250
     }
 }
 
